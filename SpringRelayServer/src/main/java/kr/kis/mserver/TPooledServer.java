@@ -5,6 +5,9 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -27,6 +30,7 @@ public class TPooledServer {
 	public static ServerInfoUtil util;
 	public static int threadID = 1;
 	String envPath = "";
+	public static String curDate = "";
 	
 	public TPooledServer() {
 		if("".equals(envPath)) {
@@ -149,13 +153,14 @@ public class TPooledServer {
 					requestToServer 	= cn.getOutputStream(); //new PrintWriter(cn.getOutputStream(), true);
 					
 					// thread pool 에 넣고 관리.
-					String sendtaskName = "RClientInOutTask-Pool-" + threadID;
+					String sendtaskName = "InOutTask-Pool-" + getThreadId();
 					Callable<Void> sendtask = new RClientInOutTask(cn, responseFromServer, rs, requestToRelay, sendtaskName); // 서버 -> 릴레이
 					log.info("Client sendtask :" +  sendtaskName);
-					threadID++;
-					String recvtaskName = "RClientOutInTask-Pool-" + threadID;
+
+					String recvtaskName = "OutInTask-Pool-" + getThreadId();
 					Callable<Void> recvtask = new RClientOutInTask(rs, responseFromRelay, cn, requestToServer, recvtaskName); // 릴레이 -> 서버
 					log.info("Client recvtask :" + recvtaskName );
+					
 					threadID++;
 					
 					pool.submit(sendtask);
@@ -180,5 +185,26 @@ public class TPooledServer {
 	}
 	
 
+	public static String getThreadId() {
+		String tid = "";
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+		
+		Calendar c = Calendar.getInstance();
+
+		String td = sdf.format(c.getTime());
+		
+		if("".equals(curDate)) {
+			curDate = td;
+		} 
+		
+		if(!td.equals(curDate)) {
+			threadID = 1;
+		}
+		
+		tid = td + "-" + threadID;
+		
+		return tid;
+	}
 
 }

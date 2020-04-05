@@ -49,16 +49,19 @@ public class RClientOutInTask implements Callable<Void>{
 					log.info("relay client -> Server 복사");
 					StreamUtils.copy(in, out);
 				} else {
-					// client 에서 close 처리 
-//					try {
-//						if(outSocket.isClosed()) {
-//							inSocket.close();
-//							log.info("Server connection is closed");
-////							inSocket.close();
-//						}
-//					} catch (Exception e) {
-//					}
-//					break;
+					// client 에서 close 처리
+//					inSocket.close(); // insocket만 close() :: close_wait : 52개
+					outSocket.close(); // outsocket만 close() :: close_wait :
+					// relay 서버의 소켓이 안닫히는 현상 파악위해. 
+					// 33590 포트 사용의 close_wait 없애기 위함 목적 테스트
+					// port 33590관련 socket close 테스트 용
+					try {
+						if(outSocket.isClosed()) {
+							inSocket.close();
+							log.info("Server connection is closed");
+						}
+					} catch (Exception e) {
+					}
 				}
 				
 //			}
@@ -84,6 +87,17 @@ public class RClientOutInTask implements Callable<Void>{
 //			} catch (Exception e) {
 //			}
 			
+			try {
+				outSocket.close(); // outsocket만 close() :: close_wait :
+				// port 33590관련 socket close 테스트 용
+				try {
+					if(outSocket.isClosed()) {
+						inSocket.close();
+					}
+				} catch (Exception e) {
+				}				
+			} catch (Exception e) {
+			}			
 		}
 		
 		return null;

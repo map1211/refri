@@ -53,34 +53,42 @@ public class RClientInOutTask implements Callable<Void>{
 				} else {
 //					log.info("Server connection is closed");
 					// 클라이언트에서 close() 처리 
-//					inSocket.close();
-//					break;
 					try {
-						if(inSocket.isClosed()) {
-							outSocket.close();
+//						if(inSocket.isClosed()) {
 							log.info("Server connection is closed");
+//							outSocket.close(); // outsocket만 close() :: close_wait : 52개 
+							inSocket.close(); // insocket만 close() :: close_wait :  
 //							if(!outSocket.isClosed()) {
 //								outSocket.close();
 //							}
-						}
+//						}
 					} catch (Exception e) {
+//						outSocket.close();
+						inSocket.close();
+//						log.info("Server connection is closed");
+
 					}					
 				}
 				
 //			}
 		} catch (IOException e) {
-			//e.printStackTrace();
-			log.error("error ::"+e.getMessage(), e);
+			if("Socket closed".equals(e.getMessage())) {
+				log.info("Socket closed ");
+			} else {
+				log.error("error ::"+e.getMessage(), e);
+			}			
 		} finally {
 			try {
-				if(inSocket.isClosed()) {
-					outSocket.close();
-					log.info("Server connection is closed");
-				}
-				if(!outSocket.isClosed()) {
-					outSocket.close();
-					log.info("Client connection is closed");
-				}
+//				if(inSocket.isClosed()) {
+//					outSocket.close();
+//					log.info("Server connection is closed");
+//				}
+//				if(!outSocket.isClosed()) {
+//					outSocket.close();
+//					log.info("Client connection is closed");
+//				}
+//				outSocket.close();
+				inSocket.close();
 			} catch (Exception e) {
 			}
 		}
