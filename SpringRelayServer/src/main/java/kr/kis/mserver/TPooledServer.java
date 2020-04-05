@@ -175,7 +175,7 @@ public class TPooledServer {
 							rs.close();
 						}
 					} catch (Exception e2) {
-					}
+					}     
 				}
 			}
 		} catch (Exception e) {
