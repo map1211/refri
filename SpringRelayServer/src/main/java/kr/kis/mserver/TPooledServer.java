@@ -178,7 +178,7 @@ public class TPooledServer {
 					}     
 				}
 			}
-		} catch (Exception e) {
+		} catch (Exception e) {      
 			log.error("Server listening error : ", e);
 		}
 		
