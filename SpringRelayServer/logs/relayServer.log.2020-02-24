@@ -1,0 +1,16 @@
+2020-02-24 09:36:51,784 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : RelayServer start.
+  2020-02-24 09:36:51,798 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : main() error
+  java.net.BindException: Address already in use: JVM_Bind
+	at java.net.DualStackPlainSocketImpl.bind0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketBind(DualStackPlainSocketImpl.java:106)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:190)
+	at java.net.ServerSocket.bind(ServerSocket.java:390)
+	at java.net.ServerSocket.<init>(ServerSocket.java:252)
+	at java.net.ServerSocket.<init>(ServerSocket.java:143)
+	at net.jbongsu.server.RelaySocketServer.startServer(RelaySocketServer.java:68)
+	at net.jbongsu.server.RelaySocketServer.main(RelaySocketServer.java:54)
+2020-02-24 09:37:49,993 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : RelayServer start.
+  2020-02-24 09:37:50,000 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : RelayServer listen port : 23510
+  2020-02-24 09:37:50,000 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  

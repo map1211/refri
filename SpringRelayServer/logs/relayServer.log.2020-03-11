@@ -1,0 +1,11 @@
+2020-03-11 16:01:51,062 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-11 16:01:51,065 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: ST
+  2020-03-11 16:01:51,065 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-11 16:01:51,065 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23510
+  2020-03-11 16:01:51,065 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-11 16:01:51,066 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-11 16:01:51,072 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 210.112.100.97
+  2020-03-11 16:01:51,073 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 9029
+  2020-03-11 16:01:51,073 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-11 16:01:51,073 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  

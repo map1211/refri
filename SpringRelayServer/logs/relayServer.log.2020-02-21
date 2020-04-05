@@ -1,0 +1,729 @@
+2020-02-21 10:34:07,726 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : RelayServer start.
+  2020-02-21 10:34:07,734 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : RelayServer listen port : 23510
+  2020-02-21 10:34:07,734 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 10:59:39,424 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : RelayServer start.
+  2020-02-21 10:59:39,432 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : RelayServer listen port : 23510
+  2020-02-21 10:59:39,432 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 11:01:45,013 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 11:01:45,013 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 11:01:45,013 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 11:01:45,021 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 11:01:45,026 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 11:01:45,026 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210001]
+  2020-02-21 11:01:48,022 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 11:01:48,024 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 11:01:48,026 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 11:01:48,027 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210002]
+  2020-02-21 11:01:51,024 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 11:01:51,024 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 11:01:51,026 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 11:01:51,026 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210003]
+  2020-02-21 11:01:53,024 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 11:01:53,024 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 11:01:53,024 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 11:01:53,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 11:01:53,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 11:01:53,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 11:01:53,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 11:01:53,025 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 11:01:53,026 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: 
+  2020-02-21 11:01:53,026 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 11:01:53,026 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : request : 1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:01:53,026 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler::command::1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:01:53,026 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: execute()
+  2020-02-21 11:01:53,026 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: execute :: 
+  2020-02-21 11:01:53,026 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: findExecutor :: param -> command ::1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:01:53,027 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerType : SA
+  2020-02-21 11:01:53,027 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerIp : 127.0.0.1
+  2020-02-21 11:01:53,027 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerPort : 23510
+  2020-02-21 11:01:53,027 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerEncodeType : UTF-8
+  2020-02-21 11:01:53,027 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: request : 1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:01:53,028 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: 다음 중계서버로 request 전달하기 위해 client 생성 : 
+  2020-02-21 11:01:53,028 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : SA 서버인 경우 
+  2020-02-21 11:01:53,029 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 11:01:53,029 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 11:01:53,029 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:202002210001]
+  2020-02-21 11:01:53,029 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 11:01:53,029 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210001]
+  2020-02-21 11:01:53,029 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 11:01:53,029 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:01:53,029 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 받은 결과 [1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 11:01:56,031 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 요청함 
+  2020-02-21 11:01:56,031 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 11:01:56,031 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 11:01:56,031 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 11:01:56,031 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 24
+  2020-02-21 11:01:56,031 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 11:01:56,031 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 11:01:56,031 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 11:01:56,031 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[2번째 소켓요청 def]
+  2020-02-21 11:01:56,032 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: 
+  2020-02-21 11:01:56,032 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : request : 2번째 소켓요청 def
+  2020-02-21 11:01:56,032 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler::command::2번째 소켓요청 def
+  2020-02-21 11:01:56,032 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: execute()
+  2020-02-21 11:01:56,032 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: execute :: 
+  2020-02-21 11:01:56,032 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: findExecutor :: param -> command ::2번째 소켓요청 def
+  2020-02-21 11:01:56,032 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerType : SA
+  2020-02-21 11:01:56,033 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerIp : 127.0.0.1
+  2020-02-21 11:01:56,036 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerPort : 23510
+  2020-02-21 11:01:56,036 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerEncodeType : UTF-8
+  2020-02-21 11:01:56,036 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: request : 2번째 소켓요청 def
+  2020-02-21 11:01:56,036 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: 다음 중계서버로 request 전달하기 위해 client 생성 : 
+  2020-02-21 11:01:56,036 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : SA 서버인 경우 
+  2020-02-21 11:01:56,036 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 11:01:56,036 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:202002210002]
+  2020-02-21 11:01:56,036 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 11:01:56,036 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210002]
+  2020-02-21 11:01:56,036 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 11:01:56,037 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 11:01:56,037 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   2번째 소켓요청 def
+  2020-02-21 11:01:56,037 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 받은 결과  [2번째 소켓요청 def]
+  2020-02-21 11:01:59,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 요청함 
+  2020-02-21 11:01:59,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 11:01:59,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 11:01:59,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 11:01:59,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 44
+  2020-02-21 11:01:59,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 11:01:59,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 11:01:59,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 11:01:59,038 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 11:01:59,039 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: 
+  2020-02-21 11:01:59,039 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : request : 뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:01:59,039 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler::command::뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:01:59,039 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: execute()
+  2020-02-21 11:01:59,039 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: execute :: 
+  2020-02-21 11:01:59,039 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: findExecutor :: param -> command ::뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:01:59,039 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerType : SA
+  2020-02-21 11:01:59,039 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerIp : 127.0.0.1
+  2020-02-21 11:01:59,040 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerPort : 23510
+  2020-02-21 11:01:59,040 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerEncodeType : UTF-8
+  2020-02-21 11:01:59,040 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: request : 뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:01:59,040 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: 다음 중계서버로 request 전달하기 위해 client 생성 : 
+  2020-02-21 11:01:59,040 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : SA 서버인 경우 
+  2020-02-21 11:01:59,040 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 11:01:59,040 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 11:01:59,040 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:202002210003]
+  2020-02-21 11:01:59,040 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210003]
+  2020-02-21 11:01:59,040 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 11:01:59,040 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 11:01:59,040 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:01:59,041 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 받은 결과 [뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 11:02:02,041 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 재 요청함 
+  2020-02-21 11:02:02,041 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 11:02:02,041 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 11:02:02,041 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 11:02:02,041 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 23
+  2020-02-21 11:02:02,042 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 11:02:02,042 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 11:02:02,042 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 11:02:02,042 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[재요청테스트2 abc]
+  2020-02-21 11:02:02,042 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: 
+  2020-02-21 11:02:02,042 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : request : 재요청테스트2 abc
+  2020-02-21 11:02:02,042 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler::command::재요청테스트2 abc
+  2020-02-21 11:02:02,042 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: execute()
+  2020-02-21 11:02:02,042 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: execute :: 
+  2020-02-21 11:02:02,042 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: findExecutor :: param -> command ::재요청테스트2 abc
+  2020-02-21 11:02:02,043 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerType : SA
+  2020-02-21 11:02:02,043 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerIp : 127.0.0.1
+  2020-02-21 11:02:02,043 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerPort : 23510
+  2020-02-21 11:02:02,043 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerEncodeType : UTF-8
+  2020-02-21 11:02:02,043 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: request : 재요청테스트2 abc
+  2020-02-21 11:02:02,043 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: 다음 중계서버로 request 전달하기 위해 client 생성 : 
+  2020-02-21 11:02:02,043 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : SA 서버인 경우 
+  2020-02-21 11:02:02,043 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 11:02:02,043 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 11:02:02,044 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:202002210002]
+  2020-02-21 11:02:02,044 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 11:02:02,044 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210002]
+  2020-02-21 11:02:02,044 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 11:02:02,044 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   재요청테스트2 abc
+  2020-02-21 11:02:02,044 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2이 받은 결과 [재요청테스트2 abc]
+  2020-02-21 11:02:05,044 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 1
+  2020-02-21 11:02:05,045 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client와의 연결이 종료됩니다.[ID:202002210001]
+  java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:36)
+	at net.jbongsu.server.connectionhandler.NormalConnectionHandler.run(NormalConnectionHandler.java:57)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 11:02:05,050 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandlerManager] : ## reportWhenExit 
+  2020-02-21 11:02:07,045 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close 2
+  2020-02-21 11:02:07,045 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client와의 연결이 종료됩니다.[ID:202002210002]
+  java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:36)
+	at net.jbongsu.server.connectionhandler.NormalConnectionHandler.run(NormalConnectionHandler.java:57)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 11:02:07,046 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandlerManager] : ## reportWhenExit 
+  2020-02-21 11:02:09,046 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close 3
+  2020-02-21 11:02:09,046 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client와의 연결이 종료됩니다.[ID:202002210003]
+  java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:36)
+	at net.jbongsu.server.connectionhandler.NormalConnectionHandler.run(NormalConnectionHandler.java:57)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 11:02:09,046 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandlerManager] : ## reportWhenExit 
+  2020-02-21 11:16:54,579 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : RelayServer start.
+  2020-02-21 11:16:54,587 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : RelayServer listen port : 23510
+  2020-02-21 11:16:54,587 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 11:17:03,960 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 11:17:03,961 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 11:17:03,961 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 11:17:03,968 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 11:17:03,972 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 11:17:03,973 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210001]
+  2020-02-21 11:17:06,969 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 11:17:06,970 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 11:17:06,973 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 11:17:06,973 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210002]
+  2020-02-21 11:17:09,971 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 11:17:09,971 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 11:17:09,972 [main] [ServerLog] [INFO] - [net.jbongsu.server.RelaySocketServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 11:17:09,972 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210003]
+  2020-02-21 11:17:11,972 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 11:17:11,972 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 11:17:11,974 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 11:17:11,974 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 11:17:11,975 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 11:17:11,976 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 11:17:11,976 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 11:17:11,976 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 11:17:11,977 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: 
+  2020-02-21 11:17:11,977 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 11:17:11,978 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : request : 1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:17:11,978 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler::command::1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:17:11,978 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: execute()
+  2020-02-21 11:17:11,979 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: execute :: 
+  2020-02-21 11:17:11,979 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: findExecutor :: param -> command ::1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:17:11,981 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerType : SA
+  2020-02-21 11:17:11,981 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerIp : 127.0.0.1
+  2020-02-21 11:17:11,982 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerPort : 23510
+  2020-02-21 11:17:11,982 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerEncodeType : UTF-8
+  2020-02-21 11:17:11,982 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: request : 1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:17:11,983 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: 다음 중계서버로 request 전달하기 위해 client 생성 : 
+  2020-02-21 11:17:11,983 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : SA 서버인 경우 
+  2020-02-21 11:17:11,985 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 11:17:11,985 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 11:17:11,986 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 11:17:11,986 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:202002210001]
+  2020-02-21 11:17:11,987 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210001]
+  2020-02-21 11:17:11,987 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 11:17:11,987 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 11:17:11,988 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 받은 결과 [1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 11:17:14,988 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 요청함 
+  2020-02-21 11:17:14,989 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 11:17:14,990 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 11:17:14,990 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 11:17:14,990 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 24
+  2020-02-21 11:17:14,991 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 11:17:14,992 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 11:17:14,993 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 11:17:14,992 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[2번째 소켓요청 def]
+  2020-02-21 11:17:14,993 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: 
+  2020-02-21 11:17:14,994 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : request : 2번째 소켓요청 def
+  2020-02-21 11:17:14,995 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler::command::2번째 소켓요청 def
+  2020-02-21 11:17:14,995 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: execute()
+  2020-02-21 11:17:14,995 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: execute :: 
+  2020-02-21 11:17:14,996 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: findExecutor :: param -> command ::2번째 소켓요청 def
+  2020-02-21 11:17:14,998 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerType : SA
+  2020-02-21 11:17:14,998 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerIp : 127.0.0.1
+  2020-02-21 11:17:15,011 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerPort : 23510
+  2020-02-21 11:17:15,011 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerEncodeType : UTF-8
+  2020-02-21 11:17:15,011 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: request : 2번째 소켓요청 def
+  2020-02-21 11:17:15,011 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: 다음 중계서버로 request 전달하기 위해 client 생성 : 
+  2020-02-21 11:17:15,011 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : SA 서버인 경우 
+  2020-02-21 11:17:15,012 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 11:17:15,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 11:17:15,012 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:202002210002]
+  2020-02-21 11:17:15,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 11:17:15,012 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210002]
+  2020-02-21 11:17:15,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 11:17:15,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   2번째 소켓요청 def
+  2020-02-21 11:17:15,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 받은 결과  [2번째 소켓요청 def]
+  2020-02-21 11:17:18,013 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 요청함 
+  2020-02-21 11:17:18,013 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 11:17:18,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 11:17:18,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 11:17:18,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 44
+  2020-02-21 11:17:18,016 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 11:17:18,017 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 11:17:18,017 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 11:17:18,017 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 11:17:18,018 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: 
+  2020-02-21 11:17:18,018 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : request : 뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:17:18,018 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler::command::뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:17:18,018 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: execute()
+  2020-02-21 11:17:18,018 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: execute :: 
+  2020-02-21 11:17:18,019 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: findExecutor :: param -> command ::뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:17:18,020 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerType : SA
+  2020-02-21 11:17:18,021 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerIp : 127.0.0.1
+  2020-02-21 11:17:18,021 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerPort : 23510
+  2020-02-21 11:17:18,021 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerEncodeType : UTF-8
+  2020-02-21 11:17:18,021 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: request : 뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:17:18,022 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: 다음 중계서버로 request 전달하기 위해 client 생성 : 
+  2020-02-21 11:17:18,022 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : SA 서버인 경우 
+  2020-02-21 11:17:18,023 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 11:17:18,023 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 11:17:18,023 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:202002210003]
+  2020-02-21 11:17:18,023 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 11:17:18,023 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210003]
+  2020-02-21 11:17:18,023 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 11:17:18,024 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 11:17:18,024 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 받은 결과 [뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 11:17:21,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 재 요청함 
+  2020-02-21 11:17:21,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 11:17:21,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 11:17:21,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 11:17:21,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 23
+  2020-02-21 11:17:21,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 11:17:21,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 11:17:21,025 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 11:17:21,025 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[재요청테스트2 abc]
+  2020-02-21 11:17:21,026 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: 
+  2020-02-21 11:17:21,026 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : request : 재요청테스트2 abc
+  2020-02-21 11:17:21,026 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler::command::재요청테스트2 abc
+  2020-02-21 11:17:21,026 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandRequestHandler :: processRequest :: execute()
+  2020-02-21 11:17:21,026 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: execute :: 
+  2020-02-21 11:17:21,026 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.CommandRequestHandler] : CommandManager :: findExecutor :: param -> command ::재요청테스트2 abc
+  2020-02-21 11:17:21,027 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerType : SA
+  2020-02-21 11:17:21,027 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerIp : 127.0.0.1
+  2020-02-21 11:17:21,027 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerPort : 23510
+  2020-02-21 11:17:21,027 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: relayServerEncodeType : UTF-8
+  2020-02-21 11:17:21,027 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: request : 재요청테스트2 abc
+  2020-02-21 11:17:21,027 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : CommandExecutorJob.execute: 다음 중계서버로 request 전달하기 위해 client 생성 : 
+  2020-02-21 11:17:21,027 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.executor.CommandExecutorJob] : SA 서버인 경우 
+  2020-02-21 11:17:21,027 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 11:17:21,027 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 11:17:21,028 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:202002210002]
+  2020-02-21 11:17:21,028 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 11:17:21,028 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:202002210002]
+  2020-02-21 11:17:21,028 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 11:17:21,028 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   재요청테스트2 abc
+  2020-02-21 11:17:21,028 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2이 받은 결과 [재요청테스트2 abc]
+  2020-02-21 11:17:24,029 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 1
+  2020-02-21 11:17:24,029 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client와의 연결이 종료됩니다.[ID:202002210001]
+  2020-02-21 11:17:24,029 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandlerManager] : ## reportWhenExit 
+  2020-02-21 11:17:26,030 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close 2
+  2020-02-21 11:17:26,030 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client와의 연결이 종료됩니다.[ID:202002210002]
+  2020-02-21 11:17:26,030 [Thread-1] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandlerManager] : ## reportWhenExit 
+  2020-02-21 11:17:28,030 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close 3
+  2020-02-21 11:17:28,030 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandler] : Client와의 연결이 종료됩니다.[ID:202002210003]
+  2020-02-21 11:17:28,030 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.NormalConnectionHandlerManager] : ## reportWhenExit 
+  2020-02-21 12:36:44,518 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 12:36:44,519 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 12:36:44,519 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 12:36:47,526 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 12:36:50,526 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 12:36:52,529 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 12:36:52,530 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 12:36:52,533 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 12:36:52,534 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 12:36:52,535 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 12:36:52,537 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 12:36:52,537 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 12:36:52,539 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 12:36:52,680 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 12:36:52,680 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 12:36:52,681 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 12:36:52,681 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 12:36:52,681 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 받은 결과 [1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 12:36:55,682 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 요청함 
+  2020-02-21 12:36:55,682 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 12:36:55,683 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 12:36:55,683 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 12:36:55,683 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 24
+  2020-02-21 12:36:55,684 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 12:36:55,685 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 12:36:55,685 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 12:36:55,805 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 12:36:55,805 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 12:36:55,805 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 12:36:55,805 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   2번째 소켓요청 def
+  2020-02-21 12:36:55,805 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 받은 결과  [2번째 소켓요청 def]
+  2020-02-21 12:36:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 요청함 
+  2020-02-21 12:36:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 12:36:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 12:36:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 12:36:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 44
+  2020-02-21 12:36:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 12:36:58,808 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 12:36:58,808 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 12:36:58,907 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 12:36:58,907 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 12:36:58,907 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 12:36:58,908 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 12:36:58,908 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 받은 결과 [뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 12:37:01,909 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 재 요청함 
+  2020-02-21 12:37:01,909 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 12:37:01,909 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 12:37:01,909 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 12:37:01,909 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 23
+  2020-02-21 12:37:01,909 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 12:37:01,909 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 12:37:01,909 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 12:37:02,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 12:37:02,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 12:37:02,038 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 12:37:02,039 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   재요청테스트2 abc
+  2020-02-21 12:37:02,039 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2이 받은 결과 [재요청테스트2 abc]
+  2020-02-21 12:37:05,040 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 1
+  2020-02-21 12:37:07,041 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close 2
+  2020-02-21 12:37:09,043 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close 3
+  2020-02-21 12:59:33,522 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 12:59:33,523 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 12:59:33,523 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 12:59:36,533 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 12:59:39,534 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 12:59:41,537 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 12:59:41,538 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 12:59:41,540 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 12:59:41,541 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 12:59:41,541 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 12:59:41,543 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 12:59:41,544 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 12:59:41,545 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:03:03,512 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : Client sendString 오류 
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.client.RelayClient.sendString(RelayClient.java:85)
+	at net.jbongsu.client.RelayClientMain.main(RelayClientMain.java:66)
+2020-02-21 13:03:03,515 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : Client 오류 발생!
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.client.RelayClient.sendString(RelayClient.java:85)
+	at net.jbongsu.client.RelayClientMain.main(RelayClientMain.java:66)
+2020-02-21 13:06:44,772 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 13:06:44,773 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 13:06:44,773 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 13:06:47,780 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 13:06:50,781 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 13:06:52,784 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 13:06:52,785 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:06:52,787 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:06:52,788 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:06:52,788 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 13:06:52,789 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:06:52,790 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:06:52,792 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:11:02,503 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : Client sendString 오류 
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.client.RelayClient.sendString(RelayClient.java:85)
+	at net.jbongsu.client.RelayClientMain.main(RelayClientMain.java:66)
+2020-02-21 13:11:02,507 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : Client 오류 발생!
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.client.RelayClient.sendString(RelayClient.java:85)
+	at net.jbongsu.client.RelayClientMain.main(RelayClientMain.java:66)
+2020-02-21 13:12:42,508 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 13:12:42,509 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 13:12:42,509 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 13:12:45,517 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 13:12:48,519 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 13:12:50,521 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 13:12:50,522 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:12:50,524 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:12:50,525 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:12:50,525 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 13:12:50,526 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:12:50,527 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:12:50,528 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:12:50,694 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:12:50,694 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:12:50,694 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:12:50,694 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 13:12:50,695 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 받은 결과 [1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 13:12:53,696 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 요청함 
+  2020-02-21 13:12:53,696 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:12:53,696 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:12:53,696 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:12:53,697 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 24
+  2020-02-21 13:12:53,698 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:12:53,698 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:12:53,699 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:12:53,822 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:12:53,822 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:12:53,822 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:12:53,823 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   2번째 소켓요청 def
+  2020-02-21 13:12:53,823 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 받은 결과  [2번째 소켓요청 def]
+  2020-02-21 13:12:56,823 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 요청함 
+  2020-02-21 13:12:56,824 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:12:56,824 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:12:56,825 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:12:56,825 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 44
+  2020-02-21 13:12:56,826 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:12:56,826 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:12:56,827 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:12:56,944 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:12:56,945 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:12:56,945 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:12:56,945 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 13:12:56,945 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 받은 결과 [뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 13:12:59,945 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 재 요청함 
+  2020-02-21 13:12:59,945 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:12:59,946 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:12:59,946 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:12:59,947 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 23
+  2020-02-21 13:12:59,948 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:12:59,948 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:12:59,949 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:13:00,062 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:13:00,062 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:13:00,062 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:13:00,063 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   재요청테스트2 abc
+  2020-02-21 13:13:00,063 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2이 받은 결과 [재요청테스트2 abc]
+  2020-02-21 13:13:03,063 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 1
+  2020-02-21 13:13:05,065 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 2
+  2020-02-21 13:13:07,066 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 3
+  2020-02-21 13:27:33,063 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 13:27:33,063 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 13:27:33,063 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 13:27:36,070 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 13:27:39,071 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 13:27:41,073 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 13:27:41,074 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:27:41,076 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:27:41,077 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:27:41,077 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 13:27:41,078 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:27:41,079 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:27:41,081 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:27:41,247 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:27:41,247 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:27:41,247 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:27:41,247 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 13:27:41,247 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 받은 결과 [1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 13:27:44,249 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 요청함 
+  2020-02-21 13:27:44,250 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:27:44,250 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:27:44,251 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:27:44,251 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 24
+  2020-02-21 13:27:44,252 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:27:44,253 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:27:44,253 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:27:44,375 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:27:44,375 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:27:44,375 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:27:44,375 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   2번째 소켓요청 def
+  2020-02-21 13:27:44,376 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 받은 결과  [2번째 소켓요청 def]
+  2020-02-21 13:27:47,376 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 요청함 
+  2020-02-21 13:27:47,377 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:27:47,377 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:27:47,377 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:27:47,378 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 44
+  2020-02-21 13:27:47,379 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:27:47,379 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:27:47,380 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:27:47,519 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:27:47,520 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:27:47,520 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:27:47,520 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 13:27:47,520 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 받은 결과 [뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 13:27:50,521 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 재 요청함 
+  2020-02-21 13:27:50,521 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:27:50,521 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:27:50,521 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:27:50,522 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 23
+  2020-02-21 13:27:50,522 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:27:50,523 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:27:50,524 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:27:50,629 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:27:50,629 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:27:50,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:27:50,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   재요청테스트2 abc
+  2020-02-21 13:27:50,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2이 받은 결과 [재요청테스트2 abc]
+  2020-02-21 13:27:53,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 1
+  2020-02-21 13:27:55,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 2
+  2020-02-21 13:27:57,632 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 3
+  2020-02-21 13:56:12,699 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 13:56:12,700 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 13:56:12,700 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 13:56:15,708 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 13:56:18,710 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 13:56:20,713 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 13:56:20,713 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:56:20,715 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:56:20,716 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:56:20,717 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 13:56:20,718 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:56:20,719 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:56:20,720 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:56:20,892 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:56:20,892 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:56:20,892 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:56:20,893 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 13:56:20,893 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 받은 결과 [1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 13:56:23,893 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 요청함 
+  2020-02-21 13:56:23,893 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:56:23,893 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:56:23,893 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:56:23,893 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 24
+  2020-02-21 13:56:23,894 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:56:23,894 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:56:23,894 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:56:24,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:56:24,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:56:24,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:56:24,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   2번째 소켓요청 def
+  2020-02-21 13:56:24,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 받은 결과  [2번째 소켓요청 def]
+  2020-02-21 13:56:27,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 요청함 
+  2020-02-21 13:56:27,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:56:27,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:56:27,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:56:27,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 44
+  2020-02-21 13:56:27,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:56:27,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:56:27,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:56:27,133 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:56:27,133 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:56:27,133 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:56:27,133 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 13:56:27,133 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 받은 결과 [뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 13:56:30,134 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 재 요청함 
+  2020-02-21 13:56:30,134 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 13:56:30,135 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 13:56:30,135 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 13:56:30,136 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 23
+  2020-02-21 13:56:30,137 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 13:56:30,138 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 13:56:30,138 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 13:56:30,238 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 13:56:30,238 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 13:56:30,238 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 13:56:30,239 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   재요청테스트2 abc
+  2020-02-21 13:56:30,239 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2이 받은 결과 [재요청테스트2 abc]
+  2020-02-21 13:56:33,239 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 1
+  2020-02-21 13:56:35,240 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 2
+  2020-02-21 13:56:37,240 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 3
+  2020-02-21 14:03:43,877 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 14:03:43,878 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 14:03:43,878 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 14:03:46,886 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 14:03:49,887 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 14:03:51,888 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 14:03:51,889 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 14:03:51,891 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 14:03:51,891 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 14:03:51,892 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 14:03:51,893 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 14:03:51,894 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 14:03:51,896 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 14:03:56,220 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 14:03:56,221 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 14:03:56,221 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 14:03:56,221 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 14:03:56,221 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 받은 결과 [1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 14:03:59,222 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 요청함 
+  2020-02-21 14:03:59,223 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 14:03:59,223 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 14:03:59,223 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 14:03:59,224 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 24
+  2020-02-21 14:03:59,224 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 14:03:59,225 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 14:03:59,226 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 14:04:00,490 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 14:04:00,490 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 14:04:00,490 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 14:04:00,491 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   2번째 소켓요청 def
+  2020-02-21 14:04:00,491 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 받은 결과  [2번째 소켓요청 def]
+  2020-02-21 14:04:03,492 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 요청함 
+  2020-02-21 14:04:03,492 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 14:04:03,492 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 14:04:03,492 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 14:04:03,492 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 44
+  2020-02-21 14:04:03,493 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 14:04:03,493 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 14:04:03,493 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 14:04:03,623 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 14:04:03,623 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 14:04:03,623 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 14:04:03,623 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 14:04:03,624 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 받은 결과 [뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 14:04:06,625 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 재 요청함 
+  2020-02-21 14:04:06,625 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 14:04:06,625 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 14:04:06,625 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 14:04:06,625 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 23
+  2020-02-21 14:04:06,626 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 14:04:06,626 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 14:04:06,626 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 14:04:06,711 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 14:04:06,711 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 14:04:06,711 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 14:04:06,712 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   재요청테스트2 abc
+  2020-02-21 14:04:06,712 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2이 받은 결과 [재요청테스트2 abc]
+  2020-02-21 14:04:09,712 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 1
+  2020-02-21 14:04:11,712 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 2
+  2020-02-21 14:04:13,714 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 3
+  2020-02-21 14:20:03,120 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 1
+  2020-02-21 14:20:03,121 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketIp : 127.0.0.1
+  2020-02-21 14:20:03,121 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : socketPort : 23510
+  2020-02-21 14:20:06,129 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 2
+  2020-02-21 14:20:09,129 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect 3
+  2020-02-21 14:20:11,130 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 요청함
+  2020-02-21 14:20:11,130 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 14:20:11,130 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 14:20:11,130 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 14:20:11,130 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 125
+  2020-02-21 14:20:11,130 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 14:20:11,130 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 14:20:11,131 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 14:20:11,277 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 14:20:11,277 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 14:20:11,278 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 14:20:11,278 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              
+  2020-02-21 14:20:11,278 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트1이 받은 결과 [1번째 소켓요청 abc FR01MAGNET0001EMAGNET0001-REPLY.200210                                                              ]
+  2020-02-21 14:20:14,279 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 요청함 
+  2020-02-21 14:20:14,279 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 14:20:14,279 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 14:20:14,279 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 14:20:14,279 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 24
+  2020-02-21 14:20:14,279 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 14:20:14,280 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 14:20:14,280 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 14:20:14,394 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 14:20:14,395 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 14:20:14,395 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 14:20:14,395 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   2번째 소켓요청 def
+  2020-02-21 14:20:14,395 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 받은 결과  [2번째 소켓요청 def]
+  2020-02-21 14:20:17,396 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 요청함 
+  2020-02-21 14:20:17,396 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 14:20:17,396 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 14:20:17,396 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 14:20:17,397 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 44
+  2020-02-21 14:20:17,398 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 14:20:17,398 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 14:20:17,399 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 14:20:17,548 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 14:20:17,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 14:20:17,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 14:20:17,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   뚜영이/인하/인준/가족:엄마:아빠
+  2020-02-21 14:20:17,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트3이 받은 결과 [뚜영이/인하/인준/가족:엄마:아빠]
+  2020-02-21 14:20:20,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2가 재 요청함 
+  2020-02-21 14:20:20,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 14:20:20,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 14:20:20,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 14:20:20,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 23
+  2020-02-21 14:20:20,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 14:20:20,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 14:20:20,549 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 14:20:20,646 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 14:20:20,646 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 14:20:20,646 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 14:20:20,646 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClient] :  전송 메시지 :   재요청테스트2 abc
+  2020-02-21 14:20:20,646 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : 클라이언트2이 받은 결과 [재요청테스트2 abc]
+  2020-02-21 14:20:23,646 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 1
+  2020-02-21 14:20:25,648 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 2
+  2020-02-21 14:20:27,648 [main] [ServerLog] [INFO] - [net.jbongsu.client.RelayClientMain] : connect close send message 3
+  

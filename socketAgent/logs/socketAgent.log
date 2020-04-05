@@ -1,0 +1,49 @@
+2020-04-02 23:32:26,644 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: LogUtil::envPath : 
+  2020-04-02 23:32:26,646 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: KisFTUtils::envPath : 
+  2020-04-02 23:32:26,656 [main] [ServerLog] [ERROR] - [kr.kis.utils.ServerInfoUtil] : .\resources\application.properties (지정된 경로를 찾을 수 없습니다)
+  2020-04-02 23:32:26,662 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : Client 오류 발생!
+  java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at kr.kis.utils.ServerInfoUtil.getSocketServerInfo(ServerInfoUtil.java:337)
+	at kr.kis.utils.KisFTUtils.<init>(KisFTUtils.java:62)
+	at kr.kis.client.KisFtClientMain.main(KisFtClientMain.java:155)
+2020-04-02 23:32:37,929 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: LogUtil::envPath : 
+  2020-04-02 23:32:37,929 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: KisFTUtils::envPath : 
+  2020-04-02 23:32:37,947 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: util.getSocketServerInfo(): 
+  2020-04-02 23:32:37,948 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] :  option is required ::::::: -u "" -p "KIS_FTAgent"
+  2020-04-02 23:32:37,948 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] :  option is required ::::::: -d  "" -p "KIS_FTAgent"
+  2020-04-02 23:32:57,140 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: LogUtil::envPath : 
+  2020-04-02 23:32:57,140 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: KisFTUtils::envPath : 
+  2020-04-02 23:32:57,154 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: util.getSocketServerInfo(): 
+  2020-04-02 23:32:57,155 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] :  option is required ::::::: -u "" -p "KIS_FTAgent"
+  2020-04-02 23:32:57,155 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] :  option is required ::::::: -d  "" -p "KIS_FTAgent"
+  2020-04-02 23:51:12,911 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: LogUtil::envPath : null
+  2020-04-02 23:51:12,912 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: KisFTUtils::envPath : null
+  2020-04-02 23:51:12,926 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: util.getSocketServerInfo(): 
+  2020-04-02 23:51:12,930 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : yymmdd :: 20200402
+  2020-04-02 23:51:12,930 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-01-0226.txt
+  2020-04-02 23:51:12,930 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-02-0226.text
+  2020-04-02 23:51:12,930 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-03-0226.txt
+  2020-04-02 23:51:39,215 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: LogUtil::envPath : null
+  2020-04-02 23:51:39,215 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: KisFTUtils::envPath : null
+  2020-04-02 23:51:39,230 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: util.getSocketServerInfo(): 
+  2020-04-02 23:51:39,234 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : yymmdd :: 20200402
+  2020-04-02 23:51:39,235 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-01-0226.txt
+  2020-04-02 23:51:39,235 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-02-0226.text
+  2020-04-02 23:51:39,235 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-03-0226.txt
+  2020-04-02 23:52:37,166 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: LogUtil::envPath : null
+  2020-04-02 23:52:37,167 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: KisFTUtils::envPath : null
+  2020-04-02 23:52:37,183 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: util.getSocketServerInfo(): 
+  2020-04-02 23:52:55,532 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : yymmdd :: 20200402
+  2020-04-02 23:53:00,214 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-01-0226.txt
+  2020-04-02 23:53:00,217 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-02-0226.text
+  2020-04-02 23:53:00,221 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-03-0226.txt
+  2020-04-02 23:53:37,935 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: LogUtil::envPath : null
+  2020-04-02 23:53:37,936 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: KisFTUtils::envPath : null
+  2020-04-02 23:53:37,955 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : ######### Main :: util.getSocketServerInfo(): 
+  2020-04-02 23:53:53,587 [main] [ServerLog] [INFO] - [kr.kis.client.KisFtClientMain] : yymmdd :: 20200402
+  2020-04-02 23:54:12,005 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-01-0226.txt
+  2020-04-02 23:54:12,009 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-02-0226.text
+  2020-04-02 23:54:12,013 [main] [ServerLog] [INFO] - [kr.kis.utils.SendFileInfoRead] : MAGNET0001-03-0226.txt
+  

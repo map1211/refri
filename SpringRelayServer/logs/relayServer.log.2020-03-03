@@ -1,0 +1,42 @@
+2020-03-03 11:35:28,623 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: hi
+
+  2020-03-03 12:35:34,006 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : #### port :23510
+  2020-03-03 12:35:52,951 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : server connected: /0:0:0:0:0:0:0:1:11979
+  2020-03-03 12:40:55,644 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : server connected: /127.0.0.1:12612
+  2020-03-03 12:41:08,844 [Thread-5] [ServerLog] [INFO] - [net.jbongsu.server.ServerNewConnectionWaiter] : server ServerSocket[addr=0.0.0.0/0.0.0.0,localport=12640] connected back to relay on Socket[addr=/127.0.0.1,port=12641,localport=12640]
+  2020-03-03 12:41:11,493 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: 
+
+  2020-03-03 12:41:11,527 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: 
+
+  2020-03-03 12:41:11,682 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: 
+
+  2020-03-03 12:41:13,343 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: hi
+
+  2020-03-03 12:41:22,460 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: hellow wortldld
+
+  2020-03-03 12:41:24,134 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: 
+
+  2020-03-03 12:41:24,383 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: 
+
+  2020-03-03 12:41:24,597 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: 
+
+  2020-03-03 12:41:27,309 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: hello
+
+  2020-03-03 12:45:29,308 [main] [ServerLog] [INFO] - [net.jbongsu.server.TestRelay] : Doesn't work yet!
+  2020-03-03 12:45:29,309 [main] [ServerLog] [INFO] - [net.jbongsu.server.TestRelay] : RelayThread start
+  2020-03-03 12:45:29,309 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.TestRelay] : RelayThread start()
+  2020-03-03 12:45:31,322 [main] [ServerLog] [INFO] - [net.jbongsu.server.TestRelay] : EchoServerThread start
+  2020-03-03 12:45:31,328 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : server connected: /127.0.0.1:13195
+  2020-03-03 12:45:33,330 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : server connected: /127.0.0.1:13200
+  2020-03-03 12:45:35,334 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : server connected: /127.0.0.1:13205
+  2020-03-03 12:46:06,100 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.EchoServer] : EchoSErver :: getClientResponder :: request :: 
+
+  2020-03-03 17:05:54,063 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : #### port :23590
+  2020-03-03 17:05:55,599 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : #### loop forever, accepting new servers :
+  2020-03-03 17:07:53,112 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : server connected: /127.0.0.1:5520 local port:23590
+  2020-03-03 17:29:20,747 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : ##### ptss thread start
+  2020-03-03 17:29:22,764 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.PassThroughServerSocket] : ###### HostForRelay :: 127.0.0.1:23690
+  2020-03-03 17:29:22,765 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.PassThroughServerSocket] : ###### HostForRelay :: clientPort :23690
+  2020-03-03 17:31:14,223 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : #### port :23590
+  2020-03-03 17:31:14,223 [main] [ServerLog] [INFO] - [net.jbongsu.server.Relay] : #### loop forever, accepting new servers :
+  

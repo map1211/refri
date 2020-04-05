@@ -1,0 +1,955 @@
+2020-03-05 11:04:22,475 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 11:04:22,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 11:04:22,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 11:04:22,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 11:04:22,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 11:04:22,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 11:04:22,485 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 11:04:22,485 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 11:04:22,486 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 11:04:22,486 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:06:54,183 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 11:06:54,186 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 11:06:54,186 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 11:06:54,186 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 11:06:54,186 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 11:06:54,186 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 11:06:54,193 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 11:06:54,193 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 11:06:54,193 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 11:06:54,193 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:11:25,568 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 11:11:25,570 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 11:11:25,570 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 11:11:25,570 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 11:11:25,571 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 11:11:25,571 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 11:11:25,578 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 11:11:25,579 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 11:11:25,579 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 11:11:25,579 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:13:03,340 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 11:13:03,343 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 11:13:03,343 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 11:13:03,343 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 11:13:03,343 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 11:13:03,343 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 11:13:03,350 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 11:13:03,350 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 11:13:03,351 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 11:13:03,351 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:14:00,701 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:14:00,706 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@1eb44e46
+  2020-03-05 11:14:00,708 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@6504e3b2
+  2020-03-05 11:14:00,708 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:14:00,708 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:14:00,708 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:14:00,709 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:14:00,712 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:14:00 KST 2020
+  2020-03-05 11:14:00,712 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:14:00 KST 2020
+  2020-03-05 11:14:01,702 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:14:01,702 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:14:01,702 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:33:56,604 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 11:33:56,607 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 11:33:56,607 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 11:33:56,607 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 11:33:56,607 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 11:33:56,607 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 11:33:56,614 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 11:33:56,614 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 11:33:56,614 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 11:33:56,614 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:34:10,596 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:34:10,601 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@1eb44e46
+  2020-03-05 11:34:10,602 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@6504e3b2
+  2020-03-05 11:34:10,603 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:34:10,603 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:34:10,603 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:34:10,603 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:34:10,607 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:34:10 KST 2020
+  2020-03-05 11:34:10,607 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:34:10 KST 2020
+  2020-03-05 11:34:11,597 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:34:11,597 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-EDDCD.20200305]
+  2020-03-05 11:34:11,597 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:34:11,606 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:34:11,606 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:34:11,606 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:36:32,817 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:36:32,818 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@1c4af82c
+  2020-03-05 11:36:32,819 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@379619aa
+  2020-03-05 11:36:32,819 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:36:32,820 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:36:32,820 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:36:32,820 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:36:32,820 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:36:32 KST 2020
+  2020-03-05 11:36:32,821 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:36:32 KST 2020
+  2020-03-05 11:36:33,824 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:36:33,824 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-EDDCD.20200305]
+  2020-03-05 11:36:33,828 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:36:33,834 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:36:33,835 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:36:33,835 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:37:08,496 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:37:08,497 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@156643d4
+  2020-03-05 11:37:08,497 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@123a439b
+  2020-03-05 11:37:08,498 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:37:08,498 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:37:08,498 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:37:08,498 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:37:08 KST 2020
+  2020-03-05 11:37:08,498 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:37:08,499 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:37:08 KST 2020
+  2020-03-05 11:37:09,503 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:37:09,503 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-EDDCD.20200305]
+  2020-03-05 11:37:09,504 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:37:09,516 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:37:09,517 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:37:09,517 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:38:21,069 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:38:21,070 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@36aa7bc2
+  2020-03-05 11:38:21,071 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@76ccd017
+  2020-03-05 11:38:21,071 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:38:21,071 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:38:21,072 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:38:21,072 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:38:21,072 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:38:21,072 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:38:21 KST 2020
+  2020-03-05 11:38:21,072 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:38:21 KST 2020
+  2020-03-05 11:38:21,074 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@4361bd48
+  2020-03-05 11:38:21,074 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@53bd815b
+  2020-03-05 11:38:21,075 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:38:21,075 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:38:21,075 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:38:21,075 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:38:21,076 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:38:21 KST 2020
+  2020-03-05 11:38:21,076 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:38:21,076 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:38:21 KST 2020
+  2020-03-05 11:38:21,078 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@4926097b
+  2020-03-05 11:38:21,078 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@762efe5d
+  2020-03-05 11:38:21,078 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:38:21,078 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:38:21,079 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:38:21,079 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:38:21,079 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:38:21 KST 2020
+  2020-03-05 11:38:21,079 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:38:21 KST 2020
+  2020-03-05 11:38:22,077 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:38:22,077 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-EDDCD.20200305]
+  2020-03-05 11:38:22,077 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:38:22,084 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:38:22,085 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:38:22,085 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:38:27,099 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:38:27,100 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-REPLY.20200305]
+  2020-03-05 11:38:27,100 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:38:27,101 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [45]
+  2020-03-05 11:38:27,101 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [뚜영이/인하/인준/가족:엄마:아빠 ]
+  2020-03-05 11:38:27,101 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:38:31,130 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : send error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientSendTask.send(RClientSendTask.java:151)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:121)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:41:31,126 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:41:31,127 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@3830f1c0
+  2020-03-05 11:41:31,128 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@39ed3c8d
+  2020-03-05 11:41:31,128 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:41:31,128 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:41:31,128 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:41:31,128 [pool-1-thread-14] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:41:31,129 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:41:31,129 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:41:31 KST 2020
+  2020-03-05 11:41:31,129 [pool-1-thread-14] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:41:31 KST 2020
+  2020-03-05 11:41:31,130 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@2d363fb3
+  2020-03-05 11:41:31,131 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@7d6f77cc
+  2020-03-05 11:41:31,132 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:41:31,132 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:41:31,132 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:41:31,132 [pool-1-thread-16] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:41:31,132 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:41:31,132 [pool-1-thread-16] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:41:31 KST 2020
+  2020-03-05 11:41:31,132 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:41:31 KST 2020
+  2020-03-05 11:41:31,133 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@6f75e721
+  2020-03-05 11:41:31,134 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@69222c14
+  2020-03-05 11:41:31,135 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:41:31,135 [pool-1-thread-18] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:41:31,135 [pool-1-thread-17] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:41:31,135 [pool-1-thread-18] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:41:31 KST 2020
+  2020-03-05 11:41:31,135 [pool-1-thread-17] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:41:31,136 [pool-1-thread-17] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:41:31 KST 2020
+  2020-03-05 11:41:32,134 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:41:32,135 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-EDDCD.20200305]
+  2020-03-05 11:41:32,136 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:41:32,148 [pool-1-thread-14] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:41:32,148 [pool-1-thread-14] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:41:32,148 [pool-1-thread-14] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:41:35,170 [pool-1-thread-17] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : send error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientSendTask.send(RClientSendTask.java:151)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:121)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:41:35,170 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : send error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientSendTask.send(RClientSendTask.java:151)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:121)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:42:04,901 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:42:04,903 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@470e2030
+  2020-03-05 11:42:04,904 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@3fb4f649
+  2020-03-05 11:42:04,904 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:42:04,904 [pool-1-thread-19] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:42:04,904 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:42:04,904 [pool-1-thread-20] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:42:04,905 [pool-1-thread-19] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:42:04,905 [pool-1-thread-20] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:42:04 KST 2020
+  2020-03-05 11:42:04,905 [pool-1-thread-19] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:42:04 KST 2020
+  2020-03-05 11:42:04,906 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@16b3fc9e
+  2020-03-05 11:42:04,906 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@e2d56bf
+  2020-03-05 11:42:04,907 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:42:04,907 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:42:04,907 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:42:04,907 [pool-1-thread-22] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:42:04,907 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:42:04,907 [pool-1-thread-22] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:42:04 KST 2020
+  2020-03-05 11:42:04,907 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:42:04 KST 2020
+  2020-03-05 11:42:04,908 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@5fdef03a
+  2020-03-05 11:42:04,909 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@3b22cdd0
+  2020-03-05 11:42:04,909 [pool-1-thread-23] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:42:04,909 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:42:04,909 [pool-1-thread-23] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:42:04,909 [pool-1-thread-24] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:42:04,910 [pool-1-thread-23] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:42:04 KST 2020
+  2020-03-05 11:42:04,910 [pool-1-thread-24] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:42:04 KST 2020
+  2020-03-05 11:42:05,911 [pool-1-thread-19] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:42:05,912 [pool-1-thread-19] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-EDDCD.20200305]
+  2020-03-05 11:42:05,912 [pool-1-thread-19] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:42:05,923 [pool-1-thread-20] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:42:05,923 [pool-1-thread-20] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:42:05,923 [pool-1-thread-20] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:42:12,930 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : send error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientSendTask.send(RClientSendTask.java:151)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:121)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:42:12,930 [pool-1-thread-23] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : send error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientSendTask.send(RClientSendTask.java:151)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:121)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:42:41,123 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:42:41,124 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@65ae6ba4
+  2020-03-05 11:42:41,125 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@48cf768c
+  2020-03-05 11:42:41,125 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:42:41,125 [pool-1-thread-25] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:42:41,126 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:42:41,126 [pool-1-thread-26] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:42:41,126 [pool-1-thread-26] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:42:41 KST 2020
+  2020-03-05 11:42:41,126 [pool-1-thread-25] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:42:41,127 [pool-1-thread-25] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:42:41 KST 2020
+  2020-03-05 11:42:41,128 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@4aa8f0b4
+  2020-03-05 11:42:41,129 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@7960847b
+  2020-03-05 11:42:41,129 [pool-1-thread-27] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:42:41,129 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:42:41,130 [pool-1-thread-28] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:42:41,130 [pool-1-thread-27] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:42:41,130 [pool-1-thread-28] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:42:41 KST 2020
+  2020-03-05 11:42:41,130 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:42:41,130 [pool-1-thread-27] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:42:41 KST 2020
+  2020-03-05 11:42:41,132 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@512ddf17
+  2020-03-05 11:42:41,132 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@2c13da15
+  2020-03-05 11:42:41,133 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:42:41,133 [pool-1-thread-29] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:42:41,133 [pool-1-thread-30] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:42:41,133 [pool-1-thread-29] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:42:41,133 [pool-1-thread-30] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:42:41 KST 2020
+  2020-03-05 11:42:41,133 [pool-1-thread-29] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:42:41 KST 2020
+  2020-03-05 11:42:42,126 [pool-1-thread-25] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:42:42,126 [pool-1-thread-25] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-EDDCD.20200305]
+  2020-03-05 11:42:42,126 [pool-1-thread-25] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:42:42,132 [pool-1-thread-26] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:42:42,132 [pool-1-thread-26] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:42:42,132 [pool-1-thread-26] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:42:51,136 [pool-1-thread-27] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:42:51,136 [pool-1-thread-27] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-REPLY.20200305]
+  2020-03-05 11:42:51,136 [pool-1-thread-27] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:42:51,149 [pool-1-thread-29] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : send error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientSendTask.send(RClientSendTask.java:151)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:121)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:42:51,149 [pool-1-thread-27] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : send error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientSendTask.send(RClientSendTask.java:151)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:121)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:43:46,128 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:43:46,129 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@9e89d68
+  2020-03-05 11:43:46,129 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@3b192d32
+  2020-03-05 11:43:46,130 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:43:46,130 [pool-1-thread-31] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:43:46,130 [pool-1-thread-32] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:43:46,130 [pool-1-thread-31] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:43:46,130 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:43:46,130 [pool-1-thread-31] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:43:46 KST 2020
+  2020-03-05 11:43:46,130 [pool-1-thread-32] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:43:46 KST 2020
+  2020-03-05 11:43:46,131 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@7c53a9eb
+  2020-03-05 11:43:46,132 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@ed17bee
+  2020-03-05 11:43:46,132 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:43:46,132 [pool-1-thread-33] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:43:46,132 [pool-1-thread-34] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:43:46,132 [pool-1-thread-33] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:43:46,132 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:43:46,133 [pool-1-thread-33] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:43:46 KST 2020
+  2020-03-05 11:43:46,133 [pool-1-thread-34] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:43:46 KST 2020
+  2020-03-05 11:43:46,134 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@11028347
+  2020-03-05 11:43:46,134 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@14899482
+  2020-03-05 11:43:46,135 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:43:46,135 [pool-1-thread-35] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:43:46,135 [pool-1-thread-36] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:43:46,135 [pool-1-thread-35] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:43:46,135 [pool-1-thread-36] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:43:46 KST 2020
+  2020-03-05 11:43:46,135 [pool-1-thread-35] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:43:46 KST 2020
+  2020-03-05 11:43:48,131 [pool-1-thread-33] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:43:48,131 [pool-1-thread-33] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-REPLY.20200305]
+  2020-03-05 11:43:48,131 [pool-1-thread-33] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:43:48,136 [pool-1-thread-33] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : send error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientSendTask.send(RClientSendTask.java:151)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:121)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:43:48,136 [pool-1-thread-35] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : send error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientSendTask.send(RClientSendTask.java:151)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:121)
+	at net.jbongsu.mserver.RClientSendTask.call(RClientSendTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:44:19,271 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:44:19,272 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@2f333739
+  2020-03-05 11:44:19,272 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@77468bd9
+  2020-03-05 11:44:19,272 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:44:19,272 [pool-1-thread-37] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:44:19,272 [pool-1-thread-38] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:44:19,272 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:44:19,273 [pool-1-thread-38] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:44:19 KST 2020
+  2020-03-05 11:44:19,273 [pool-1-thread-37] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:44:19,273 [pool-1-thread-37] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:44:19 KST 2020
+  2020-03-05 11:44:19,274 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@7a7b0070
+  2020-03-05 11:44:19,274 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@39a054a5
+  2020-03-05 11:44:19,275 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:44:19,275 [pool-1-thread-39] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:44:19,275 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:44:19,275 [pool-1-thread-40] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:44:19,275 [pool-1-thread-39] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:44:19,275 [pool-1-thread-40] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:44:19 KST 2020
+  2020-03-05 11:44:19,275 [pool-1-thread-39] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:44:19 KST 2020
+  2020-03-05 11:44:19,276 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@2437c6dc
+  2020-03-05 11:44:19,277 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@1f89ab83
+  2020-03-05 11:44:19,277 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:44:19,280 [pool-1-thread-42] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:44:19,280 [pool-1-thread-41] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:44:19,280 [pool-1-thread-42] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:44:19 KST 2020
+  2020-03-05 11:44:19,281 [pool-1-thread-41] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:44:19,281 [pool-1-thread-41] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:44:19 KST 2020
+  2020-03-05 11:44:21,273 [pool-1-thread-39] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:44:21,273 [pool-1-thread-39] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-REPLY.20200305]
+  2020-03-05 11:44:21,273 [pool-1-thread-39] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:44:54,595 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:44:54,596 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@7b1d7fff
+  2020-03-05 11:44:54,597 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@299a06ac
+  2020-03-05 11:44:54,597 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:44:54,597 [pool-1-thread-43] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:44:54,597 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:44:54,597 [pool-1-thread-44] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:44:54,597 [pool-1-thread-43] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:44:54,598 [pool-1-thread-44] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:44:54 KST 2020
+  2020-03-05 11:44:54,598 [pool-1-thread-43] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:44:54 KST 2020
+  2020-03-05 11:44:54,598 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@7b3300e5
+  2020-03-05 11:44:54,599 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@2e5c649
+  2020-03-05 11:44:54,599 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:44:54,599 [pool-1-thread-45] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:44:54,599 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:44:54,600 [pool-1-thread-45] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:44:54,599 [pool-1-thread-46] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:44:54,600 [pool-1-thread-45] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:44:54 KST 2020
+  2020-03-05 11:44:54,600 [pool-1-thread-46] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:44:54 KST 2020
+  2020-03-05 11:44:54,601 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@1055e4af
+  2020-03-05 11:44:54,601 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@3caeaf62
+  2020-03-05 11:44:54,602 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:44:54,602 [pool-1-thread-47] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:44:54,602 [pool-1-thread-48] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:44:54,602 [pool-1-thread-47] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:44:54,602 [pool-1-thread-48] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:44:54 KST 2020
+  2020-03-05 11:44:54,602 [pool-1-thread-47] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:44:54 KST 2020
+  2020-03-05 11:44:54,602 [pool-1-thread-47] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [45]
+  2020-03-05 11:44:54,603 [pool-1-thread-47] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [뚜영이/인하/인준/가족:엄마:아빠 ]
+  2020-03-05 11:44:54,603 [pool-1-thread-47] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:45:45,920 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:45:45,921 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@5577140b
+  2020-03-05 11:45:45,921 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@1c6b6478
+  2020-03-05 11:45:45,922 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:45:45,922 [pool-1-thread-49] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:45:45,922 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:45:45,922 [pool-1-thread-49] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:45:45,922 [pool-1-thread-50] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:45:45,922 [pool-1-thread-49] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:45:45 KST 2020
+  2020-03-05 11:45:45,922 [pool-1-thread-50] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:45:45 KST 2020
+  2020-03-05 11:45:45,923 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@277c0f21
+  2020-03-05 11:45:45,923 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@6073f712
+  2020-03-05 11:45:45,924 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:45:45,924 [pool-1-thread-51] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:45:45,924 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:45:45,924 [pool-1-thread-51] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:45:45,924 [pool-1-thread-52] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:45:45,924 [pool-1-thread-51] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:45:45 KST 2020
+  2020-03-05 11:45:45,924 [pool-1-thread-52] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:45:45 KST 2020
+  2020-03-05 11:45:45,925 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@7a46a697
+  2020-03-05 11:45:45,925 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@5f205aa
+  2020-03-05 11:45:45,926 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:45:45,926 [pool-1-thread-53] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:45:45,926 [pool-1-thread-54] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:45:45,926 [pool-1-thread-53] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:45:45,926 [pool-1-thread-53] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:45:45 KST 2020
+  2020-03-05 11:45:45,926 [pool-1-thread-54] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:45:45 KST 2020
+  2020-03-05 11:45:45,926 [pool-1-thread-53] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [45]
+  2020-03-05 11:45:45,927 [pool-1-thread-53] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [뚜영이/인하/인준/가족:엄마:아빠 ]
+  2020-03-05 11:45:45,927 [pool-1-thread-53] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:46:18,030 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 11:46:18,032 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 11:46:18,033 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 11:46:18,033 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 11:46:18,033 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 11:46:18,033 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 11:46:18,040 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 11:46:18,040 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 11:46:18,040 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 11:46:18,040 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:46:28,147 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:46:28,151 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@1eb44e46
+  2020-03-05 11:46:28,152 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@6504e3b2
+  2020-03-05 11:46:28,153 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:46:28,153 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:46:28,153 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:46:28,153 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:46:28,154 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:46:28,155 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@1c4af82c
+  2020-03-05 11:46:28,155 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@379619aa
+  2020-03-05 11:46:28,156 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:46:28,156 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:46:28,156 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:46:28,156 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:46:28,157 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:46:28,157 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:46:28 KST 2020
+  2020-03-05 11:46:28,157 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:46:28 KST 2020
+  2020-03-05 11:46:28,158 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:46:28 KST 2020
+  2020-03-05 11:46:28,158 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:46:28 KST 2020
+  2020-03-05 11:46:28,159 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@156643d4
+  2020-03-05 11:46:28,160 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@123a439b
+  2020-03-05 11:46:28,160 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:46:28,160 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:46:28,161 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:46:28,161 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:46:28,162 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:46:28 KST 2020
+  2020-03-05 11:46:28,162 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:46:28 KST 2020
+  2020-03-05 11:46:28,162 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [45]
+  2020-03-05 11:46:28,162 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [뚜영이/인하/인준/가족:엄마:아빠 ]
+  2020-03-05 11:46:28,162 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:46:56,407 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [45]
+  2020-03-05 11:46:56,407 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:46:56,407 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:46:59,458 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : recv error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientRecvTask.recv(RClientRecvTask.java:95)
+	at net.jbongsu.mserver.RClientRecvTask.call(RClientRecvTask.java:71)
+	at net.jbongsu.mserver.RClientRecvTask.call(RClientRecvTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:46:59,460 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : recv error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientRecvTask.recv(RClientRecvTask.java:95)
+	at net.jbongsu.mserver.RClientRecvTask.call(RClientRecvTask.java:71)
+	at net.jbongsu.mserver.RClientRecvTask.call(RClientRecvTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:46:59,460 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : recv error : Connection reset
+  java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:127)
+	at net.jbongsu.mserver.RClientRecvTask.recv(RClientRecvTask.java:95)
+	at net.jbongsu.mserver.RClientRecvTask.call(RClientRecvTask.java:71)
+	at net.jbongsu.mserver.RClientRecvTask.call(RClientRecvTask.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-03-05 11:47:12,986 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:47:12,987 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@36aa7bc2
+  2020-03-05 11:47:12,988 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@76ccd017
+  2020-03-05 11:47:12,988 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:47:12,988 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:47:12,989 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:47:12,990 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@4361bd48
+  2020-03-05 11:47:12,991 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@53bd815b
+  2020-03-05 11:47:12,992 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:47:12,992 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:47:12,992 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:47:12,994 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:47:12 KST 2020
+  2020-03-05 11:47:12,993 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:47:12,993 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:47:12 KST 2020
+  2020-03-05 11:47:12,995 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:47:12,994 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:47:12,994 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:47:12,995 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:47:12 KST 2020
+  2020-03-05 11:47:12,995 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:47:12 KST 2020
+  2020-03-05 11:47:12,997 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@4926097b
+  2020-03-05 11:47:12,998 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@762efe5d
+  2020-03-05 11:47:12,998 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:47:12,998 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:47:12,998 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:47:12,998 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:47:12,999 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:47:12 KST 2020
+  2020-03-05 11:47:12,999 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:47:12 KST 2020
+  2020-03-05 11:47:12,999 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [45]
+  2020-03-05 11:47:12,999 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [뚜영이/인하/인준/가족:엄마:아빠 ]
+  2020-03-05 11:47:13,000 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:47:13,020 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [45]
+  2020-03-05 11:47:13,020 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:47:13,020 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:48:03,877 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:48:03,878 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@3830f1c0
+  2020-03-05 11:48:03,878 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@39ed3c8d
+  2020-03-05 11:48:03,879 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:48:03,879 [pool-1-thread-14] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:48:03,879 [pool-1-thread-14] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:48:03 KST 2020
+  2020-03-05 11:48:03,879 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:48:03,879 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:48:03,880 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:48:03,880 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:48:03 KST 2020
+  2020-03-05 11:48:03,881 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@2d363fb3
+  2020-03-05 11:48:03,881 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@7d6f77cc
+  2020-03-05 11:48:03,882 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:48:03,882 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:48:03,882 [pool-1-thread-16] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:48:03,882 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:48:03,882 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:48:03,882 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:48:03 KST 2020
+  2020-03-05 11:48:03,887 [pool-1-thread-16] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:48:03 KST 2020
+  2020-03-05 11:48:03,888 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@6f75e721
+  2020-03-05 11:48:03,888 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@69222c14
+  2020-03-05 11:48:03,889 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:48:03,889 [pool-1-thread-18] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:48:03,889 [pool-1-thread-17] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:48:03,889 [pool-1-thread-18] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:48:03 KST 2020
+  2020-03-05 11:48:03,889 [pool-1-thread-17] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:48:03,890 [pool-1-thread-17] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:48:03 KST 2020
+  2020-03-05 11:48:05,880 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:48:05,880 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-REPLY.20200305]
+  2020-03-05 11:48:05,880 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:48:05,891 [pool-1-thread-16] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:48:05,891 [pool-1-thread-16] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:48:05,891 [pool-1-thread-16] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:48:40,731 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:48:40,732 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@470e2030
+  2020-03-05 11:48:40,732 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@3fb4f649
+  2020-03-05 11:48:40,733 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:48:40,733 [pool-1-thread-19] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:48:40,733 [pool-1-thread-20] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:48:40,733 [pool-1-thread-19] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:48:40,733 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:48:40,733 [pool-1-thread-19] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:48:40 KST 2020
+  2020-03-05 11:48:40,733 [pool-1-thread-20] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:48:40 KST 2020
+  2020-03-05 11:48:40,735 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@16b3fc9e
+  2020-03-05 11:48:40,735 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@e2d56bf
+  2020-03-05 11:48:40,736 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:48:40,736 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:48:40,736 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:48:40,736 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:48:40,736 [pool-1-thread-22] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:48:40,736 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:48:40 KST 2020
+  2020-03-05 11:48:40,737 [pool-1-thread-22] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:48:40 KST 2020
+  2020-03-05 11:48:40,738 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@5fdef03a
+  2020-03-05 11:48:40,738 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@3b22cdd0
+  2020-03-05 11:48:40,739 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:48:40,739 [pool-1-thread-23] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:48:40,739 [pool-1-thread-24] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:48:40,739 [pool-1-thread-23] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:48:40,739 [pool-1-thread-24] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:48:40 KST 2020
+  2020-03-05 11:48:40,739 [pool-1-thread-23] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:48:40 KST 2020
+  2020-03-05 11:48:42,733 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:48:42,733 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-REPLY.20200305]
+  2020-03-05 11:48:42,733 [pool-1-thread-21] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:48:42,743 [pool-1-thread-22] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:48:42,743 [pool-1-thread-22] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:48:42,743 [pool-1-thread-22] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:49:03,413 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 11:49:03,415 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 11:49:03,415 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 11:49:03,415 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 11:49:03,415 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 11:49:03,416 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 11:49:03,423 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 11:49:03,423 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 11:49:03,423 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 11:49:03,423 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:49:18,004 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:49:18,008 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@1eb44e46
+  2020-03-05 11:49:18,009 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@6504e3b2
+  2020-03-05 11:49:18,010 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:49:18,010 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:49:18,010 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:49:18,010 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:49:18,010 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:49:18,012 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@1c4af82c
+  2020-03-05 11:49:18,013 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@379619aa
+  2020-03-05 11:49:18,014 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:49:18,014 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:49:18,015 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:49:18,015 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:49:18,017 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:49:18 KST 2020
+  2020-03-05 11:49:18,017 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:49:18 KST 2020
+  2020-03-05 11:49:18,017 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:49:18 KST 2020
+  2020-03-05 11:49:18,017 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@156643d4
+  2020-03-05 11:49:18,017 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:49:18,018 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:49:18 KST 2020
+  2020-03-05 11:49:18,019 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@123a439b
+  2020-03-05 11:49:18,019 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:49:18,019 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:49:18,020 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:49:18,020 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:49:18,021 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:49:18 KST 2020
+  2020-03-05 11:49:18,021 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:49:18 KST 2020
+  2020-03-05 11:49:20,013 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:49:20,014 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-REPLY.20200305]
+  2020-03-05 11:49:20,015 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:49:20,026 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:49:20,026 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:49:20,026 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 11:50:20,128 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:50:20,128 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@36aa7bc2
+  2020-03-05 11:50:20,129 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@76ccd017
+  2020-03-05 11:50:20,130 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:50:20,130 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:50:20,130 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:50:20,130 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:50:20,130 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:50:20 KST 2020
+  2020-03-05 11:50:20,131 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:50:20,131 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:50:20 KST 2020
+  2020-03-05 11:50:20,132 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@4361bd48
+  2020-03-05 11:50:20,133 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@53bd815b
+  2020-03-05 11:50:20,133 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:50:20,134 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:50:20,134 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:50:20 KST 2020
+  2020-03-05 11:50:20,134 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:50:20,133 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:50:20,135 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:50:20 KST 2020
+  2020-03-05 11:50:20,135 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 11:50:20,136 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientSendTask@4926097b
+  2020-03-05 11:50:20,137 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientRecvTask@762efe5d
+  2020-03-05 11:50:20,137 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 11:50:20,138 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : client 정상 연결 
+  2020-03-05 11:50:20,137 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : Send...
+  2020-03-05 11:50:20,138 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] : RClientRecvTask : now.toString() : Thu Mar 05 11:50:20 KST 2020
+  2020-03-05 11:50:20,138 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : ### 소켓 연결 정상 
+  2020-03-05 11:50:20,138 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] : RClientSendTask : now.toString() : Thu Mar 05 11:50:20 KST 2020
+  2020-03-05 11:50:22,130 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  bytesRead : [40]
+  2020-03-05 11:50:22,130 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  수신 :  msg : [FR01SCOURT0001ESCOURT0001-REPLY.20200305]
+  2020-03-05 11:50:22,130 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientSendTask] :  다음 릴레이서버로 송신: 
+  2020-03-05 11:50:22,138 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  bytesRead : [40]
+  2020-03-05 11:50:22,138 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  relay 서버로부터 수신 :  msg : []
+  2020-03-05 11:50:22,138 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientRecvTask] :  클라이언트로 송신 : 
+  2020-03-05 15:03:53,556 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 15:03:53,559 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 15:03:53,559 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 15:03:53,559 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 15:03:53,559 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 15:03:53,559 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 15:03:53,568 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 15:03:53,568 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 15:03:53,569 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 15:03:53,569 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:04:53,184 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:04:53,189 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:04:53,189 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 ...
+  2020-03-05 15:04:53,189 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 ...
+  2020-03-05 15:04:53,189 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:04:53,191 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 ...
+  2020-03-05 15:04:53,191 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 ...
+  2020-03-05 15:04:53,191 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:04:53,191 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:04:53,192 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 ...
+  2020-03-05 15:04:53,193 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 ...
+  2020-03-05 15:04:53,192 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:08:58,804 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 15:08:58,806 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 15:08:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 15:08:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 15:08:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 15:08:58,807 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 15:08:58,813 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 15:08:58,814 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 15:08:58,814 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 15:08:58,814 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:09:07,959 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:09:09,964 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : server error
+  java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at net.jbongsu.mserver.TPooledServer.main(TPooledServer.java:91)
+2020-03-05 15:09:09,966 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:09:09,966 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:09:11,967 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : server error
+  java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at net.jbongsu.mserver.TPooledServer.main(TPooledServer.java:91)
+2020-03-05 15:09:11,968 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:09:11,968 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:09:13,971 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : server error
+  java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at net.jbongsu.mserver.TPooledServer.main(TPooledServer.java:91)
+2020-03-05 15:09:13,971 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:11:01,659 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:11:01,661 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@cac736f
+  2020-03-05 15:11:01,662 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@5e265ba4
+  2020-03-05 15:11:01,662 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:11:01,663 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:11:01,663 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:11:01,663 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:11:01,664 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@1175e2db
+  2020-03-05 15:11:01,664 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@36aa7bc2
+  2020-03-05 15:11:01,664 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:11:01,664 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:11:01,664 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:11:01,664 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:11:01,665 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@26f0a63f
+  2020-03-05 15:11:01,665 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@4361bd48
+  2020-03-05 15:11:01,665 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:11:01,665 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:11:01,665 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:13:03,475 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 15:13:03,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: FN
+  2020-03-05 15:13:03,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 15:13:03,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23590
+  2020-03-05 15:13:03,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 15:13:03,478 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 15:13:03,485 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 15:13:03,485 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23690
+  2020-03-05 15:13:03,485 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 15:13:03,485 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:13:38,699 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:13:38,702 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@515f550a
+  2020-03-05 15:13:38,703 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@626b2d4a
+  2020-03-05 15:13:38,704 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:13:38,704 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:13:38,704 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:13:38,704 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:13:38,704 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:13:38,704 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:13:38,705 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@cac736f
+  2020-03-05 15:13:38,705 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@5e265ba4
+  2020-03-05 15:13:38,706 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:13:38,706 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:13:38,706 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:13:38,706 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:13:38,706 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:13:38,706 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:13:38,708 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@7de26db8
+  2020-03-05 15:13:38,708 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@1175e2db
+  2020-03-05 15:13:38,708 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:13:38,708 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:13:38,709 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:13:38,709 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:13:38,710 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:15:53,419 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:15:53,420 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@182decdb
+  2020-03-05 15:15:53,420 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@26f0a63f
+  2020-03-05 15:15:53,424 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:15:53,424 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:15:53,424 [pool-1-thread-8] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:15:53,424 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:15:53,425 [pool-1-thread-7] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:15:53,424 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:15:53,426 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@2401f4c3
+  2020-03-05 15:15:53,426 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@7637f22
+  2020-03-05 15:15:53,426 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:15:53,426 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:15:53,427 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:15:53,427 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:15:53,427 [pool-1-thread-10] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:15:53,427 [pool-1-thread-9] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:15:53,428 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@5d22bbb7
+  2020-03-05 15:15:53,428 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@41a4555e
+  2020-03-05 15:15:53,429 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:15:53,429 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:15:53,430 [pool-1-thread-11] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:15:53,430 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:15:53,430 [pool-1-thread-12] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:16:28,954 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:16:28,955 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@71dac704
+  2020-03-05 15:16:28,955 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@123772c4
+  2020-03-05 15:16:28,956 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:16:28,956 [pool-1-thread-14] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:16:28,956 [pool-1-thread-14] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:16:28,956 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:16:28,956 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:16:28,957 [pool-1-thread-13] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:16:28,958 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@5aaa6d82
+  2020-03-05 15:16:28,958 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@73a28541
+  2020-03-05 15:16:28,958 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:16:28,958 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:16:28,959 [pool-1-thread-15] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:16:28,958 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:16:28,958 [pool-1-thread-16] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:16:28,959 [pool-1-thread-16] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:16:28,960 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@606d8acf
+  2020-03-05 15:16:28,960 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@782830e
+  2020-03-05 15:16:28,960 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:16:28,960 [pool-1-thread-17] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:16:28,960 [pool-1-thread-18] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:16:28,960 [pool-1-thread-17] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:16:28,961 [pool-1-thread-18] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:30:56,264 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 15:30:56,267 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: ST
+  2020-03-05 15:30:56,267 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 15:30:56,267 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23510
+  2020-03-05 15:30:56,267 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 15:30:56,267 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 15:30:56,274 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 15:30:56,275 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 33590
+  2020-03-05 15:30:56,275 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 15:30:56,275 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:32:35,390 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-05 15:32:35,393 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Type :: ST
+  2020-03-05 15:32:35,393 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-05 15:32:35,393 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server Listen port :: 23510
+  2020-03-05 15:32:35,393 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-05 15:32:35,393 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-05 15:32:35,402 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Ip :: 127.0.0.1
+  2020-03-05 15:32:35,402 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server Listen port :: 23590
+  2020-03-05 15:32:35,402 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-05 15:32:35,402 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:33:15,034 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:33:15,038 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@515f550a
+  2020-03-05 15:33:15,038 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@626b2d4a
+  2020-03-05 15:33:15,039 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:33:15,039 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:33:15,040 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:33:15,039 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:33:15,040 [pool-1-thread-2] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:33:15,040 [pool-1-thread-1] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:33:15,040 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@cac736f
+  2020-03-05 15:33:15,041 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@5e265ba4
+  2020-03-05 15:33:15,041 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:33:15,041 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:33:15,041 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:33:15,041 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : ServerSocket :: 
+  2020-03-05 15:33:15,042 [pool-1-thread-4] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:33:15,042 [pool-1-thread-3] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:33:15,043 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client sendtask net.jbongsu.mserver.RClientInOutTask@7de26db8
+  2020-03-05 15:33:15,043 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client recvtask net.jbongsu.mserver.RClientInOutTask@1175e2db
+  2020-03-05 15:33:15,043 [main] [ServerLog] [INFO] - [net.jbongsu.mserver.TPooledServer] : Client accept 대기 
+  2020-03-05 15:33:15,043 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:33:15,044 [pool-1-thread-6] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  2020-03-05 15:33:15,043 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] :  RclientTask :: input -> output 전송 start ...
+  2020-03-05 15:33:15,045 [pool-1-thread-5] [ServerLog] [INFO] - [net.jbongsu.mserver.RClientInOutTask] : inputstream -> outputstream 복사
+  

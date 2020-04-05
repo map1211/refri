@@ -1,0 +1,14 @@
+2020-03-30 20:33:53,900 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : ######### TPooledServer() :: envPath : .
+  2020-03-30 20:36:08,537 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : ######### TPooledServer() :: envPath : .
+  2020-03-30 20:36:26,496 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : ######### TPooledServer() :: envPath : .
+  2020-03-30 20:36:26,501 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : Thread Pool 생성  :: pool 수 : 1000
+  2020-03-30 20:36:26,504 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : Server Type :: ST
+  2020-03-30 20:36:26,504 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : Server Ip :: 127.0.0.1
+  2020-03-30 20:36:26,504 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : Server Listen port :: 23510
+  2020-03-30 20:36:26,504 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : Server encodeType :: UTF-8
+  2020-03-30 20:36:26,504 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : ServerSocket 생성 :: 
+  2020-03-30 20:36:26,511 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : relay Server Ip :: 210.112.100.97
+  2020-03-30 20:36:26,511 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : relay Server Listen port :: 9029
+  2020-03-30 20:36:26,511 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : relay Server encodeType :: UTF-8
+  2020-03-30 20:36:26,511 [main] [ServerLog] [INFO] - [kr.kis.mserver.TPooledServer] : Client accept 대기 
+  
