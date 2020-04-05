@@ -41,8 +41,10 @@ public class ServerInfoUtil {
 		if("".equals(envPath)) envPath = ".";
 		
 		try {
-//			resources = new FileReader( envPath + "/resources/application.properties" );
-			resources = new FileReader( ResourceUtils.getFile("classpath:application.properties") );
+			// jar에서 실행시 사용
+			resources = new FileReader( envPath + "/resources/application.properties" );
+			// eclipse 에서 테스트시 적용 
+//			resources = new FileReader( ResourceUtils.getFile("classpath:application.properties") );
 			properties.load(resources);
 		} catch (FileNotFoundException e) {
 //			log.error(e.getMessage(),e);
@@ -55,6 +57,8 @@ public class ServerInfoUtil {
 		
 		return properties;
 	}
+	
+
 	
 
 	
@@ -73,38 +77,6 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerEncodeType", properties.getProperty("socket.server.encoding"));			
 			svrinfoMap.put("relayServerSocketTimeout", properties.getProperty("socket.server.timeout"));			
 			svrinfoMap.put("relayServerThreadNum", properties.getProperty("thread.maxNum"));			
-//		} else if("ST".equals(relayServerType)) {
-//			// 중계서버 중 맨 처음 시작하는 서버 
-//			int rcount = 0;
-//			// 프로퍼티에 등록된 항목 중 key 가 어떤게 있는지 확인하기 위해 
-//			// 키를 확인.
-//			for (String key : properties.stringPropertyNames()) {
-//	            //Object value = properties.getProperty(key);
-////				ServerLog.getInstance().info(this.getClass().getName(),"### properties :: key :: " + key);
-//				if(key.contains(".R")) {
-//					rcount++;
-//					break;
-//				}
-//				
-//	        }
-//			
-//			String midStr = "";
-//
-//			// R로 시작하는 key가 존재하면 ST가 시작하는 relay이기 때문에 다음 서버는 RO부터 시작
-//			// R로 시작하는 key가 존재하지 않으면 FN 으로 설정. 
-//			if(rcount > 0) {
-//				midStr = "R0";
-//			} else {
-//				midStr = "FN";
-//				
-//			}
-//			
-//			svrinfoMap.put("relayServerType", relayServerType);
-//			svrinfoMap.put("relayServerIp", properties.getProperty("socket.server."+ midStr+".ip"));
-//			svrinfoMap.put("relayServerPort", Integer.parseInt(properties.getProperty("socket.server."+ midStr+".port")));
-//			svrinfoMap.put("relayServerEncodeType", properties.getProperty("socket.server.encoding"));
-//			svrinfoMap.put("relayServerSocketTimeout", properties.getProperty("socket.server.timeout"));
-//			svrinfoMap.put("relayServerThreadNum", properties.getProperty("thread.maxNum"));
 			
 		} else if("ST".equals(relayServerType) || "FN".equals(relayServerType)) {
 			// 중계서버 중 맨 마지막 서버 
@@ -114,41 +86,6 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerEncodeType", properties.getProperty("socket.server.encoding"));
 			svrinfoMap.put("relayServerSocketTimeout", properties.getProperty("socket.server.timeout"));
 			svrinfoMap.put("relayServerThreadNum", properties.getProperty("thread.maxNum"));
-//		} else if(!"ST".equals(relayServerType) && !"FN".equals(relayServerType)) {
-//			// 중계서버 중 R0 ~ R9 에 해당 하는 경우 
-//			int svrNo = Integer.parseInt(relayServerType.replace("R", ""));
-//			svrNo++;
-//			
-//			if(svrNo > 9 ) {
-//				ServerLog.getInstance().info(this.getClass().getName(),"중계서버 횟수를 초과했습니다.");
-//				throw new Exception("중계서버 횟수를 초과했습니다.");
-//			}
-////			String nextSvrNo = "R" + (svrNo < 10 ? "0"+svrNo : svrNo);
-//			String nextSvrNo = "R" + (svrNo);
-//			//ServerLog.getInstance().info(this.getClass().getName(),"nextSvrNo ::" + nextSvrNo );
-//			log.info("nextSvrNo ::" + nextSvrNo );
-//			
-//			String midStr = nextSvrNo;
-//			int rcount = 0;
-//			for (String key : properties.stringPropertyNames()) {
-//	            //Object value = properties.getProperty(key);
-//	//			ServerLog.getInstance().info(this.getClass().getName(),"### properties :: key :: " + key);
-//				if(key.contains(midStr)) {
-//					rcount++;
-//					break;
-//				}
-//	        }
-//			// 
-//			if(rcount == 0) {
-//				midStr = "FN";
-//			}
-//			log.info("midStr ::" + midStr );
-//			svrinfoMap.put("relayServerType", relayServerType);
-//			svrinfoMap.put("relayServerIp", properties.getProperty("socket.server."+ midStr+".ip"));
-//			svrinfoMap.put("relayServerPort", Integer.parseInt(properties.getProperty("socket.server."+ midStr+".port")));
-//			svrinfoMap.put("relayServerEncodeType", properties.getProperty("socket.server.encoding"));
-//			svrinfoMap.put("relayServerSocketTimeout", properties.getProperty("socket.server.timeout"));
-//			svrinfoMap.put("relayServerThreadNum", properties.getProperty("thread.maxNum"));
 		}
 		
 		return svrinfoMap;
@@ -177,48 +114,5 @@ public class ServerInfoUtil {
 	
 	
 	
-	 /**
-	   * Look for an open port, starting with port+1.
-	   */
-	public int findNextOpenPortAbove(int port) throws IOException {
-		    boolean foundPort = false;
-		    int nextTrialPort = port;
-		    ServerSocket serverSocket = null;
-		    while (!foundPort) {
-		      nextTrialPort++;
-		      try {
-		        serverSocket = new ServerSocket(nextTrialPort);
-		        foundPort = true;
-		      } catch (IOException e) {
-		        // continue with the attempts until we find an open port
-		        if (nextTrialPort == 65535) throw new IOException("No open port.");
-		      } finally {
-		        try { serverSocket.close(); } catch (Exception e) {}
-		      }
-		    }
-		    return nextTrialPort;
-	}
-	
-	/**
-	 * Look for an open port, starting with port+1.
-	 */
-	public int findNextOpenPortAbove() throws IOException {
-		boolean foundPort = false;
-		String sip = "210.112.100.97";
-		int nextTrialPort = 9029;
-		ServerSocket serverSocket = null;
-		while (!foundPort) {
-			nextTrialPort++;
-			try {
-				serverSocket = new ServerSocket(nextTrialPort);
-				foundPort = true;
-			} catch (IOException e) {
-				// continue with the attempts until we find an open port
-				if (nextTrialPort == 65535) throw new IOException("No open port.");
-			} finally {
-				try { serverSocket.close(); } catch (Exception e) {}
-			}
-		}
-		return nextTrialPort;
-	}
+
 }

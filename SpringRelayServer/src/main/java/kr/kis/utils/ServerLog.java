@@ -56,8 +56,10 @@ public class ServerLog {
 		
 //		System.out.println("####### utilLogInit() :: SYSTEM.properties:: LOGPATH::" + System.getProperty("LOGPATH"));
 		try {
-//			resources = new FileReader( envPath + "/resources/log4j.properties" );
-			resources = new FileReader( ResourceUtils.getFile("classpath:log4j.properties") );
+			// jar에서 실행시 사용
+			resources = new FileReader( envPath + "/resources/log4j.properties" );
+			// eclipse 에서 테스트시 적용			
+//			resources = new FileReader( ResourceUtils.getFile("classpath:log4j.properties") );
 			properties.load(resources);
 		} catch (FileNotFoundException e) {
 			System.err.println(e.getMessage());
