@@ -2,12 +2,15 @@ package kr.kis.client;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
@@ -48,6 +51,7 @@ public class KisFtClientMain {
 	static String sendTypeCode;
 	static String sendTestYn;
 	static String sendConfigDateType;
+	static String execCmd;
 	
 	
 	static int DEFAULT_BUFFER_SIZE = 1024;
@@ -174,7 +178,8 @@ public class KisFtClientMain {
 				sendTypeCode 	=  map.get("serverSendCode").toString();
 				sendTestYn 		=  map.get("serverSendTestYn").toString();
 				
-				sendConfigDateType 		=  map.get("serverSendConfigDateType").toString();
+				sendConfigDateType 	=  map.get("serverSendConfigDateType").toString();
+				execCmd 		= map.get("execCommand").toString();
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
@@ -200,6 +205,7 @@ public class KisFtClientMain {
 					if(envPath == null ) {
 						sfir = new SendFileInfoRead();
 					} else {
+						System.out.println("####### sfir :: envPath ::" + envPath);
 						sfir = new SendFileInfoRead(envPath);
 						
 					}
@@ -226,6 +232,9 @@ public class KisFtClientMain {
 					
 				}
 
+				// 정상 종료시 시스템 명령어 수행. 
+				logutil.info("###### execCmd::" + execCmd);
+				execCommand(execCmd);
 
 			}
 			
@@ -250,7 +259,9 @@ public class KisFtClientMain {
 					}
 				}
 				
-
+				// 정상 종료시 시스템 명령어 수행. 
+				logutil.info("###### execCmd::" + execCmd);
+				execCommand(execCmd);
 			}
 			
 		} catch(Exception e){
@@ -1165,4 +1176,27 @@ public class KisFtClientMain {
 
 		}
 	}	
+	
+	
+	public static void execCommand (String cmd) {
+		
+		try {
+			Runtime rt = Runtime.getRuntime(); 
+			Process proc = rt.exec(cmd); //시스템 명령어
+
+			InputStream is = proc.getInputStream(); 
+			InputStreamReader isr = new InputStreamReader(is); 
+			BufferedReader br = new BufferedReader(isr);
+
+			String line;
+			while((line=br.readLine())!= null){
+				System.out.println(line);
+				System.out.flush();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
 }

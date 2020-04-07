@@ -43,13 +43,13 @@ public class SendFileInfoRead {
 	public SendFileInfoRead(String envPath) {
 		log = new LogUtil(this.getClass().getName(), envPath);
 		this.util = new ServerInfoUtil(envPath);
-		
+		log.info("SendFileInfoRead(String envPath) :: " + envPath);
 		HashMap<String, Object> map;
 		
 		try {
 			map = util.getSocketServerInfo();
 			this.serverSendPath 	= map.get("serverSendPath").toString();
-			this.serverSendConfigPath 	= map.get("serverSendConfigPath").toString();
+			this.serverSendConfigPath 	= envPath + map.get("serverSendConfigPath").toString();
 			this.serverSendConfigName 	= map.get("serverSendConfigName").toString();
 			this.serverSendConfigDateType 	= map.get("serverSendConfigDateType").toString();
 		} catch (Exception e1) {
@@ -67,6 +67,7 @@ public class SendFileInfoRead {
 		File file;
 		ArrayList<String> arr = new ArrayList();
 		try {
+			log.info("#######  readConfig() serverSendConfigPath  :: " + serverSendConfigPath );
 			// 파일객체 생성
 			file = new File(serverSendConfigPath + File.separator + serverSendConfigName);
 			
@@ -110,6 +111,7 @@ public class SendFileInfoRead {
 		File file;
 		ArrayList<String> arr = new ArrayList();
 		try {
+			log.info("#######  readConfig(String yymmdd) serverSendConfigPath  :: " + serverSendConfigPath );
 			// 파일객체 생성
 			file = new File(serverSendConfigPath + File.separator + serverSendConfigName);
 			

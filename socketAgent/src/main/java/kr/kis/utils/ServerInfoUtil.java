@@ -41,8 +41,8 @@ public class ServerInfoUtil {
 		
 		System.out.println("### ServerInfoUtil. utilInit:: envPath::" + envPath);
 		try {
-//			resources = new FileReader( envPath+"/resources/application.properties" );
-			resources = new FileReader( ResourceUtils.getFile("classpath:application.properties") );
+			resources = new FileReader( envPath+"/resources/application.properties" );
+//			resources = new FileReader( ResourceUtils.getFile("classpath:application.properties") );
 			properties.load(resources);
 		} catch (FileNotFoundException e) {
 			ServerLog.getInstance().error(this.getClass().getName(),e.getMessage());
@@ -102,7 +102,7 @@ public class ServerInfoUtil {
 			 * 
 			 */
 			svrinfoMap.put("relayServerSendPath", properties.getProperty("socket.client."+ relayServerType+".sendPath"));
-			svrinfoMap.put("relayServerSendConfigPath", properties.getProperty("socket.client."+ relayServerType+".sendConfigPath"));
+			svrinfoMap.put("relayServerSendConfigPath", envPath+ properties.getProperty("socket.client."+ relayServerType+".sendConfigPath"));
 			svrinfoMap.put("relayServerSendConfigName", properties.getProperty("socket.client."+ relayServerType+".sendConfigName"));
 			svrinfoMap.put("relayServerSendConfigDateType", properties.getProperty("socket.client."+ relayServerType+".sendConfigDateType"));
 
@@ -111,6 +111,9 @@ public class ServerInfoUtil {
 			
 			// relay server 사용여부 확인 
 			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+			
+			// 클라이언트 종료 후 실행할 명령어  
+			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
 			
 			log.info("relayServerType : " + svrinfoMap.get("relayServerType").toString());
 			log.info("relayServerIp : " + svrinfoMap.get("relayServerIp").toString());
@@ -170,7 +173,7 @@ public class ServerInfoUtil {
 			 * 
 			 */
 			svrinfoMap.put("relayServerSendPath", properties.getProperty("socket.client."+ relayServerType+".sendPath"));
-			svrinfoMap.put("relayServerSendConfigPath", properties.getProperty("socket.client."+ relayServerType+".sendConfigPath"));
+			svrinfoMap.put("relayServerSendConfigPath", envPath + properties.getProperty("socket.client."+ relayServerType+".sendConfigPath"));
 			svrinfoMap.put("relayServerSendConfigName", properties.getProperty("socket.client."+ relayServerType+".sendConfigName"));
 			svrinfoMap.put("relayServerSendConfigDateType", properties.getProperty("socket.client."+ relayServerType+".sendConfigDateType"));
 			
@@ -179,6 +182,9 @@ public class ServerInfoUtil {
 			
 			// relay server 사용여부 확인 
 			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+			
+			// 클라이언트 종료 후 실행할 명령어  
+			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
 			
 			log.info("relayServerType : " + svrinfoMap.get("relayServerType").toString());
 			log.info("relayServerIp : " + svrinfoMap.get("relayServerIp").toString());
@@ -242,7 +248,7 @@ public class ServerInfoUtil {
 			
 			svrinfoMap.put("relayServerSendPath", properties.getProperty("socket.client."+ relayServerType+".sendPath"));
 
-			svrinfoMap.put("relayServerSendConfigPath", properties.getProperty("socket.client."+ relayServerType+".sendConfigPath"));
+			svrinfoMap.put("relayServerSendConfigPath", envPath+ properties.getProperty("socket.client."+ relayServerType+".sendConfigPath"));
 			svrinfoMap.put("relayServerSendConfigName", properties.getProperty("socket.client."+ relayServerType+".sendConfigName"));
 			svrinfoMap.put("relayServerSendConfigDateType", properties.getProperty("socket.client."+ relayServerType+".sendConfigDateType"));
 			
@@ -251,6 +257,10 @@ public class ServerInfoUtil {
 			
 			// relay server 사용여부 확인 
 			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+			
+			// 클라이언트 종료 후 실행할 명령어  
+			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+
 			
 			log.info("relayServerType : " + svrinfoMap.get("relayServerType").toString());
 			log.info("relayServerIp : " + svrinfoMap.get("relayServerIp").toString());
@@ -304,7 +314,7 @@ public class ServerInfoUtil {
 		 */
 		
 		svrinfoMap.put("relayServerSendPath", properties.getProperty("socket.client."+ relayServerType+".sendPath"));
-		svrinfoMap.put("relayServerSendConfigPath", properties.getProperty("socket.client."+ relayServerType+".sendConfigPath"));
+		svrinfoMap.put("relayServerSendConfigPath", envPath+ properties.getProperty("socket.client."+ relayServerType+".sendConfigPath"));
 		svrinfoMap.put("relayServerSendConfigName", properties.getProperty("socket.client."+ relayServerType+".sendConfigName"));
 		svrinfoMap.put("relayServerSendConfigDateType", properties.getProperty("socket.client."+ relayServerType+".sendConfigDateType"));
 		
@@ -313,6 +323,10 @@ public class ServerInfoUtil {
 		
 		// relay server 사용여부 확인 
 		svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+		
+		// 클라이언트 종료 후 실행할 명령어  
+		svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+
 		
 		return svrinfoMap;
 	}
@@ -371,6 +385,10 @@ public class ServerInfoUtil {
 		svrinfoMap.put("serverSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 		// relay server 사용여부 확인 
 		svrinfoMap.put("serverRelayUseYn", properties.getProperty("socket.server.relayYn"));
+		
+		// 클라이언트 종료 후 실행할 명령어  
+		svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+
 		
 		return svrinfoMap;
 	}

@@ -45,15 +45,15 @@ public class ServerLog {
 		
 		properties = new Properties();
 		
-//		if("".equals(envPath)) {
+		if("".equals(envPath)) {
 			envPath = ".";
-//		}
+		}
 		System.setProperty("LOGPATH", envPath);
 		
 //		System.out.println("####### utilLogInit() :: SYSTEM.properties:: LOGPATH::" + System.getProperty("LOGPATH"));
 		try {
-//			resources = new FileReader( envPath + "/resources/log4j.properties" );
-			resources = new FileReader( ResourceUtils.getFile("classpath:log4j.properties") );
+			resources = new FileReader( envPath + "/resources/log4j.properties" );
+//			resources = new FileReader( ResourceUtils.getFile("classpath:log4j.properties") );
 			properties.load(resources);
 		} catch (FileNotFoundException e) {
 			System.err.println(e.getMessage());
