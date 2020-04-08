@@ -388,7 +388,8 @@ public class ServerInfoUtil {
 		svrinfoMap.put("serverSendCode", properties.getProperty("socket.server."+ relayServerType+".sendCode"));
 		svrinfoMap.put("serverSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 		// relay server 사용여부 확인 
-		svrinfoMap.put("serverRelayUseYn", properties.getProperty("socket.server.relayYn"));
+//		svrinfoMap.put("serverRelayUseYn", properties.getProperty("socket.server.relayYn"));
+		svrinfoMap.put("serverRelayUseYn", "N");
 		
 		// 클라이언트 종료 후 실행할 명령어  
 		svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
