@@ -233,8 +233,9 @@ public class KisFtClientMain {
 				}
 
 				// 정상 종료시 시스템 명령어 수행. 
-				logutil.info("###### execCmd::" + execCmd);
-				execCommand(execCmd);
+				// 송신시에는 필요 없어 주석 처리 함. 
+				//logutil.info("###### execCmd::" + execCmd);
+				//execCommand(execCmd);
 
 			}
 			

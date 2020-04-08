@@ -110,7 +110,8 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 			
 			// relay server 사용여부 확인 
-			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+//			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+			svrinfoMap.put("relayServerRelayUseYn", "N");
 			
 			// 클라이언트 종료 후 실행할 명령어  
 			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
@@ -181,7 +182,8 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 			
 			// relay server 사용여부 확인 
-			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+//			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+			svrinfoMap.put("relayServerRelayUseYn", "N");
 			
 			// 클라이언트 종료 후 실행할 명령어  
 			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
@@ -256,7 +258,8 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 			
 			// relay server 사용여부 확인 
-			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+//			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+			svrinfoMap.put("relayServerRelayUseYn", "N");
 			
 			// 클라이언트 종료 후 실행할 명령어  
 			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
@@ -322,7 +325,8 @@ public class ServerInfoUtil {
 		svrinfoMap.put("relayServerSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 		
 		// relay server 사용여부 확인 
-		svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+		//svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
+		svrinfoMap.put("relayServerRelayUseYn", "N");
 		
 		// 클라이언트 종료 후 실행할 명령어  
 		svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
