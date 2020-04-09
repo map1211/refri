@@ -145,6 +145,13 @@ public class TPooledServer {
 		            
 					log.info("relay ServerSocket create:: " );
 					rs = new Socket(rip, rport);
+					InetSocketAddress clientSocketAddress =(InetSocketAddress)rs.getRemoteSocketAddress();
+					String clientHostName = clientSocketAddress.getAddress().getHostAddress();
+					int clientHostPort = rs.getPort();
+					int clientHostLocalPort = rs.getLocalPort();
+		            log.info("[client] connected! :: connected socket address(server ip)::" + clientHostName
+		                    + ", port:" + clientHostPort);	
+
 					
 					// 다음 릴레이 서버로 쓸 스트림 생성 
 					responseFromServer 	= cn.getInputStream();
@@ -161,10 +168,16 @@ public class TPooledServer {
 					Callable<Void> recvtask = new RClientOutInTask(rs, responseFromRelay, cn, requestToServer, recvtaskName); // 릴레이 -> 서버
 					log.info("Client recvtask :" + recvtaskName );
 					
+//					String clienttaskName = "ClientTask-Pool-" + getThreadId();
+//					Callable<Void> clienttask = new RClientTask(cn, responseFromServer, rs, requestToRelay, 
+//							responseFromRelay, requestToServer, clienttaskName); // 서버 -> 릴레이
+//					log.info("Client clienttask :" +  clienttask);
+
 					threadID++;
 					
 					pool.submit(sendtask);
 					pool.submit(recvtask);
+//					pool.submit(clienttask);
 					
 			        
 					
