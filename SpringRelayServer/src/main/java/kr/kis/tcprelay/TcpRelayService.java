@@ -39,11 +39,11 @@ public class TcpRelayService {
 	
 	
 	//private final ExecutorService executorService = Executors.newFixedThreadPool(100);
-	private ExecutorService executorService;
+	private final ExecutorService executorService;
 
-	public TcpRelayService() {
-		this(DEFAULT_TARGET_SERVER, DEFAULT_TARGET_PORT);
-	}
+//	public TcpRelayService() {
+//		this(DEFAULT_TARGET_SERVER, DEFAULT_TARGET_PORT);
+//	}
 
 	public TcpRelayService(String envPath) {
 		
@@ -88,15 +88,14 @@ public class TcpRelayService {
 		executorService = Executors.newFixedThreadPool( threadNum );
 		
 		
-	}
-	
-	public TcpRelayService(String targetServer, int targetPort) {
-		this.targetServer = targetServer;
-		this.targetPort = targetPort;
-		log.info("relay Server Ip :: " + targetServer);
-		log.info("relay Server Listen port :: " + targetPort);
 		
 	}
+	
+//	public TcpRelayService(String targetServer, int targetPort) {
+//		this.targetServer = targetServer;
+//		this.targetPort = targetPort;
+//		
+//	}
 
 	public void start() {
 		log.info("Relay Service is starting " );
@@ -109,16 +108,22 @@ public class TcpRelayService {
 		try {
 			serverSocket = new ServerSocket(this.socketPort);
 			log.info("Sever socket is ready.");
+			log.info("####################################");
 			log.info("Server Type :: " + serverType);
 			log.info("Server Ip :: " + socketIp);
 			log.info("Server Listen port :: " + socketPort);
-			log.info("Server encodeType :: " + encodeType);
+ 			log.info("Server encodeType :: " + encodeType);
+ 			log.info("####################################");
+			log.info("relay Server Ip :: " + targetServer);
+			log.info("relay Server Listen port :: " + targetPort);
 
+			
+			
 			while (running) {
 				sourceSocket = serverSocket.accept();
 				log.info("accepting.");
 				targetSocket = new Socket(targetServer, targetPort);
-				TcpRelayWorker worker = new TcpRelayWorker(sourceSocket, targetSocket);
+				TcpRelayWorker worker = new TcpRelayWorker(sourceSocket, targetSocket, envPath);
 				executorService.submit(worker);
 			}
 		} catch (IOException e) {
@@ -155,7 +160,7 @@ public class TcpRelayService {
 	}
 
 	public static void main(String[] args) {
-//		TcpRelayService tcpRelayService = null;
+		TcpRelayService tcpRelayService = null;
 		
 		String envVar = "";
 		String envPath = "";
@@ -168,7 +173,7 @@ public class TcpRelayService {
 			envPath = System.getenv(args[0].toString());
 		}
 		
-		TcpRelayService tcpRelayService = new TcpRelayService(envPath);		
+		//TcpRelayService tcpRelayService = new TcpRelayService(envPath);		
 		
 //		switch (args.length) {
 //		case 0:
@@ -188,7 +193,7 @@ public class TcpRelayService {
 
 		//int targetPort = Integer.parseInt(args[1]);
 //		tcpRelayService = new TcpRelayService(targetServer, targetPort);
-		tcpRelayService = new TcpRelayService(targetServer, targetPort);
+		tcpRelayService = new TcpRelayService(envPath);
 		tcpRelayService.start();
 	}
 	

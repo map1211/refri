@@ -3,20 +3,36 @@ package kr.kis.tcprelay;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import kr.kis.utils.LogUtil;
+import kr.kis.utils.ServerInfoUtil;
+
 public class TcpRelayWorker implements Runnable {
 	private final Socket sourceSocket;
 	private final Socket targetSocket;
 	public  String curDate = "";
-	public  int threadID = 1;
+	public  static int threadID = 1;
+	public  String envPath;
+	
+	protected static LogUtil log;
+	public static ServerInfoUtil util;		
+	
 	
 	public TcpRelayWorker(Socket sourceSocket, Socket targetSocket) {
 		this.sourceSocket = sourceSocket;
 		this.targetSocket = targetSocket;
+	}
+	
+	public TcpRelayWorker(Socket sourceSocket, Socket targetSocket, String envPath) {
+		this.sourceSocket = sourceSocket;
+		this.targetSocket = targetSocket;
+		this.envPath = envPath;
+		this.log = new LogUtil(this.getClass().getName(), envPath);
 	}
 
 	public String getThreadId() {
@@ -53,9 +69,21 @@ public class TcpRelayWorker implements Runnable {
 			targetIs = targetSocket.getInputStream();
 			targetOs = targetSocket.getOutputStream();
 
-			Thread inboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.INBOUND, sourceIs, targetOs));
-			Thread outboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetIs, sourceOs));
-
+			Thread inboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.INBOUND, sourceIs, targetOs, getThreadId(), envPath));
+            log.info("[server] connected! :: connected socket address(client ip)::" + ((InetSocketAddress)targetSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
+                    + ", port:" + ((InetSocketAddress)targetSocket.getRemoteSocketAddress()).getPort()
+                    + ", localPort:" + targetSocket.getLocalPort()
+                    );
+			Thread outboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetIs, sourceOs, getThreadId(), envPath));
+            log.info("[server] connected! :: connected socket address(client ip)::" + ((InetSocketAddress)sourceSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
+            		+ ", port:" + sourceSocket.getLocalPort()
+            		+ ", localPort:" + sourceSocket.getLocalPort()
+            		);
+            
+            threadID++;
+            
+            
+            
 			inboundWorker.start();
 			outboundWorker.start();
 

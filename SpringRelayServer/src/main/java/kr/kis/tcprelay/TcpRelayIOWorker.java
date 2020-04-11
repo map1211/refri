@@ -28,11 +28,12 @@ public class TcpRelayIOWorker implements Runnable {
 				
 	}
 	
-	public TcpRelayIOWorker(IOWorkerType type, InputStream is, OutputStream os, String threadId) {
+	public TcpRelayIOWorker(IOWorkerType type, InputStream is, OutputStream os, String threadId, String envPath) {
 		this.type = type;
 		this.is = is;
 		this.os = os;
-		this.threadName = type + "-" + threadId; 
+		this.threadName = type + "-" + threadId;
+		this.log = new LogUtil(this.getClass().getName() + ":"+ threadName, envPath);
 	}
 
 	@Override
@@ -45,15 +46,15 @@ public class TcpRelayIOWorker implements Runnable {
 //				os.write(buffer, 0, readBytes);
 //			}
 			if("INBOUND".equals(type)) {
-				log.info("INBOUND -> OUTBOUND 복사");
+				log.info("INBOUND -> OUTBOUND stream copy");
 			} else {
-				log.info("INBOUND -> OUTBOUND 복사");
+				log.info("OUTBOUND -> INBOUND stream copy");
 			}
+			
 			StreamUtils.copy(is, os);
 			
 		} catch (IOException e) {
-			System.err.println("Exception :: TYPE :" + type + " message :" + e.getMessage());
-			//e.printStackTrace();
+			log.info("TYPE :" + type + " message :" + e.getMessage());
 			
 			if("Socket closed".equals(e.getMessage())) { // inbound
 				if (is != null ) {
