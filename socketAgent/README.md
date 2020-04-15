@@ -36,7 +36,7 @@
 - 특정파일의 전문 수신 및 파일 수신 시 
 
 ```bash
- ]$ java -jar socketAgent-0.3-JDK-1.6.jar -p "KIS_FTAgent" -d "MAGNET0001-REPLY.200205"
+ ]$ java -jar socketAgent-0.4-JDK-1.6.jar -p "KIS_FTAgent" -d "MAGNET0001-REPLY.200205"
                                                                ^^^^^^^^^^^^^^^^^^^^^^^
                                                                                                                                                수신파일명
 
@@ -55,14 +55,14 @@
 - 특정일자의 전문 송신 및 파일 송신 시 
 
 ```bash
- $]java -jar socketAgent-0.3-JDK-1.6.jar -p "KIS_FTAgent" -u "MAGNET0001-REPLY.200205"
+ $]java -jar socketAgent-0.4-JDK-1.6.jar -p "KIS_FTAgent" -u "MAGNET0001-REPLY.200205"
                                                                ^^^^^^^^^^^^^^^^^^^^^^^
                                                                                                                                               송신파일명
   
                        
 ```
 
-- 로그 저장 경로
+- 로그 저장 경로 (환경변수에 설정된 경로 밑에 아래 경로를 찾게 됨) 
  
 ```bash
 	resource/log4j.properties 파일에 경로가 설정되어 있음. 	
