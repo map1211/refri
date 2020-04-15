@@ -335,7 +335,7 @@ public class KisFtClientMain {
 			logutil.info("connect client");
 			sc1.connect(socketIp, socketPort, socketTimeout);
 			
-			logutil.info("1번을 통한 makeFr01 전문 발송 ");
+			logutil.info("FR01 전문 발송 ");
 			// 파일 수신 승인 전문(FR12) : KIS -> 가맹점
 			// 전문을 보내면 서버에서 작업 후 
 			// 파일 수신 전문(FR02) : KIS -> 가맹점 
@@ -355,6 +355,7 @@ public class KisFtClientMain {
 			try{    Thread.sleep(1000);  } catch (Exception e) {	}
 			// 1초 waiting후 input stream 읽기 
 			try {
+				logutil.info("FR12 전문 수신,파일수신,수신완료  ");
 				result = sc1.recvFR12_02_13String( recvFilePath, rcvFileName.trim());
 			} catch (Exception e1) {
 				// 1초 waiting 후 inputstream 이 없으면 다시 1초 waiting후 input stream 읽기 

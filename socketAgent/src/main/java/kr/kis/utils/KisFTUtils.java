@@ -308,7 +308,7 @@ public class KisFTUtils {
 		String recvTypeCode = "";
 //		String recvDate = fileName.substring(17, 23);
 		String recvDate = "";
-		log.info("### KisFTUtils().makrFr01(fileName) : recvDate : " + recvDate);
+//		log.info("### KisFTUtils().makrFr01(fileName) : recvDate : " + recvDate);
 
 		recvTypeCode = recvTypeCodeValue;
 		
