@@ -23,6 +23,7 @@ public class KisFTUtils {
 	static String sendTestYn;
 	
 	static String serverMode;
+	static String sendConfigDateType;
 	
 	
 
@@ -52,6 +53,8 @@ public class KisFTUtils {
 		
 		
 		serverMode 		=  map.get("serverMode").toString();
+		// 날짜 타입 
+		sendConfigDateType 			= map.get("sendConfigDateType").toString();		
 	}
 	
 	public KisFTUtils(String envPath) {
@@ -479,7 +482,7 @@ public class KisFTUtils {
 	 */
 	public StringBuilder makeFr03(String fileSize) {
 		
-		log.info("makeFr03 fileSize : " + fileSize);
+		log.info("Fr03 fileSize : " + fileSize);
 		StringBuilder sb = new StringBuilder();
 		
 		//sb.append("100");	// 전체 길이
@@ -499,7 +502,7 @@ public class KisFTUtils {
 		 *  char(80)
 		 */	
 		sb.append(CustStringUtils.fillSpaceString("", 80, "L", " "));
-		log.info("makeFr03 return msg : " + sb.toString());
+		log.info("Fr03 return msg : [" + sb.toString() + "]");
 		return sb;
 	}
 	

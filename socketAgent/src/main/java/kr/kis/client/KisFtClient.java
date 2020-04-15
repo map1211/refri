@@ -129,7 +129,7 @@ public class KisFtClient {
 	 */
 	public String sendNrcvString( String msg ) throws Exception{
 		
-		log.info("msg:[" + msg + "]");
+//		log.info("msg:[" + msg + "]");
 		String retMsg = null;
 		
 		try{
@@ -369,16 +369,16 @@ public class KisFtClient {
 		try{
 			log.info("FR03 :: 서버에 Byte[]스트림 전송 msg : [" + msg + "]" );
 			//서버에 Byte[]스트림 전송
-			log.info("서버에 Byte[]스트림 전송 " );
+//			log.info("서버에 Byte[]스트림 전송 " );
 			DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
 			//(1) 전송 자료를 byte[]로 변환
-			log.info("(1) 전송 자료를 byte[]로 변환 " );
+//			log.info("(1) 전송 자료를 byte[]로 변환 " );
 //			byte[] sendWhat = msg.getBytes("ms949");
 			byte[] sendWhat = msg.getBytes(socketEncode);
 			//(2) 전송 자료의 길이를 구함 
-			log.info("(2) 전송 자료의 길이를 구함 : length : " );
+//			log.info("(2) 전송 자료의 길이를 구함 : length : " );
 			int writeLen= sendWhat.length;
-			log.info("(4) 전송 자료를 보냄 : " );
+//			log.info("(4) 전송 자료를 보냄 : " );
 			dos.write(sendWhat, 0, writeLen);
 			dos.flush();
 

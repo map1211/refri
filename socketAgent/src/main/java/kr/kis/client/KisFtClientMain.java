@@ -153,13 +153,13 @@ public class KisFtClientMain {
 			logutil = new LogUtil(KisFtClientMain.class.getName(), envPath);
 			
 			ServerInfoUtil util = new ServerInfoUtil(envPath);
-			logutil.info("######### Main :: LogUtil::envPath : " + envPath);
-			
-			logutil.info("######### Main :: KisFTUtils::envPath : " + envPath);
+//			logutil.info("######### Main :: LogUtil::envPath : " + envPath);
+//			
+//			logutil.info("######### Main :: KisFTUtils::envPath : " + envPath);
 			KisFTUtils ftUtils = new KisFTUtils(envPath);
 			
 			try {
-				logutil.info("######### Main :: util.getSocketServerInfo(): ");
+//				logutil.info("######### Main :: util.getSocketServerInfo(): ");
 				map = util.getSocketServerInfo();
 				serverType 	= map.get("serverType").toString();
 				socketIp 	= map.get("serverIp").toString();
@@ -190,6 +190,8 @@ public class KisFtClientMain {
 				logutil.info(" option is required ::::::: -d  \"\" -p \"KIS_FTAgent\"" );
 			}
 			
+			
+			logutil.info("######### Socket Agent Start ");
 			/**
 			 * 송신
 			 */
@@ -479,13 +481,13 @@ public class KisFtClientMain {
 		KisFTUtils ftUtils;
 		ServerInfoUtil util;
 
-		System.out.println("downloadExec(String localFileName, String recvType, String recvFilePrefix)");
-		System.out.println("downloadExec() :: envPath :: " + envPath);
+//		System.out.println("downloadExec(String localFileName, String recvType, String recvFilePrefix)");
+//		System.out.println("downloadExec() :: envPath :: " + envPath);
 		if(envPath == null) {
 			ftUtils = new KisFTUtils();
 			util = new ServerInfoUtil();
 		} else {
-			System.out.println("downloadExec() :: envPath :: " + envPath);
+//			System.out.println("downloadExec() :: envPath :: " + envPath);
 			ftUtils = new KisFTUtils(envPath);
 			util = new ServerInfoUtil(envPath);
 		}
@@ -528,10 +530,10 @@ public class KisFtClientMain {
 		String rcvFileName = ""; 
 				
 		try {
-			logutil.info("connect client");
+			logutil.info("Connect client");
 			sc1.connect(socketIp, socketPort, socketTimeout);
 			
-			logutil.info("1번을 통한 makeFr01 전문 발송 ");
+//			logutil.info("1번을 통한 makeFr01 전문 발송 ");
 			// 파일 수신 승인 전문(FR12) : KIS -> 가맹점
 			// 전문을 보내면 서버에서 작업 후 
 			// 파일 수신 전문(FR02) : KIS -> 가맹점 
