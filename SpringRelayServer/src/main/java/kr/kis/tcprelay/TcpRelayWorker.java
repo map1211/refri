@@ -70,11 +70,19 @@ public class TcpRelayWorker implements Runnable {
 			targetOs = targetSocket.getOutputStream();
 
 			Thread inboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.INBOUND, sourceIs, targetOs, getThreadId(), envPath));
-            log.info("[server] connected! :: connected socket address(client ip)::" + ((InetSocketAddress)targetSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
+			log.info("Send service:: " );			
+			log.info("Server connected Info ::" + ((InetSocketAddress)sourceSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
+					+ ", port:" + ((InetSocketAddress)sourceSocket.getRemoteSocketAddress()).getPort()
+					);
+            log.info("Client connected Info ::" + ((InetSocketAddress)targetSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
                     + ", port:" + ((InetSocketAddress)targetSocket.getRemoteSocketAddress()).getPort()
                     + ", localPort:" + targetSocket.getLocalPort()
                     );
 			Thread outboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetIs, sourceOs, getThreadId(), envPath));
+			log.info("Receive service:: " );
+            log.info("Server connected Info ::::" + ((InetSocketAddress)targetSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
+            		+ ", port:" + targetSocket.getLocalPort()
+            		);
             log.info("[server] connected! :: connected socket address(client ip)::" + ((InetSocketAddress)sourceSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
             		+ ", port:" + sourceSocket.getLocalPort()
             		+ ", localPort:" + sourceSocket.getLocalPort()

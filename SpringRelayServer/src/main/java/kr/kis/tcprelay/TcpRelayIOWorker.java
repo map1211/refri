@@ -39,19 +39,23 @@ public class TcpRelayIOWorker implements Runnable {
 	@Override
 	public void run() {
 		try {
-//			byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
-//			int readBytes;
-//			while ((readBytes = is.read(buffer)) != -1) {
-////				System.out.println(type + ":\n" + new String(buffer));
-//				os.write(buffer, 0, readBytes);
-//			}
 			if("INBOUND".equals(type)) {
 				log.info("INBOUND -> OUTBOUND stream copy");
 			} else {
 				log.info("OUTBOUND -> INBOUND stream copy");
 			}
 			
-			StreamUtils.copy(is, os);
+			byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
+			int readBytes;
+			int totalBytes = 0;
+			while ((readBytes = is.read(buffer)) != -1) {
+//				System.out.println(type + ":\n" + new String(buffer));
+				os.write(buffer, 0, readBytes);
+				totalBytes += readBytes;
+			}
+			log.info("수신 byte : [" + totalBytes + "]");
+			log.info("송신 byte : [" + totalBytes + "]");
+//			StreamUtils.copy(is, os);
 			
 		} catch (IOException e) {
 			log.info("TYPE :" + type + " message :" + e.getMessage());
@@ -60,7 +64,11 @@ public class TcpRelayIOWorker implements Runnable {
 				if (is != null ) {
 					try {
 						is.close();
-						log.info("is.close");
+						if("INBOUND".equals(type)) {
+							log.info("Server socket close");
+						} else {
+							log.info("Client socket close");
+						}
 					} catch (IOException e1) {
 						e.printStackTrace();
 					}
@@ -71,7 +79,11 @@ public class TcpRelayIOWorker implements Runnable {
 				if (os != null ) {
 					try {
 						os.close();
-						log.info("os.close");
+						if("OUTBOUND".equals(type)) {
+							log.info("Server socket close");
+						} else {
+							log.info("Client socket close");
+						}
 					} catch (IOException e1) {
 						e.printStackTrace();
 					}

@@ -57,8 +57,6 @@ public class TcpRelayService {
 		this.log = new LogUtil(this.getClass().getName(), envPath);
 		util = new ServerInfoUtil(envPath);
 		
-		log.info("######### TPooledServer() :: envPath : " + envPath);
-		
 		HashMap<String, Object> map = util.getSocketServerInfo();
 		this.serverType = map.get("relayServerType").toString();
 		this.socketIp 	= map.get("relayServerIp").toString();
@@ -98,26 +96,25 @@ public class TcpRelayService {
 //	}
 
 	public void start() {
+		log.info("###### LISTENING INFO ##############################");
+		log.info("Server Type :: " + serverType);
+		log.info("Server Ip :: " + socketIp);
+		log.info("Server Listen port :: " + socketPort);
+		log.info("Server encodeType :: " + encodeType);
+		log.info("###### 연계 서버 연결 INFO #############################");
+		log.info("relay Server Ip :: " + targetServer);
+		log.info("relay Server Listen port :: " + targetPort);
+		log.info("######################################################");
+		
 		log.info("Relay Service is starting " );
 		
 		running = true;
-
 		ServerSocket serverSocket = null;
 		Socket sourceSocket = null;
 		Socket targetSocket = null;
 		try {
 			serverSocket = new ServerSocket(this.socketPort);
-			log.info("Sever socket is ready.");
-			log.info("####################################");
-			log.info("Server Type :: " + serverType);
-			log.info("Server Ip :: " + socketIp);
-			log.info("Server Listen port :: " + socketPort);
- 			log.info("Server encodeType :: " + encodeType);
- 			log.info("####################################");
-			log.info("relay Server Ip :: " + targetServer);
-			log.info("relay Server Listen port :: " + targetPort);
-
-			
+			log.info("Sever is ready.");
 			
 			while (running) {
 				sourceSocket = serverSocket.accept();
