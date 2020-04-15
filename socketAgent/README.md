@@ -18,6 +18,7 @@
 - export 파일 명
 
 ```bash
+  - 2020.04.15 : socketAgent-0.4-JDK-1.6.jar  > JDK 1.6  기반으로 컴파일
   - 2020.03.15 : socketAgent-0.3-JDK-1.6.jar  > JDK 1.6  기반으로 컴파일 
   - 2020.03.11 : socketAgent-0.2-jdk1.6.jar   > JDK 1.6  기반으로 컴파일
   - 2020.02.29 : socketAgent-0.1.jar   > JDK 1.8 기반으로 컴파일
