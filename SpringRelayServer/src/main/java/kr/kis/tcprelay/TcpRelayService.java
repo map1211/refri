@@ -13,11 +13,6 @@ import kr.kis.utils.ServerInfoUtil;
 
 public class TcpRelayService {
 
-	private static final int DEFAULT_PORT = 12345;
-
-	private static final String DEFAULT_TARGET_SERVER = "www.naver.com";
-	private static final int DEFAULT_TARGET_PORT = 80;
-
 	private static String targetServer ;
 	private static int targetPort;
 
@@ -40,10 +35,6 @@ public class TcpRelayService {
 	
 	//private final ExecutorService executorService = Executors.newFixedThreadPool(100);
 	private final ExecutorService executorService;
-
-//	public TcpRelayService() {
-//		this(DEFAULT_TARGET_SERVER, DEFAULT_TARGET_PORT);
-//	}
 
 	public TcpRelayService(String envPath) {
 		
