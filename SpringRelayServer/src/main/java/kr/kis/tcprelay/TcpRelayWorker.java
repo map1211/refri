@@ -2,7 +2,6 @@ package kr.kis.tcprelay;
 
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 
@@ -12,12 +11,15 @@ import kr.kis.utils.ServerInfoUtil;
 public class TcpRelayWorker implements Runnable {
 	private final Socket sourceSocket;
 	private final Socket targetSocket;
-	public String curDate = "";
+	public String curDate = null;
 	public static int threadID = 1;
 	public String envPath;
 
 	protected static LogUtil log;
 	public static ServerInfoUtil util;
+
+	private static final int DEFAULT_BUFFER_SIZE = 1024;
+	byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
 
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 
@@ -36,7 +38,7 @@ public class TcpRelayWorker implements Runnable {
 	public String getThreadId() {
 		String td = sdf.format(System.currentTimeMillis());
 
-		if ("".equals(curDate)) {
+		if (curDate == null) {
 			curDate = td;
 		}
 
@@ -54,66 +56,71 @@ public class TcpRelayWorker implements Runnable {
 		OutputStream sourceOs = null;
 		InputStream targetIs = null;
 		OutputStream targetOs = null;
-		
+
 		try {
-			sourceIs = sourceSocket.getInputStream();
-			sourceOs = sourceSocket.getOutputStream();
-			targetIs = targetSocket.getInputStream();
-			targetOs = targetSocket.getOutputStream();
+			// Inbound
+			{
+				int dataLength = 0;
+				int tmpDataLength = 0;
+				sourceIs = sourceSocket.getInputStream();
+				targetOs = targetSocket.getOutputStream();
 
-			String threadId = getThreadId();
-			
-			Thread inboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.INBOUND, sourceIs, targetOs, threadId, envPath));
-			log.info("Send service:: ");
-			log.info("Server connected Info ::" + ((InetSocketAddress) sourceSocket.getRemoteSocketAddress()).getAddress().getHostAddress() + ", port:"
-					+ ((InetSocketAddress) sourceSocket.getRemoteSocketAddress()).getPort());
-			log.info("Client connected Info ::" + ((InetSocketAddress) targetSocket.getRemoteSocketAddress()).getAddress().getHostAddress() + ", port:"
-					+ ((InetSocketAddress) targetSocket.getRemoteSocketAddress()).getPort() + ", localPort:" + targetSocket.getLocalPort());
-			
-			Thread outboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetIs, sourceOs, threadId, envPath));
-			log.info("Receive service:: ");
-			log.info("Server connected Info ::::" + ((InetSocketAddress) targetSocket.getRemoteSocketAddress()).getAddress().getHostAddress() + ", port:"
-					+ targetSocket.getLocalPort());
-			log.info("[server] connected! :: connected socket address(client ip)::" + ((InetSocketAddress) sourceSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
-					+ ", port:" + sourceSocket.getLocalPort() + ", localPort:" + sourceSocket.getLocalPort());
+				while (sourceIs.available() > 0 && (tmpDataLength = sourceIs.read(buffer)) != -1) {
+					dataLength += tmpDataLength;
+					targetOs.write(buffer);
+				}
+				targetOs.flush();
+				log.info("INBOUND -> OUTBOUND stream copy [" + dataLength + "]");
+			}
 
-			inboundWorker.start();
-			outboundWorker.start();
+			// Outbound
+			{
+				int dataLength = 0;
+				int tmpDataLength = 0;
+				targetIs = targetSocket.getInputStream();
+				sourceOs = sourceSocket.getOutputStream();
 
-			inboundWorker.join();
-			outboundWorker.join();
+				while (targetIs.available() > 0 && (tmpDataLength = targetIs.read(buffer)) != -1) {
+					dataLength += tmpDataLength;
+					sourceOs.write(buffer);
+				}
+				sourceOs.flush();
+				log.info("OUTBOUND -> INBOUND stream copy [" + dataLength + "]");
+			}
 		} catch (Exception e) {
 			log.error("ERROR", e);
 		} finally {
 			try {
 				sourceIs.close();
 			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 
 			try {
 				sourceOs.close();
 			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 
 			try {
 				targetIs.close();
 			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 
 			try {
 				targetOs.close();
 			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 
 			try {
 				sourceSocket.close();
-			} catch (Exception e) {
+			} catch (Exception e1) {
+				log.error(e1.getMessage());
 			}
 
-			try {
-				targetSocket.close();
-			} catch (Exception e) {
-			}
+			TcpRelayService.restoreSocket(targetSocket);
 		}
 	}
 }
