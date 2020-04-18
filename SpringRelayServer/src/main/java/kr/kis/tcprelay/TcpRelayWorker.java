@@ -2,9 +2,10 @@ package kr.kis.tcprelay;
 
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
+
+import org.apache.commons.io.IOUtils;
 
 import kr.kis.utils.LogUtil;
 import kr.kis.utils.ServerInfoUtil;
@@ -18,6 +19,8 @@ public class TcpRelayWorker implements Runnable {
 
 	protected static LogUtil log;
 	public static ServerInfoUtil util;
+
+	private static final int DEFAULT_BUFFER_SIZE = 1024;
 
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 
@@ -54,34 +57,21 @@ public class TcpRelayWorker implements Runnable {
 		OutputStream sourceOs = null;
 		InputStream targetIs = null;
 		OutputStream targetOs = null;
-		
+
 		try {
 			sourceIs = sourceSocket.getInputStream();
 			sourceOs = sourceSocket.getOutputStream();
 			targetIs = targetSocket.getInputStream();
 			targetOs = targetSocket.getOutputStream();
 
-			String threadId = getThreadId();
+			boolean isInbound = sourceIs.available() > 0;
+			boolean isOutbound = targetIs.available() > 0;
+			if (isInbound) {
+				log.info("INBOUND -> OUTBOUND stream copy [" + IOUtils.copy(sourceIs, targetOs, DEFAULT_BUFFER_SIZE) + "]");
+			} else if (isOutbound) {
+				log.info("OUTBOUND -> INBOUND stream copy [" + IOUtils.copy(targetIs, sourceOs, DEFAULT_BUFFER_SIZE) + "]");
+			}
 			
-			Thread inboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.INBOUND, sourceIs, targetOs, threadId, envPath));
-			log.info("Send service:: ");
-			log.info("Server connected Info ::" + ((InetSocketAddress) sourceSocket.getRemoteSocketAddress()).getAddress().getHostAddress() + ", port:"
-					+ ((InetSocketAddress) sourceSocket.getRemoteSocketAddress()).getPort());
-			log.info("Client connected Info ::" + ((InetSocketAddress) targetSocket.getRemoteSocketAddress()).getAddress().getHostAddress() + ", port:"
-					+ ((InetSocketAddress) targetSocket.getRemoteSocketAddress()).getPort() + ", localPort:" + targetSocket.getLocalPort());
-			
-			Thread outboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetIs, sourceOs, threadId, envPath));
-			log.info("Receive service:: ");
-			log.info("Server connected Info ::::" + ((InetSocketAddress) targetSocket.getRemoteSocketAddress()).getAddress().getHostAddress() + ", port:"
-					+ targetSocket.getLocalPort());
-			log.info("[server] connected! :: connected socket address(client ip)::" + ((InetSocketAddress) sourceSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
-					+ ", port:" + sourceSocket.getLocalPort() + ", localPort:" + sourceSocket.getLocalPort());
-
-			inboundWorker.start();
-			outboundWorker.start();
-
-			inboundWorker.join();
-			outboundWorker.join();
 		} catch (Exception e) {
 			log.error("ERROR", e);
 		} finally {
@@ -110,10 +100,7 @@ public class TcpRelayWorker implements Runnable {
 			} catch (Exception e) {
 			}
 
-			try {
-				targetSocket.close();
-			} catch (Exception e) {
-			}
+			TcpRelayService.restoreSocket(targetSocket);
 		}
 	}
 }
