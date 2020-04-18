@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import org.apache.commons.io.IOUtils;
 import org.springframework.util.StreamUtils;
 
 import kr.kis.utils.LogUtil;
@@ -36,7 +37,7 @@ public class TcpRelayIOWorker implements Runnable {
 		this.log = new LogUtil(this.getClass().getName() + ":"+ threadName, envPath);
 	}
 
-	@Override
+//	@Override
 	public void run() {
 		try {
 			if("INBOUND".equals(type)) {
@@ -53,8 +54,9 @@ public class TcpRelayIOWorker implements Runnable {
 //				os.write(buffer, 0, readBytes);
 //				totalBytes += readBytes;
 //			}
-			totalBytes = StreamUtils.copy (is, os);
-			log.info("수신 byte : [" + totalBytes + "]   송신 byte : [" + totalBytes + "]");
+//			totalBytes = StreamUtils.copy (is, os);
+//			log.info("수신 byte : [" + totalBytes + "]   송신 byte : [" + totalBytes + "]");
+			log.info("Data byte : [" + IOUtils.copy(is, os, DEFAULT_BUFFER_SIZE) + "]");			
 			
 		} catch (IOException e) {
 			log.info("TYPE :" + type + " message :" + e.getMessage());

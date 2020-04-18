@@ -3,82 +3,85 @@ package kr.kis.tcprelay;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.HashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import kr.kis.mserver.TPooledServer;
+import org.apache.commons.lang.StringUtils;
+
 import kr.kis.utils.LogUtil;
 import kr.kis.utils.ServerInfoUtil;
+import kr.kis.vo.ServerInfoVO;
 
-public class TcpRelayService { 
+public class TcpRelayService {
 
-	private static String targetServer ;
+	private static String targetServer;
 	private static int targetPort;
 
 	private boolean running = false;
 
-	private static int 		socketPort ;
-	private static String 	socketIp;
-	private static String 	serverType;
-	private static int 		socketTimeout;
-	private static String 	encodeType;
-	private static int 		threadNum;
-	
+	private static int socketPort;
+	private static String socketIp;
+	private static String serverType;
+	//	private static int socketTimeout;
+	private static String encodeType;
+	private static int threadNum;
+
 	protected static LogUtil log;
 
 	public static ServerInfoUtil util;
 	public static int threadID = 1;
 	String envPath = "";
-	public static String curDate = "";	
-	
-	
-	private final ExecutorService executorService;
+	public static String curDate = "";
+
+	private ExecutorService executorService;
 
 	public TcpRelayService(String envPath) {
-		
-		this.envPath = envPath;
-		
-		if("".equals(envPath)) {
-			envPath = ".";
-		}
-		System.setProperty("LOGPATH", envPath);
-		
-		this.log = new LogUtil(this.getClass().getName(), envPath);
-		util = new ServerInfoUtil(envPath);
-		
-		HashMap<String, Object> map = util.getSocketServerInfo();
-		this.serverType = map.get("relayServerType").toString();
-		this.socketIp 	= map.get("relayServerIp").toString();
-		this.socketTimeout = Integer.parseInt(map.get("relayServerSocketTimeout").toString());
-		this.encodeType = map.get("relayServerEncodeType").toString();
-		
-		this.socketPort = Integer.parseInt(map.get("relayServerPort").toString());
-		this.threadNum = Integer.parseInt(map.get("relayServerThreadNum").toString());
-	
-			
-		// 서버 정보 요청 
-		HashMap<String, Object> hmap = new HashMap<String, Object>();
 		try {
-			hmap = util.getRelayServerInfo();
-		} catch (Exception e1) {
-			e1.printStackTrace();
+			initTcpRelayService(envPath);
+
+			// Init SocketServer
+			getSocketServerInfo();
+
+			// 서버 정보 요청 
+			getRelayServerInfo();
+
+			// 쓰레드 풀 갯수 설정.
+			executorService = Executors.newFixedThreadPool(threadNum);
+		} catch (Exception e) {
+			try {
+				log.error("ERROR", e);
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
 		}
-		
-		String rip = hmap.get("relayServerIp").toString();
-		int rport = Integer.parseInt(hmap.get("relayServerPort").toString());
-		String rencode = hmap.get("relayServerEncodeType").toString();
-		
-		this.targetServer = rip;
-		this.targetPort = rport;
-		
-		// 쓰레드 풀 갯수 설정.
-		executorService = Executors.newFixedThreadPool( threadNum );
-		
-		
-		
 	}
-	
+
+	private void getRelayServerInfo() throws Exception {
+		ServerInfoVO serverInfoVO = util.getRelayServerInfo();
+		targetServer = serverInfoVO.relayServerIp;
+		targetPort = serverInfoVO.relayServerPort;
+	}
+
+	private void initTcpRelayService(String envPath) {
+		this.envPath = envPath;
+		if ("".equals(this.envPath)) {
+			this.envPath = ".";
+		}
+		System.setProperty("LOGPATH", this.envPath);
+
+		log = new LogUtil(this.getClass().getName(), this.envPath);
+		util = new ServerInfoUtil(this.envPath);
+	}
+
+	private void getSocketServerInfo() {
+		ServerInfoVO serverInfoVO = util.getSocketServerInfo();
+		serverType = serverInfoVO.relayServerType;
+		socketIp = serverInfoVO.relayServerIp;
+		//		socketTimeout = serverInfoVO.relayServerSocketTimeout;
+		encodeType = serverInfoVO.relayServerEncodeType;
+		socketPort = serverInfoVO.relayServerPort;
+		threadNum = serverInfoVO.relayServerThreadNum;
+	}
 
 	public void start() {
 		log.info("###### LISTENING INFO ##############################");
@@ -90,49 +93,49 @@ public class TcpRelayService {
 		log.info("relay Server Ip :: " + targetServer);
 		log.info("relay Server Listen port :: " + targetPort);
 		log.info("######################################################");
-		
-		log.info("Relay Service is starting " );
-		
+
+		log.info("Relay Service is starting ");
+
 		running = true;
 		ServerSocket serverSocket = null;
-		Socket sourceSocket = null;
-		Socket targetSocket = null;
 		try {
-			serverSocket = new ServerSocket(this.socketPort);
+			serverSocket = new ServerSocket(socketPort);
 			log.info("Sever is ready.");
-			
+
+			int i = 0;
 			while (running) {
-				sourceSocket = serverSocket.accept();
-				log.info("accepting.");
-				targetSocket = new Socket(targetServer, targetPort);
-				TcpRelayWorker worker = new TcpRelayWorker(sourceSocket, targetSocket, envPath);
-				executorService.submit(worker);
+				if (i++ > 100000000) {
+					log.debug("Sever is running");
+					i = 0;
+				}
+
+				Socket sourceSocket = null;
+				Socket targetSocket = null;
+				try {
+					sourceSocket = serverSocket.accept();
+					targetSocket = new Socket(targetServer, targetPort);
+					TcpRelayWorker worker = new TcpRelayWorker(sourceSocket, targetSocket, envPath);
+					executorService.submit(worker);
+				} catch (Exception e) {
+					log.error("ERROR", e);
+
+					try {
+						sourceSocket.close();
+					} catch (Exception e1) {
+					}
+
+					try {
+						targetSocket.close();
+					} catch (Exception e1) {
+					}
+				}
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			if (sourceSocket != null) {
-				try {
-					sourceSocket.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-
-			if (targetSocket != null) {
-				try {
-					targetSocket.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-
-			if (serverSocket != null) {
-				try {
-					serverSocket.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+			try {
+				serverSocket.close();
+			} catch (Exception e) {
 			}
 		}
 	}
@@ -142,22 +145,12 @@ public class TcpRelayService {
 	}
 
 	public static void main(String[] args) {
-		TcpRelayService tcpRelayService = null;
-		
-		String envVar = "";
 		String envPath = "";
-		
-		if(args.length > 1 ) {
-			envVar = args[0].toString(); 
-		}
-		
-		if(!"".equals(envVar)) { 
+		if (args.length > 1 && StringUtils.isNotBlank(args[0])) {
 			envPath = System.getenv(args[0].toString());
 		}
-		
-		tcpRelayService = new TcpRelayService(envPath);
-		tcpRelayService.start();
+
+		new TcpRelayService(envPath).start();
 	}
-	
-	
+
 }
