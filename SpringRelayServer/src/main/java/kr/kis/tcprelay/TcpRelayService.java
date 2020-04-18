@@ -11,7 +11,7 @@ import kr.kis.mserver.TPooledServer;
 import kr.kis.utils.LogUtil;
 import kr.kis.utils.ServerInfoUtil;
 
-public class TcpRelayService {
+public class TcpRelayService { 
 
 	private static String targetServer ;
 	private static int targetPort;
@@ -33,7 +33,6 @@ public class TcpRelayService {
 	public static String curDate = "";	
 	
 	
-	//private final ExecutorService executorService = Executors.newFixedThreadPool(100);
 	private final ExecutorService executorService;
 
 	public TcpRelayService(String envPath) {
@@ -80,11 +79,6 @@ public class TcpRelayService {
 		
 	}
 	
-//	public TcpRelayService(String targetServer, int targetPort) {
-//		this.targetServer = targetServer;
-//		this.targetPort = targetPort;
-//		
-//	}
 
 	public void start() {
 		log.info("###### LISTENING INFO ##############################");
@@ -161,26 +155,6 @@ public class TcpRelayService {
 			envPath = System.getenv(args[0].toString());
 		}
 		
-		//TcpRelayService tcpRelayService = new TcpRelayService(envPath);		
-		
-//		switch (args.length) {
-//		case 0:
-//			tcpRelayService = new TcpRelayService();
-//			break;
-//
-//		case 2:
-//			String targetServer = args[0];
-//			int targetPort = Integer.parseInt(args[1]);
-//			tcpRelayService = new TcpRelayService(targetServer, targetPort);
-//			break;
-//
-//		default:
-//			System.out.println("java " + TcpRelayService.class.getCanonicalName() + " <target server> <target port>");
-//			System.exit(1);
-//		}
-
-		//int targetPort = Integer.parseInt(args[1]);
-//		tcpRelayService = new TcpRelayService(targetServer, targetPort);
 		tcpRelayService = new TcpRelayService(envPath);
 		tcpRelayService.start();
 	}

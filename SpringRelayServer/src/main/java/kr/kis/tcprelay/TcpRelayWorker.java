@@ -78,12 +78,14 @@ public class TcpRelayWorker implements Runnable {
                     + ", port:" + ((InetSocketAddress)targetSocket.getRemoteSocketAddress()).getPort()
                     + ", localPort:" + targetSocket.getLocalPort()
                     );
+            threadID++;
+            
 			Thread outboundWorker = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetIs, sourceOs, getThreadId(), envPath));
 			log.info("Receive service:: " );
             log.info("Server connected Info ::::" + ((InetSocketAddress)targetSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
             		+ ", port:" + targetSocket.getLocalPort()
             		);
-            log.info("[server] connected! :: connected socket address(client ip)::" + ((InetSocketAddress)sourceSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
+            log.info("Client connected Info::" + ((InetSocketAddress)sourceSocket.getRemoteSocketAddress()).getAddress().getHostAddress()
             		+ ", port:" + sourceSocket.getLocalPort()
             		+ ", localPort:" + sourceSocket.getLocalPort()
             		);
@@ -94,7 +96,7 @@ public class TcpRelayWorker implements Runnable {
             
 			inboundWorker.start();
 			outboundWorker.start();
-
+			
 			inboundWorker.join();
 			outboundWorker.join();
 		} catch (IOException e) {
@@ -103,7 +105,6 @@ public class TcpRelayWorker implements Runnable {
 			e.printStackTrace();
 		} finally {
 			if (sourceIs != null ) {
-//				System.out.println("sourceIs is not null");
 				try {
 					sourceIs.close();
 				} catch (IOException e) {
@@ -112,7 +113,6 @@ public class TcpRelayWorker implements Runnable {
 			}
 
 			if (sourceOs != null) {
-//				System.out.println("sourceOs is not null");
 				try {
 					sourceOs.close();
 				} catch (IOException e) {
@@ -122,7 +122,6 @@ public class TcpRelayWorker implements Runnable {
 
 			try {
 				if (sourceSocket != null || sourceSocket.getKeepAlive() == false) {
-//					System.out.println("sourceSocket is not null");
 					try {
 						sourceSocket.close();
 					} catch (IOException e) {
@@ -134,7 +133,6 @@ public class TcpRelayWorker implements Runnable {
 			}
 
 			if (targetIs != null) {
-//				System.out.println("targetIs is not null");
 				try {
 					targetIs.close();
 				} catch (IOException e) {
@@ -143,17 +141,15 @@ public class TcpRelayWorker implements Runnable {
 			}
 
 			if (targetOs != null) {
-//				System.out.println("targetOs is not null");
 				try {
 					targetOs.close();
 				} catch (IOException e) {
 					e.printStackTrace();
-				}
+				} 
 			}
 
 			try {
 				if (targetSocket != null || targetSocket.getKeepAlive() == false) {
-//					System.out.println("targetSocket is not null");
 					try {
 						targetSocket.close();
 					} catch (IOException e) {
@@ -161,7 +157,6 @@ public class TcpRelayWorker implements Runnable {
 					}
 				}
 			} catch (SocketException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
