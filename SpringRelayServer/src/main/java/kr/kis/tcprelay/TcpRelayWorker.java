@@ -18,8 +18,9 @@ public class TcpRelayWorker implements Runnable {
 	protected static LogUtil log;
 	public static ServerInfoUtil util;
 
+	private static final byte[] buffer = new byte[1024];
+
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-	private byte[] buffer = new byte[1024];
 
 	public TcpRelayWorker(Socket sourceSocket, Socket targetSocket) {
 		this.sourceSocket = sourceSocket;
@@ -30,6 +31,7 @@ public class TcpRelayWorker implements Runnable {
 		this.sourceSocket = sourceSocket;
 		this.targetSocket = targetSocket;
 		this.envPath = envPath;
+		log = new LogUtil(this.getClass().getName(), envPath);
 	}
 
 	public String getThreadId() {
@@ -60,48 +62,20 @@ public class TcpRelayWorker implements Runnable {
 			targetIs = targetSocket.getInputStream();
 			targetOs = targetSocket.getOutputStream();
 
-			log = new LogUtil(this.getClass().getName() + ":" + getThreadId(), envPath);
+			String threadId = getThreadId();
+			
+			// Inbound
+			Thread inThread = new Thread(new TcpRelayIOWorker(IOWorkerType.INBOUND, sourceIs, targetOs, threadId, this.envPath));
+			inThread.start();
 
-			int tempLength;
-			int length;
-			int totalLength = 0;
-			do {
-				totalLength = 0;
+			// Outbound
+			Thread outThread = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetIs, sourceOs, threadId, this.envPath));
+			outThread.start();
 
-				// IN
-				{
-					tempLength = 0;
-					length = 0;
-					while ((tempLength = sourceIs.read(buffer)) != -1) {
-						targetOs.write(buffer, 0, tempLength);
-						length += tempLength;
-
-						if (sourceIs.available() == 0) {
-							break;
-						}
-					}
-					targetOs.flush();
-					log.info("INBOUND [" + length + "]");
-					totalLength += length;
-				}
-
-				// OUT
-				{
-					tempLength = 0;
-					length = 0;
-					while ((tempLength = targetIs.read(buffer)) != -1) {
-						sourceOs.write(buffer, 0, tempLength);
-						length += tempLength;
-
-						if (targetIs.available() == 0) {
-							break;
-						}
-					}
-					sourceOs.flush();
-					log.info("OUTBOUND [" + length + "]");
-					totalLength += length;
-				}
-			} while (totalLength > 0);
+			inThread.join();
+			outThread.join();
+			
+			log.debug("END : " + threadId);
 		} catch (Exception e) {
 			log.error("ERROR", e);
 		} finally {
