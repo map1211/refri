@@ -18,8 +18,6 @@ public class TcpRelayWorker implements Runnable {
 	protected static LogUtil log;
 	public static ServerInfoUtil util;
 
-	private static final byte[] buffer = new byte[1024];
-
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 
 	public TcpRelayWorker(Socket sourceSocket, Socket targetSocket) {
@@ -82,31 +80,37 @@ public class TcpRelayWorker implements Runnable {
 			try {
 				sourceIs.close();
 			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 
 			try {
 				sourceOs.close();
 			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 
 			try {
 				targetIs.close();
 			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 
 			try {
 				targetOs.close();
 			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 
 			try {
 				sourceSocket.close();
-			} catch (Exception e1) {
+			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 
 			try {
 				targetSocket.close();
-			} catch (Exception e1) {
+			} catch (Exception e) {
+				log.error(e.getMessage());
 			}
 		}
 	}

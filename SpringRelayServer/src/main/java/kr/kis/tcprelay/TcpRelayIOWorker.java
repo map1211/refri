@@ -42,10 +42,10 @@ public class TcpRelayIOWorker implements Runnable {
 				os.write(buffer, 0, readBytes);
 				totalBytes += readBytes;
 			}
+			os.flush();
 			log.info("Data byte : [" + totalBytes + "]");
 		} catch (Exception e) {
-			e.printStackTrace();
-			log.error("ERROR", e);
+			log.error(type.toString() + " ERROR", e);
 		}
 	}
 }
