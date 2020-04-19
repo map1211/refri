@@ -5,8 +5,6 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 
-import org.apache.commons.io.IOUtils;
-
 import kr.kis.utils.LogUtil;
 import kr.kis.utils.ServerInfoUtil;
 
@@ -19,9 +17,6 @@ public class TcpRelayWorker implements Runnable {
 
 	protected static LogUtil log;
 	public static ServerInfoUtil util;
-
-	private static final int DEFAULT_BUFFER_SIZE = 1024;
-	byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
 
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 
@@ -60,35 +55,23 @@ public class TcpRelayWorker implements Runnable {
 		OutputStream targetOs = null;
 
 		try {
-			// Inbound
-			{
-				int dataLength = 0;
-				int tmpDataLength = 0;
-				sourceIs = sourceSocket.getInputStream();
-				targetOs = targetSocket.getOutputStream();
+			sourceIs = sourceSocket.getInputStream();
+			sourceOs = sourceSocket.getOutputStream();
+			targetIs = targetSocket.getInputStream();
+			targetOs = targetSocket.getOutputStream();
 
-				while (sourceIs.available() > 0 && (tmpDataLength = sourceIs.read(buffer)) != -1) {
-					dataLength += tmpDataLength;
-					targetOs.write(buffer);
-				}
-				targetOs.flush();
-				log.info("INBOUND -> OUTBOUND stream copy [" + dataLength + "]");
-			}
+			String threadId = getThreadId();
+			
+			// Inbound
+			Thread inThread = new Thread(new TcpRelayIOWorker(IOWorkerType.INBOUND, sourceIs, targetOs, threadId, this.envPath));
+			inThread.start();
 
 			// Outbound
-			{
-				int dataLength = 0;
-				int tmpDataLength = 0;
-				targetIs = targetSocket.getInputStream();
-				sourceOs = sourceSocket.getOutputStream();
+			Thread outThread = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetIs, sourceOs, threadId, this.envPath));
+			outThread.start();
 
-				while (targetIs.available() > 0 && (tmpDataLength = targetIs.read(buffer)) != -1) {
-					dataLength += tmpDataLength;
-					sourceOs.write(buffer);
-				}
-				sourceOs.flush();
-				log.info("OUTBOUND -> INBOUND stream copy [" + dataLength + "]");
-			}
+			inThread.join();
+			outThread.join();
 		} catch (Exception e) {
 			log.error("ERROR", e);
 		} finally {
