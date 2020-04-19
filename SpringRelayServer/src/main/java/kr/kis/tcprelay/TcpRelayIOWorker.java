@@ -51,6 +51,12 @@ public class TcpRelayIOWorker implements Runnable {
 			log.info("Data byte : [" + totalBytes + "]");
 		} catch (Exception e) {
 			log.error(type.toString() + " ERROR", e);
+
+			try {
+				TcpRelayService.closeSocketQueue.put(source);
+				TcpRelayService.closeSocketQueue.put(target);
+			} catch (Exception e1) {
+			}
 			
 			try {
 				is.close();
