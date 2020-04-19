@@ -8,7 +8,6 @@ import kr.kis.utils.ServerInfoUtil;
 
 public class TcpRelayIOWorker implements Runnable {
 	private static final int DEFAULT_BUFFER_SIZE = 1024;
-	private static final byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
 
 	protected static LogUtil log;
 	public static ServerInfoUtil util;
@@ -37,6 +36,7 @@ public class TcpRelayIOWorker implements Runnable {
 
 			int readBytes;
 			int totalBytes = 0;
+			byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
 			while ((readBytes = is.read(buffer)) != -1) {
 				System.out.println(type + ":\n" + new String(buffer));
 				os.write(buffer, 0, readBytes);
