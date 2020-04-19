@@ -76,7 +76,7 @@ public class TcpRelayWorker implements Runnable {
 						targetOs.write(buffer, 0, tempLength);
 						length += tempLength;
 
-						if (targetIs.available() == 0) {
+						if (sourceIs.available() == 0) {
 							break;
 						}
 					}
