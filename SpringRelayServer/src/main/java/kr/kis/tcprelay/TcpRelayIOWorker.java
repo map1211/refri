@@ -2,37 +2,43 @@ package kr.kis.tcprelay;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.Socket;
 
 import kr.kis.utils.LogUtil;
-import kr.kis.utils.ServerInfoUtil;
 
 public class TcpRelayIOWorker implements Runnable {
 	private static final int DEFAULT_BUFFER_SIZE = 1024;
 
-	protected static LogUtil log;
-	public static ServerInfoUtil util;
+	private LogUtil log;
 
 	private final IOWorkerType type;
-	private final InputStream is;
-	private final OutputStream os;
+	private Socket source;
+	private Socket target;
 	private final String threadName;
 
-	public TcpRelayIOWorker(IOWorkerType type, InputStream is, OutputStream os, String threadId, String envPath) {
+	public TcpRelayIOWorker(IOWorkerType type, Socket source, Socket target, String threadId, String envPath) {
 		this.type = type;
-		this.is = is;
-		this.os = os;
+		this.source = source;
+		this.target = target;
 		this.threadName = type + "-" + threadId;
 		log = new LogUtil(this.getClass().getName() + ":" + threadName, envPath);
 	}
 
 	@Override
 	public void run() {
+		InputStream is = null;
+		OutputStream os = null;
+
 		try {
 			if (type == IOWorkerType.INBOUND) {
 				log.info("INBOUND -> OUTBOUND stream copy");
 			} else {
 				log.info("OUTBOUND -> INBOUND stream copy");
 			}
+
+			is = source.getInputStream();
+			os = target.getOutputStream();
 
 			int readBytes;
 			int totalBytes = 0;
@@ -46,6 +52,35 @@ public class TcpRelayIOWorker implements Runnable {
 			log.info("Data byte : [" + totalBytes + "]");
 		} catch (Exception e) {
 			log.error(type.toString() + " ERROR", e);
+
+			try {
+				log.debug(threadName + " - Socket Close Reg");
+				TcpRelayService.closeSocketQueue.put(source);
+				log.debug(threadName + " >> Socket Close Reg : " + ((InetSocketAddress) source.getRemoteSocketAddress()).getAddress().getHostAddress());
+				TcpRelayService.closeSocketQueue.put(target);
+				log.debug(threadName + " >> Socket Close Reg : " + ((InetSocketAddress) target.getRemoteSocketAddress()).getAddress().getHostAddress());
+			} catch (Exception e1) {
+			}
+			
+			try {
+				is.close();
+			} catch (Exception e1) {
+			}
+			
+			try {
+				os.close();
+			} catch (Exception e1) {
+			}
+
+			try {
+				source.close();
+			} catch (Exception e1) {
+			}
+
+			try {
+				target.close();
+			} catch (Exception e1) {
+			}
 		}
 	}
 }

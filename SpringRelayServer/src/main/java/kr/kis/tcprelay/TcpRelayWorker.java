@@ -1,7 +1,5 @@
 package kr.kis.tcprelay;
 
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 
@@ -18,7 +16,7 @@ public class TcpRelayWorker implements Runnable {
 	protected static LogUtil log;
 	public static ServerInfoUtil util;
 
-	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd"); 
 
 	public TcpRelayWorker(Socket sourceSocket, Socket targetSocket) {
 		this.sourceSocket = sourceSocket;
@@ -49,25 +47,15 @@ public class TcpRelayWorker implements Runnable {
 
 	@Override
 	public void run() {
-		InputStream sourceIs = null;
-		OutputStream sourceOs = null;
-		InputStream targetIs = null;
-		OutputStream targetOs = null;
-
 		try {
-			sourceIs = sourceSocket.getInputStream();
-			sourceOs = sourceSocket.getOutputStream();
-			targetIs = targetSocket.getInputStream();
-			targetOs = targetSocket.getOutputStream();
-
 			String threadId = getThreadId();
 			
 			// Inbound
-			Thread inThread = new Thread(new TcpRelayIOWorker(IOWorkerType.INBOUND, sourceIs, targetOs, threadId, this.envPath));
+			Thread inThread = new Thread(new TcpRelayIOWorker(IOWorkerType.INBOUND, sourceSocket, targetSocket, threadId, this.envPath));
 			inThread.start();
 
 			// Outbound
-			Thread outThread = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetIs, sourceOs, threadId, this.envPath));
+			Thread outThread = new Thread(new TcpRelayIOWorker(IOWorkerType.OUTBOUND, targetSocket, sourceSocket, threadId, this.envPath));
 			outThread.start();
 
 			inThread.join();
@@ -78,39 +66,13 @@ public class TcpRelayWorker implements Runnable {
 			log.error("ERROR", e);
 		} finally {
 			try {
-				sourceIs.close();
-			} catch (Exception e) {
-				log.error(e.getMessage());
-			}
-
-			try {
-				sourceOs.close();
-			} catch (Exception e) {
-				log.error(e.getMessage());
-			}
-
-			try {
-				targetIs.close();
-			} catch (Exception e) {
-				log.error(e.getMessage());
-			}
-
-			try {
-				targetOs.close();
-			} catch (Exception e) {
-				log.error(e.getMessage());
-			}
-
-			try {
 				sourceSocket.close();
 			} catch (Exception e) {
-				log.error(e.getMessage());
 			}
 
 			try {
 				targetSocket.close();
 			} catch (Exception e) {
-				log.error(e.getMessage());
 			}
 		}
 	}

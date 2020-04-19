@@ -1,9 +1,12 @@
 package kr.kis.tcprelay;
 
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import org.apache.commons.lang.StringUtils;
 
@@ -33,6 +36,7 @@ public class TcpRelayService {
 	public static String curDate = "";
 
 	private ExecutorService executorService;
+	public static BlockingQueue<Socket> closeSocketQueue;
 
 	public TcpRelayService(String envPath) {
 		try {
@@ -46,6 +50,27 @@ public class TcpRelayService {
 
 			// 쓰레드 풀 갯수 설정.
 			executorService = Executors.newFixedThreadPool(threadNum);
+			closeSocketQueue = new LinkedBlockingQueue<Socket>(threadNum);
+			{
+				new Thread(new Runnable() {
+
+					@Override
+					public void run() {
+						while (true) {
+							try {
+								Socket socket = closeSocketQueue.take();
+
+								try {
+									log.debug("Socket Close : " + ((InetSocketAddress) socket.getRemoteSocketAddress()).getAddress().getHostAddress());
+									socket.close();
+								} catch (Exception e) {
+								}
+							} catch (Exception e) {
+							}
+						}
+					}
+				});
+			}
 		} catch (Exception e) {
 			try {
 				log.error("ERROR", e);
@@ -117,7 +142,7 @@ public class TcpRelayService {
 					} catch (Exception e1) {
 						log.error(e1.getMessage());
 					}
-					
+
 					try {
 						targetSocket.close();
 					} catch (Exception e1) {
