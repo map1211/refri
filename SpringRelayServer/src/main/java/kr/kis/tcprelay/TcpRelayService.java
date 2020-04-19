@@ -2,6 +2,8 @@ package kr.kis.tcprelay;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -34,6 +36,28 @@ public class TcpRelayService {
 
 	private ExecutorService executorService;
 
+	private static BlockingQueue<Socket> socketQueue = null;
+
+	public static void restoreSocket(Socket socket) {
+		try {
+			socket.close();
+		} catch (Exception e) {
+			log.error(e.getMessage());
+		} finally {
+			createNewSocket();
+		}
+	}
+
+	private static void createNewSocket() {
+		try {
+			Socket socket = new Socket(targetServer, targetPort);
+			socket.setKeepAlive(true);
+			socketQueue.put(socket);
+		} catch (Exception e) {
+			log.error("ERROR", e);
+		}
+	}
+
 	public TcpRelayService(String envPath) {
 		try {
 			initTcpRelayService(envPath);
@@ -45,7 +69,8 @@ public class TcpRelayService {
 			getRelayServerInfo();
 
 			// 쓰레드 풀 갯수 설정.
-			executorService = Executors.newFixedThreadPool(threadNum);
+			executorService = Executors.newCachedThreadPool();
+			socketQueue = new ArrayBlockingQueue<Socket>(threadNum);
 		} catch (Exception e) {
 			try {
 				log.error("ERROR", e);
@@ -98,6 +123,11 @@ public class TcpRelayService {
 		running = true;
 		ServerSocket serverSocket = null;
 		try {
+			// Socket Connection Pool
+			for (int i = 0; i < threadNum; i++) {
+				createNewSocket();
+			}
+
 			serverSocket = new ServerSocket(socketPort);
 			log.info("Sever is ready.");
 
@@ -107,7 +137,8 @@ public class TcpRelayService {
 				try {
 					sourceSocket = serverSocket.accept();
 
-					targetSocket = new Socket(targetServer, targetPort);
+					targetSocket = getSocket();
+					log.debug("Working Process : " + (threadNum - socketQueue.size()));
 					executorService.submit(new TcpRelayWorker(sourceSocket, targetSocket, envPath));
 				} catch (Exception e) {
 					log.error("ERROR", e);
@@ -117,12 +148,8 @@ public class TcpRelayService {
 					} catch (Exception e1) {
 						log.error(e1.getMessage());
 					}
-					
-					try {
-						targetSocket.close();
-					} catch (Exception e1) {
-						log.error(e1.getMessage());
-					}
+
+					restoreSocket(targetSocket);
 				}
 			}
 		} catch (Exception e) {
@@ -133,6 +160,28 @@ public class TcpRelayService {
 			} catch (Exception e) {
 			}
 		}
+	}
+
+	private Socket getSocket() throws Exception {
+		return getSocket(0);
+	}
+
+	private Socket getSocket(int tryCount) throws Exception {
+		if (socketQueue.isEmpty()) {
+			createNewSocket();
+		}
+
+		Socket socket = socketQueue.take();
+		if (socket.isConnected() == false) {
+			if (tryCount > threadNum) {
+				throw new Exception("Get Connection Fail");
+			}
+
+			createNewSocket();
+			return getSocket(tryCount++);
+		}
+
+		return socket;
 	}
 
 	public void stop() {
