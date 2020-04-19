@@ -1,5 +1,6 @@
 package kr.kis.tcprelay;
 
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.BlockingQueue;
@@ -60,6 +61,7 @@ public class TcpRelayService {
 								Socket socket = closeSocketQueue.take();
 
 								try {
+									log.debug("Socket Close : " + ((InetSocketAddress) socket.getRemoteSocketAddress()).getAddress().getHostAddress());
 									socket.close();
 								} catch (Exception e) {
 								}

@@ -16,7 +16,7 @@ public class TcpRelayWorker implements Runnable {
 	protected static LogUtil log;
 	public static ServerInfoUtil util;
 
-	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd"); 
 
 	public TcpRelayWorker(Socket sourceSocket, Socket targetSocket) {
 		this.sourceSocket = sourceSocket;

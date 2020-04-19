@@ -2,6 +2,7 @@ package kr.kis.tcprelay;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 
 import kr.kis.utils.LogUtil;
@@ -53,8 +54,11 @@ public class TcpRelayIOWorker implements Runnable {
 			log.error(type.toString() + " ERROR", e);
 
 			try {
+				log.debug(threadName + " - Socket Close Reg");
 				TcpRelayService.closeSocketQueue.put(source);
+				log.debug(threadName + " >> Socket Close Reg : " + ((InetSocketAddress) source.getRemoteSocketAddress()).getAddress().getHostAddress());
 				TcpRelayService.closeSocketQueue.put(target);
+				log.debug(threadName + " >> Socket Close Reg : " + ((InetSocketAddress) target.getRemoteSocketAddress()).getAddress().getHostAddress());
 			} catch (Exception e1) {
 			}
 			
