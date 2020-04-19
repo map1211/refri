@@ -129,7 +129,6 @@ public class KisFtClient {
 	 */
 	public String sendNrcvString( String msg ) throws Exception{
 		
-//		log.info("msg:[" + msg + "]");
 		String retMsg = null;
 		
 		try{
@@ -175,9 +174,6 @@ public class KisFtClient {
 	 */
 	public void sendFR01String( String msg ) throws Exception{
 		
-		log.info("msg:[" + msg + "]");
-		String retMsg = null;
-		
 		try{
 			log.info("outputstream 생성 " );
 			OutputStream output = socket.getOutputStream();
@@ -218,9 +214,7 @@ public class KisFtClient {
 				line = new String(receiveWhat, 0, bytesRead);
 			}
 			log.info("receive msg : [" +line + "]");
-			if("FR12".equals(line.substring(0, 4)) && "1".equals(line.substring(14, 15))) {
-//				log.info("파일 수신 모드 ");
-			}
+			
 			return line;
 			
 		}catch(Exception e){
@@ -267,7 +261,6 @@ public class KisFtClient {
 			log.info("receive msg : [" +retMsg + "]");
 			if("FR12".equals(retMsg.substring(0, 4)) && "1".equals(retMsg.substring(14, 15))) {
 				String rcvFileSize = retMsg.substring(15, 25);
-//				log.info("파일 수신 모드 filesize : " + rcvFileSize );
 				log.info("파일 수신 모드 filesize long : " + Long.parseLong(rcvFileSize) );
 				
 				// FR02 : 파일 수신 실행. 
@@ -292,8 +285,6 @@ public class KisFtClient {
 				while((len = is.read(data)) != -1) {
 					bos.write(data, 0, len);
 					writeSize += len;
-//					log.info("## Client: writen fileSize : " + writeSize);
-					
 					if((writeSize + 1024) > Long.parseLong(rcvFileSize)) {
 						break;
 					}
@@ -372,13 +363,9 @@ public class KisFtClient {
 //			log.info("서버에 Byte[]스트림 전송 " );
 			DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
 			//(1) 전송 자료를 byte[]로 변환
-//			log.info("(1) 전송 자료를 byte[]로 변환 " );
-//			byte[] sendWhat = msg.getBytes("ms949");
 			byte[] sendWhat = msg.getBytes(socketEncode);
 			//(2) 전송 자료의 길이를 구함 
-//			log.info("(2) 전송 자료의 길이를 구함 : length : " );
 			int writeLen= sendWhat.length;
-//			log.info("(4) 전송 자료를 보냄 : " );
 			dos.write(sendWhat, 0, writeLen);
 			dos.flush();
 
@@ -400,13 +387,10 @@ public class KisFtClient {
 			log.info("FR03 :: 서버에 Byte[]스트림 전송 msg : [" + msg + "]" );
 			OutputStream output = socket.getOutputStream();
 			//(1) 전송 자료를 byte[]로 변환
-//			log.info("(1) 전송 자료를 byte[]로 변환 " );
 			byte[] sendWhat = msg.getBytes(socketEncode);
 			//(2) 전송 자료의 길이를 구함 
-//			log.info("(2) 전송 자료의 길이를 구함 : length : "  + sendWhat.length);
 			int writeLen= sendWhat.length;
 			//(4) 전송 자료를 보냄
-//			log.info("(4) 전송 자료를 보냄 : " + new String(sendWhat));
 			output.write(sendWhat);			
 			
 			
@@ -442,8 +426,6 @@ public class KisFtClient {
 		
 		// 시간 측정위해
 		long lStartTime = System.currentTimeMillis();
-		log.info("######## KisFtClientMain Start:::::::" );
-		
 		
 		// 릴레이 서버에 파일 전달하기
 		HashMap<String, Object> relaymap;
@@ -620,17 +602,12 @@ public class KisFtClient {
 		
 		try{
 			//서버에 Byte[]스트림 전송
-			log.info("outputstream 생성 " );
 			OutputStream output = socket.getOutputStream();
 			//(1) 전송 자료를 byte[]로 변환
-			log.info("(1) 전송 자료를 byte[]로 변환 " );
 			byte[] sendWhat = msg.getBytes(socketEncode);
 			//(2) 전송 자료의 길이를 구함 
-			log.info("(2) 전송 자료의 길이를 구함 : length : "  + sendWhat.length);
 			int writeLen= sendWhat.length;
-			//(3) 전송 자료의 길이를 먼저 보냄
 			//(4) 전송 자료를 보냄
-			log.info("(4) 전송 자료를 보냄 : " + new String(sendWhat));
 			output.write(sendWhat);
 
 		}catch(Exception e){
@@ -657,13 +634,10 @@ public class KisFtClient {
 			log.info("outputstream 생성 " );
 			OutputStream output = socket.getOutputStream();
 			//(1) 전송 자료를 byte[]로 변환
-			log.info("(1) 전송 자료를 byte[]로 변환 " );
 			byte[] sendWhat = msg.getBytes(socketEncode);
 			//(2) 전송 자료의 길이를 구함 
-			log.info("(2) 전송 자료의 길이를 구함 : length : "  + sendWhat.length);
 			int writeLen= sendWhat.length;
 			//(4) 전송 자료를 보냄
-			log.info("(4) 전송 자료를 보냄 : " + new String(sendWhat));
 			output.write(sendWhat);
 
 		}catch(Exception e){
@@ -691,20 +665,15 @@ public class KisFtClient {
 		try{
 		
 			//서버에서  Byte[]스트림을 전송받음
-			log.info("서버에서  Byte[]스트림을 전송받음 " );
 			InputStream is = socket.getInputStream();
 			DataInputStream dis = new DataInputStream(is);
 			// (1) 전송될 자료의 길이를 받음
-			log.info(" (1) 전송될 자료의 길이를 받음 " );
 			int size = 100;
 			// (2) 전송될  자료의 길이에 맞는 byte[] 생성
-			log.info(" (2) 전송될  자료의 길이에 맞는 byte[] 생성" );
 			byte[] receiveWhat = new byte[size];
 			// (3) 전송된 자료를 byte[]변수에 저장함
-			log.info(" (3) 전송된 자료를 byte[]변수에 저장함 " );
 			dis.read(receiveWhat, 0, size);
 			// (4) 전송된 자료를 String변수로 변환 
-			log.info(" (4) 전송된 자료를 String변수로 변환  " );
 			retMsg = new String(receiveWhat, socketEncode);
 			
 			log.info("receive msg : [" +retMsg + "]");
@@ -735,19 +704,14 @@ public class KisFtClient {
 		try{
 			
 			//서버에서  Byte[]스트림을 전송받음
-			log.info("서버에서  Byte[]스트림을 전송받음 " );
 			InputStream is = socket.getInputStream();
 			DataInputStream dis = new DataInputStream(is);
 			// (1) 전송될 자료의 길이를 받음
-			log.info(" (1) 전송될 자료의 길이를 받음 " );
 			int size = 100;
 			// (2) 전송될  자료의 길이에 맞는 byte[] 생성
-			log.info(" (2) 전송될  자료의 길이에 맞는 byte[] 생성" );
 			byte[] receiveWhat = new byte[size];
-			log.info(" (3) 전송된 자료를 byte[]변수에 저장함 " );
 			dis.read(receiveWhat, 0, size);
 			// (4) 전송된 자료를 String변수로 변환 
-			log.info(" (4) 전송된 자료를 String변수로 변환  " );
 			retMsg = new String(receiveWhat, socketEncode);
 			
 			log.info("receive msg : [" +retMsg + "]");

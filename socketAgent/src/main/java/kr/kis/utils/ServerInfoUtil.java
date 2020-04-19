@@ -39,7 +39,6 @@ public class ServerInfoUtil {
 			envPath = ".";
 		}
 		
-//		System.out.println("### ServerInfoUtil. utilInit:: envPath::" + envPath);
 		try {
 			resources = new FileReader( envPath+"/resources/application.properties" );
 //			resources = new FileReader( ResourceUtils.getFile("classpath:application.properties") );

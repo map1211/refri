@@ -31,10 +31,7 @@ public class ServerLog {
 	
 	
 	private ServerLog(String envPath){
-//		PropertyConfigurator.configure("C:/egov_dev/workspace/JavaSample/bin/log4j.properties");
-//		log = (Logger)Logger.getInstance("ServerLog");
 		this.envPath = envPath;
-//		System.out.println("ServerLog(envPath) :: envPath ::" + envPath);
 		Properties log4jProperty = this.utilLogInit();
 		PropertyConfigurator.configure(log4jProperty);
 		logger = (Logger)Logger.getInstance("ServerLog");
@@ -50,7 +47,6 @@ public class ServerLog {
 		}
 		System.setProperty("LOGPATH", envPath);
 		
-//		System.out.println("####### utilLogInit() :: SYSTEM.properties:: LOGPATH::" + System.getProperty("LOGPATH"));
 		try {
 			resources = new FileReader( envPath + "/resources/log4j.properties" );
 //			resources = new FileReader( ResourceUtils.getFile("classpath:log4j.properties") );
@@ -80,7 +76,6 @@ public class ServerLog {
 	}
 	
 	public static ServerLog getInstance(String envPath){
-//		System.out.println("###### ServerLog::getInstance::envPath::" + envPath);
 		if(serverLog == null){
 			serverLog = initLog(envPath);
 		}
@@ -88,7 +83,6 @@ public class ServerLog {
 	}
 	
 	private static ServerLog initLog(String envPath){
-//		System.out.println("###### ServerLog::initLog::envPath::" + envPath);
 		serverLog = new ServerLog(envPath);
 		return serverLog;
 	}
