@@ -5,6 +5,8 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
 
+import org.apache.commons.io.IOUtils;
+
 import kr.kis.utils.LogUtil;
 import kr.kis.utils.ServerInfoUtil;
 

@@ -65,7 +65,7 @@ public class TcpRelayService {
 			// Init SocketServer
 			getSocketServerInfo();
 
-			// 서버 정보 요청 
+			// 서버 정보 요청
 			getRelayServerInfo();
 
 			// 쓰레드 풀 갯수 설정.
