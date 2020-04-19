@@ -78,34 +78,32 @@ public class TcpRelayWorker implements Runnable {
 			try {
 				sourceIs.close();
 			} catch (Exception e) {
-				log.error(e.getMessage());
 			}
 
 			try {
 				sourceOs.close();
 			} catch (Exception e) {
-				log.error(e.getMessage());
 			}
 
 			try {
 				targetIs.close();
 			} catch (Exception e) {
-				log.error(e.getMessage());
 			}
 
 			try {
 				targetOs.close();
 			} catch (Exception e) {
-				log.error(e.getMessage());
 			}
 
 			try {
 				sourceSocket.close();
 			} catch (Exception e1) {
-				log.error(e1.getMessage());
 			}
 
-			TcpRelayService.restoreSocket(targetSocket);
+			try {
+				targetSocket.close();
+			} catch (Exception e1) {
+			}
 		}
 	}
 }

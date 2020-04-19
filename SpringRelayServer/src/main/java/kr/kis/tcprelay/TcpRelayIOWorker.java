@@ -44,8 +44,7 @@ public class TcpRelayIOWorker implements Runnable {
 			}
 			log.info("Data byte : [" + totalBytes + "]");
 		} catch (Exception e) {
-			e.printStackTrace();
-			log.error("ERROR", e);
+			log.error(type.toString() + " ERROR", e);
 		}
 	}
 }
