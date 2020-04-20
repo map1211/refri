@@ -37,7 +37,7 @@ public class KisFtClient {
 
 	
 	private static InputStream dis = null;
-	private static OutputStream dos = null;
+	private static OutputStream dos = null;   
 	
 	static String recvFileSize;
 	static String envPath;
