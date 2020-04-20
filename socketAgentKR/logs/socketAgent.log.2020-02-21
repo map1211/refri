@@ -1,0 +1,814 @@
+2020-02-21 15:53:27,523 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 15:53:27,529 [main] [ServerLog] [INFO] - [] : ######## KisFtClientMain Start:::::::
+  2020-02-21 15:53:27,530 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 15:53:27,530 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 15:53:27,552 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 15:53:27,552 [main] [ServerLog] [INFO] - [] : download filename:::::::
+  2020-02-21 15:53:28,638 [main] [ServerLog] [INFO] - [] : connect 1
+  2020-02-21 15:53:30,651 [main] [ServerLog] [INFO] - [] : Client 오류 발생!
+  java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at net.jbongsu.client.KisFtClient.connect(KisFtClient.java:59)
+	at net.jbongsu.client.KisFtClientMain.main(KisFtClientMain.java:141)
+2020-02-21 15:59:29,253 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 소켓 서버를 실행합니다.
+  2020-02-21 15:59:29,261 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 서버 응답대기 포트 : 30030
+  2020-02-21 15:59:29,261 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 15:59:42,741 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 15:59:42,744 [main] [ServerLog] [INFO] - [] : ######## KisFtClientMain Start:::::::
+  2020-02-21 15:59:42,746 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 15:59:42,746 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 15:59:42,768 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 15:59:42,768 [main] [ServerLog] [INFO] - [] : download filename:::::::
+  2020-02-21 15:59:43,844 [main] [ServerLog] [INFO] - [] : connect 1
+  2020-02-21 15:59:43,867 [main] [ServerLog] [INFO] - [] : Client 오류 발생!
+  java.net.ConnectException: connect: Address is invalid on local machine, or port is not valid on remote machine
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at net.jbongsu.client.KisFtClient.connect(KisFtClient.java:59)
+	at net.jbongsu.client.KisFtClientMain.main(KisFtClientMain.java:151)
+2020-02-21 16:03:51,619 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 16:03:51,623 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ######## KisFtClientMain Start:::::::
+  2020-02-21 16:03:51,624 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:03:51,625 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:03:51,648 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 16:03:51,648 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : download filename:::::::
+  2020-02-21 16:03:51,650 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 ip   :null
+  2020-02-21 16:03:51,650 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 port :0
+  2020-02-21 16:03:52,728 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect 1
+  2020-02-21 16:03:52,736 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : Client 오류 발생!
+  java.net.ConnectException: connect: Address is invalid on local machine, or port is not valid on remote machine
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at net.jbongsu.client.KisFtClient.connect(KisFtClient.java:59)
+	at net.jbongsu.client.KisFtClientMain.main(KisFtClientMain.java:153)
+2020-02-21 16:15:38,460 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : stand alone 형 인 경우
+  2020-02-21 16:15:38,460 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:15:38,460 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerIp : 127.0.0.1
+  2020-02-21 16:15:38,461 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerPort : 30030
+  2020-02-21 16:15:38,461 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerEncodeType : UTF-8
+  2020-02-21 16:15:38,461 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 16:15:38,461 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ######## KisFtClientMain Start:::::::
+  2020-02-21 16:15:38,462 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:15:38,463 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:15:38,463 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:15:38,463 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:15:38,483 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 16:15:38,483 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : download filename:::::::
+  2020-02-21 16:15:38,484 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:15:38,485 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:15:38,485 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 ip   :null
+  2020-02-21 16:15:38,485 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 port :0
+  2020-02-21 16:15:39,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect 1
+  2020-02-21 16:15:39,568 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : Client 오류 발생!
+  java.net.ConnectException: connect: Address is invalid on local machine, or port is not valid on remote machine
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at java.net.Socket.<init>(Socket.java:452)
+	at java.net.Socket.<init>(Socket.java:229)
+	at net.jbongsu.client.KisFtClient.connect(KisFtClient.java:59)
+	at net.jbongsu.client.KisFtClientMain.main(KisFtClientMain.java:154)
+2020-02-21 16:17:15,542 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:17:15,543 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:17:15,543 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 16:17:15,543 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ######## KisFtClientMain Start:::::::
+  2020-02-21 16:17:15,544 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:17:15,545 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:17:15,545 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:17:15,545 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:17:15,566 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 16:17:15,566 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : download filename:::::::
+  2020-02-21 16:17:15,567 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:17:15,568 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:17:15,568 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 ip   :127.0.0.1
+  2020-02-21 16:17:15,568 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 port :30030
+  2020-02-21 16:17:16,645 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect 1
+  2020-02-21 16:17:16,652 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 16:17:16,659 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:0]
+  2020-02-21 16:17:16,662 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 16:17:16,662 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:0]
+  2020-02-21 16:17:19,653 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 1번을 통한 makeFr01 전문 발송 
+  2020-02-21 16:17:19,655 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils().makeFr01() : orgCode:MAGNET0001
+  2020-02-21 16:17:19,655 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ### Build file name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:17:19,656 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : msg:[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:17:19,656 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:17:19,656 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:17:19,657 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:17:19,657 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 100
+  2020-02-21 16:17:19,657 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:17:19,658 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:17:19,658 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:17:19,658 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-21 16:17:19,658 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-21 16:17:19,658 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:17:19,659 [Thread-0] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-21 16:17:19,659 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-21 16:17:19,660 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              
+  2020-02-21 16:17:19,662 [Thread-0] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:17:19,662 [Thread-0] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:17:19,662 [Thread-0] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-21 16:17:19,663 [Thread-0] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:17:19,663 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:17:19,664 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 16:17:19,664 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:17:19,665 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:17:19,665 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:17:19,665 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR12MAGNET00011000102400000000001000000                                         
+  2020-02-21 16:17:19,665 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 클라이언트1이 받은 결과 [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:17:19,665 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:17:19,665 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 다운로드 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송
+  2020-02-21 16:17:19,666 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : File Receiving : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:17:19,666 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:17:19,666 [main] [ServerLog] [INFO] - [] : ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:17:19,666 [main] [ServerLog] [INFO] - [] : ## Client: File Name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:17:19,666 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:0]
+  2020-02-21 16:17:19,666 [main] [ServerLog] [INFO] - [] : ## Client: File 생성완료 : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:17:19,667 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:0]
+  2020-02-21 16:17:19,667 [Thread-1] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-21 16:17:19,672 [main] [ServerLog] [INFO] - [] : ## Client: writen fileSize : 1474
+  2020-02-21 16:17:19,672 [main] [ServerLog] [INFO] - [] : ## Client: File 수신완료  
+  2020-02-21 16:17:19,672 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:0]
+  2020-02-21 16:17:19,672 [main] [ServerLog] [INFO] - [] : ## Client: 받은 파일 사이즈 : [1474]
+  2020-02-21 16:17:19,673 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 수신 성공. 
+  2020-02-21 16:17:19,673 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : recvString. 
+  2020-02-21 16:17:19,673 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:17:19,674 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:17:19,674 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:17:19,674 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:17:19,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:17:19,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:17:19,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:17:19,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:17:19,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:17:19,673 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:0]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 16:17:19,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR13MAGNET0001                                                                                      
+  2020-02-21 16:17:19,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관 코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:17:19,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : FR03 :: 서버에 Byte[]스트림 전송 msg : [FR03MAGNET00010000001474                                                                                ]
+  2020-02-21 16:17:19,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:17:19,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:17:19,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:17:19,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:17:22,676 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect close 1
+  2020-02-21 16:17:22,677 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### kis server에서 전문 통신 소요 시간: 7.133 초
+  2020-02-21 16:17:22,678 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:17:22,679 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:17:22,679 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 ip: 127.0.0.1
+  2020-02-21 16:17:22,679 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 port: 23510
+  2020-02-21 16:17:22,679 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 접속시도 
+  2020-02-21 16:17:22,680 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버로 파일 송신 
+  2020-02-21 16:17:22,681 [main] [ServerLog] [INFO] - [] : File transfer completed.
+  2020-02-21 16:17:22,681 [main] [ServerLog] [INFO] - [] : ## Client: File 송신완료  
+  2020-02-21 16:17:22,681 [main] [ServerLog] [INFO] - [] : ## Client: 송신 파일 사이즈 : [0]
+  2020-02-21 16:17:22,681 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 송신 성공. 
+  2020-02-21 16:19:26,022 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:19:26,024 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:19:26,024 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 16:19:26,024 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ######## KisFtClientMain Start:::::::
+  2020-02-21 16:19:26,025 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:19:26,026 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:19:26,026 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:19:26,026 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:19:26,049 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 16:19:26,049 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : download filename:::::::
+  2020-02-21 16:19:26,050 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:19:26,050 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:19:26,050 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 ip   :127.0.0.1
+  2020-02-21 16:19:26,050 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 port :30030
+  2020-02-21 16:19:27,127 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect 1
+  2020-02-21 16:19:27,147 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 16:19:27,147 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:1]
+  2020-02-21 16:19:27,149 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 16:19:27,149 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:1]
+  2020-02-21 16:19:30,147 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 1번을 통한 makeFr01 전문 발송 
+  2020-02-21 16:19:30,152 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils().makeFr01() : orgCode:MAGNET0001
+  2020-02-21 16:19:30,153 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ### Build file name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:19:30,154 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : msg:[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:19:30,155 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:19:30,157 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:19:30,157 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:19:30,158 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 100
+  2020-02-21 16:19:30,158 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:19:30,159 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:19:30,159 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:19:30,160 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-21 16:19:30,160 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-21 16:19:30,160 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:19:30,160 [Thread-2] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-21 16:19:30,161 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-21 16:19:30,161 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              
+  2020-02-21 16:19:30,163 [Thread-2] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:19:30,164 [Thread-2] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:19:30,164 [Thread-2] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-21 16:19:30,165 [Thread-2] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:19:30,165 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:19:30,165 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 16:19:30,165 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:19:30,166 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:19:30,166 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:1]
+  2020-02-21 16:19:30,166 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:1]
+  2020-02-21 16:19:30,167 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:19:30,167 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR12MAGNET00011000102400000000001000000                                         
+  2020-02-21 16:19:30,167 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 클라이언트1이 받은 결과 [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:19:30,167 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:19:30,168 [Thread-3] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-21 16:19:30,168 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 다운로드 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송
+  2020-02-21 16:19:30,168 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : File Receiving : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:19:30,168 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:1]
+  2020-02-21 16:19:30,169 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:19:30,169 [main] [ServerLog] [INFO] - [] : ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:19:30,169 [main] [ServerLog] [INFO] - [] : ## Client: File Name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:19:30,169 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:1]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 16:19:30,169 [main] [ServerLog] [INFO] - [] : ## Client: File 생성완료 : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:19:30,169 [main] [ServerLog] [INFO] - [] : ## Client: writen fileSize : 1474
+  2020-02-21 16:19:30,170 [main] [ServerLog] [INFO] - [] : ## Client: File 수신완료  
+  2020-02-21 16:19:30,170 [main] [ServerLog] [INFO] - [] : ## Client: 받은 파일 사이즈 : [1474]
+  2020-02-21 16:19:30,170 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 수신 성공. 
+  2020-02-21 16:19:30,171 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : recvString. 
+  2020-02-21 16:19:30,171 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:19:30,172 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:19:30,173 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:19:30,173 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:19:30,173 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:19:30,173 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:19:30,173 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:19:30,174 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:19:30,174 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:19:30,174 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR13MAGNET0001                                                                                      
+  2020-02-21 16:19:30,174 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관 코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:19:30,174 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : FR03 :: 서버에 Byte[]스트림 전송 msg : [FR03MAGNET00010000001474                                                                                ]
+  2020-02-21 16:19:30,175 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:19:30,175 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:19:30,175 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:19:30,175 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:19:33,177 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect close 1
+  2020-02-21 16:19:33,179 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### kis server에서 전문 통신 소요 시간: 7.153 초
+  2020-02-21 16:19:33,181 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:19:33,182 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:19:33,183 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 ip: 127.0.0.1
+  2020-02-21 16:19:33,183 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 port: 23510
+  2020-02-21 16:19:33,183 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 접속시도 
+  2020-02-21 16:19:33,184 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버로 파일 송신 
+  2020-02-21 16:19:33,186 [main] [ServerLog] [INFO] - [] : File transfer completed.
+  2020-02-21 16:19:33,186 [main] [ServerLog] [INFO] - [] : ## Client: File 송신완료  
+  2020-02-21 16:19:33,187 [main] [ServerLog] [INFO] - [] : ## Client: 송신 파일 사이즈 : [0]
+  2020-02-21 16:19:33,187 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 송신 성공. 
+  2020-02-21 16:45:35,851 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:45:35,853 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:45:35,853 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 16:45:35,853 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ######## KisFtClientMain Start:::::::
+  2020-02-21 16:45:35,854 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:45:35,855 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:45:35,855 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:45:35,856 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:45:35,877 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 16:45:35,877 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : download filename:::::::
+  2020-02-21 16:45:35,878 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:45:35,879 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:45:35,879 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 ip   :127.0.0.1
+  2020-02-21 16:45:35,879 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 port :30030
+  2020-02-21 16:45:36,983 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect 1
+  2020-02-21 16:45:37,001 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 16:45:37,001 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:2]
+  2020-02-21 16:45:37,002 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 16:45:37,002 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:2]
+  2020-02-21 16:45:40,001 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 1번을 통한 makeFr01 전문 발송 
+  2020-02-21 16:45:40,003 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils().makeFr01() : orgCode:MAGNET0001
+  2020-02-21 16:45:40,003 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ### Build file name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:45:40,004 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : msg:[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:45:40,004 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:45:40,004 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:45:40,004 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:45:40,004 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 100
+  2020-02-21 16:45:40,005 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:45:40,005 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:45:40,005 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:45:40,005 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-21 16:45:40,005 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-21 16:45:40,005 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:45:40,005 [Thread-4] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-21 16:45:40,006 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-21 16:45:40,006 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              
+  2020-02-21 16:45:40,007 [Thread-4] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:45:40,007 [Thread-4] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:45:40,007 [Thread-4] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-21 16:45:40,007 [Thread-4] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:45:40,007 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:45:40,008 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 16:45:40,008 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:45:40,008 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:2]
+  2020-02-21 16:45:40,008 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:45:40,008 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:2]
+  2020-02-21 16:45:40,008 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:45:40,009 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR12MAGNET00011000102400000000001000000                                         
+  2020-02-21 16:45:40,009 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 클라이언트1이 받은 결과 [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:45:40,009 [Thread-5] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-21 16:45:40,009 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:45:40,009 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 다운로드 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송
+  2020-02-21 16:45:40,010 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : File Receiving : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:45:40,010 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:45:40,010 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:2]
+  2020-02-21 16:45:40,010 [main] [ServerLog] [INFO] - [] : ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:45:40,010 [main] [ServerLog] [INFO] - [] : ## Client: File Name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:45:40,010 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:2]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 16:45:40,011 [main] [ServerLog] [INFO] - [] : ## Client: File 생성완료 : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:45:40,011 [main] [ServerLog] [INFO] - [] : ## Client: writen fileSize : 1474
+  2020-02-21 16:45:40,011 [main] [ServerLog] [INFO] - [] : ## Client: File 수신완료  
+  2020-02-21 16:45:40,011 [main] [ServerLog] [INFO] - [] : ## Client: 받은 파일 사이즈 : [1474]
+  2020-02-21 16:45:40,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 수신 성공. 
+  2020-02-21 16:45:40,012 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : recvString. 
+  2020-02-21 16:45:40,012 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:45:40,013 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:45:40,013 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:45:40,013 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:45:40,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:45:40,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:45:40,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:45:40,014 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:45:40,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:45:40,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR13MAGNET0001                                                                                      
+  2020-02-21 16:45:40,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관 코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:45:40,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : FR03 :: 서버에 Byte[]스트림 전송 msg : [FR03MAGNET00010000001474                                                                                ]
+  2020-02-21 16:45:40,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:45:40,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:45:40,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:45:40,015 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:45:43,016 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect close 1
+  2020-02-21 16:45:43,017 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### kis server에서 전문 통신 소요 시간: 7.163 초
+  2020-02-21 16:45:43,018 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:45:43,018 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:45:43,018 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 ip: 127.0.0.1
+  2020-02-21 16:45:43,018 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 port: 23510
+  2020-02-21 16:45:43,018 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 접속시도 
+  2020-02-21 16:45:43,019 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버로 파일 송신 
+  2020-02-21 16:45:43,019 [main] [ServerLog] [INFO] - [] : File transfer completed.
+  2020-02-21 16:45:43,020 [main] [ServerLog] [INFO] - [] : ## Client: File 송신완료  
+  2020-02-21 16:45:43,020 [main] [ServerLog] [INFO] - [] : ## Client: 송신 파일 사이즈 : [0]
+  2020-02-21 16:45:43,020 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 송신 성공. 
+  2020-02-21 16:47:53,427 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:47:53,428 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:47:53,428 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 16:47:53,428 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ######## KisFtClientMain Start:::::::
+  2020-02-21 16:47:53,430 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:47:53,430 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:47:53,430 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:47:53,431 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:47:53,453 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 16:47:53,453 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : download filename:::::::
+  2020-02-21 16:47:53,454 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:47:53,455 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:47:53,455 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 ip   :127.0.0.1
+  2020-02-21 16:47:53,455 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 port :30030
+  2020-02-21 16:47:54,535 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect 1
+  2020-02-21 16:47:54,546 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 16:47:54,546 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:3]
+  2020-02-21 16:47:54,548 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 16:47:54,548 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:3]
+  2020-02-21 16:47:57,546 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 1번을 통한 makeFr01 전문 발송 
+  2020-02-21 16:47:57,550 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils().makeFr01() : orgCode:MAGNET0001
+  2020-02-21 16:47:57,550 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ### Build file name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:47:57,550 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : msg:[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:47:57,551 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:47:57,551 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:47:57,551 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:47:57,551 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 100
+  2020-02-21 16:47:57,552 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:47:57,552 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:47:57,552 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:47:57,552 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-21 16:47:57,553 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-21 16:47:57,553 [Thread-6] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-21 16:47:57,553 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:47:57,553 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-21 16:47:57,553 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              
+  2020-02-21 16:47:57,554 [Thread-6] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:47:57,554 [Thread-6] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:47:57,554 [Thread-6] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-21 16:47:57,554 [Thread-6] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:47:57,554 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:47:57,555 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 16:47:57,555 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:47:57,555 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:47:57,555 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:3]
+  2020-02-21 16:47:57,555 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:47:57,555 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:3]
+  2020-02-21 16:47:57,555 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR12MAGNET00011000102400000000001000000                                         
+  2020-02-21 16:47:57,556 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 클라이언트1이 받은 결과 [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:47:57,556 [Thread-7] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-21 16:47:57,556 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:47:57,556 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 다운로드 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송
+  2020-02-21 16:47:57,556 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : File Receiving : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:47:57,557 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:3]
+  2020-02-21 16:47:57,557 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:47:57,557 [main] [ServerLog] [INFO] - [] : ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:47:57,557 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:3]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 16:47:57,557 [main] [ServerLog] [INFO] - [] : ## Client: File Name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:47:57,558 [main] [ServerLog] [INFO] - [] : ## Client: File 생성완료 : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:47:57,559 [main] [ServerLog] [INFO] - [] : ## Client: writen fileSize : 1474
+  2020-02-21 16:47:57,559 [main] [ServerLog] [INFO] - [] : ## Client: File 수신완료  
+  2020-02-21 16:47:57,559 [main] [ServerLog] [INFO] - [] : ## Client: 받은 파일 사이즈 : [1474]
+  2020-02-21 16:47:57,559 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 수신 성공. 
+  2020-02-21 16:47:57,559 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : recvString. 
+  2020-02-21 16:47:57,559 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:47:57,560 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:47:57,560 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:47:57,560 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:47:57,560 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:47:57,560 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:47:57,560 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:47:57,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:47:57,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:47:57,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR13MAGNET0001                                                                                      
+  2020-02-21 16:47:57,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관 코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:47:57,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : FR03 :: 서버에 Byte[]스트림 전송 msg : [FR03MAGNET00010000001474                                                                                ]
+  2020-02-21 16:47:57,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:47:57,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:47:57,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:47:57,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:48:00,561 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect close 1
+  2020-02-21 16:48:00,562 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### kis server에서 전문 통신 소요 시간: 7.133 초
+  2020-02-21 16:48:00,563 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:48:00,563 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:48:00,563 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 ip: 127.0.0.1
+  2020-02-21 16:48:00,563 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 port: 23510
+  2020-02-21 16:48:00,563 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 접속시도 
+  2020-02-21 16:48:00,564 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버로 파일 송신 
+  2020-02-21 16:48:00,565 [main] [ServerLog] [INFO] - [] : File transfer completed.
+  2020-02-21 16:48:00,565 [main] [ServerLog] [INFO] - [] : ## Client: File 송신완료  
+  2020-02-21 16:48:00,565 [main] [ServerLog] [INFO] - [] : ## Client: 송신 파일 사이즈 : [0]
+  2020-02-21 16:48:00,565 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 송신 성공. 
+  2020-02-21 16:49:43,495 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:49:43,496 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:49:43,497 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 16:49:43,497 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ######## KisFtClientMain Start:::::::
+  2020-02-21 16:49:43,498 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:49:43,498 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:49:43,498 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:49:43,498 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:49:43,518 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 16:49:43,518 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : download filename:::::::
+  2020-02-21 16:49:43,519 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:49:43,520 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:49:43,520 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 ip   :127.0.0.1
+  2020-02-21 16:49:43,520 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 port :30030
+  2020-02-21 16:49:44,599 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect 1
+  2020-02-21 16:49:44,613 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 16:49:44,613 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:4]
+  2020-02-21 16:49:44,613 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 16:49:44,614 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:4]
+  2020-02-21 16:49:47,613 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 1번을 통한 makeFr01 전문 발송 
+  2020-02-21 16:49:47,616 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils().makeFr01() : orgCode:MAGNET0001
+  2020-02-21 16:49:47,617 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ### Build file name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:49:47,618 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : msg:[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:49:47,618 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:49:47,619 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:49:47,619 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:49:47,619 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 100
+  2020-02-21 16:49:47,620 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:49:47,620 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 16:49:47,620 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:49:47,620 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-21 16:49:47,620 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-21 16:49:47,620 [Thread-8] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-21 16:49:47,621 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-21 16:49:47,621 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              
+  2020-02-21 16:49:47,621 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:49:47,621 [Thread-8] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:49:47,621 [Thread-8] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:49:47,621 [Thread-8] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-21 16:49:47,622 [Thread-8] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:49:47,625 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:49:47,625 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 16:49:47,625 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:49:47,626 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:4]
+  2020-02-21 16:49:47,626 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:49:47,626 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:4]
+  2020-02-21 16:49:47,626 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:49:47,626 [Thread-9] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-21 16:49:47,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR12MAGNET00011000102400000000001000000                                         
+  2020-02-21 16:49:47,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 클라이언트1이 받은 결과 [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 16:49:47,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:49:47,630 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:4]
+  2020-02-21 16:49:47,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 다운로드 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송
+  2020-02-21 16:49:47,630 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : File Receiving : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:49:47,630 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:49:47,630 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:4]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 16:49:47,630 [main] [ServerLog] [INFO] - [] : ## fileWrite :: Client: file receive starting... 
+  2020-02-21 16:49:47,631 [main] [ServerLog] [INFO] - [] : ## Client: File Name : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:49:47,631 [main] [ServerLog] [INFO] - [] : ## Client: File 생성완료 : [MAGNET0001-REPLY.200220]
+  2020-02-21 16:49:47,631 [main] [ServerLog] [INFO] - [] : ## Client: writen fileSize : 1474
+  2020-02-21 16:49:47,632 [main] [ServerLog] [INFO] - [] : ## Client: File 수신완료  
+  2020-02-21 16:49:47,632 [main] [ServerLog] [INFO] - [] : ## Client: 받은 파일 사이즈 : [1474]
+  2020-02-21 16:49:47,632 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 수신 성공. 
+  2020-02-21 16:49:47,632 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : recvString. 
+  2020-02-21 16:49:47,632 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:49:47,633 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:49:47,634 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 16:49:47,634 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 16:49:47,634 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 16:49:47,634 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 16:49:47,634 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 16:49:47,634 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 16:49:47,634 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 16:49:47,634 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR13MAGNET0001                                                                                      
+  2020-02-21 16:49:47,635 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관 코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 16:49:47,635 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : FR03 :: 서버에 Byte[]스트림 전송 msg : [FR03MAGNET00010000001474                                                                                ]
+  2020-02-21 16:49:47,635 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 16:49:47,635 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 16:49:47,635 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 16:49:47,635 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 16:49:50,637 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect close 1
+  2020-02-21 16:49:50,640 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### kis server에서 전문 통신 소요 시간: 7.14 초
+  2020-02-21 16:49:50,641 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 16:49:50,642 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 16:49:50,642 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 ip: 127.0.0.1
+  2020-02-21 16:49:50,642 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 port: 23510
+  2020-02-21 16:49:50,642 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 접속시도 
+  2020-02-21 16:49:50,643 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버로 파일 송신 
+  2020-02-21 16:49:50,643 [main] [ServerLog] [INFO] - [] : File transfer completed.
+  2020-02-21 16:49:50,643 [main] [ServerLog] [INFO] - [] : ## Client: File 송신완료  
+  2020-02-21 16:49:50,644 [main] [ServerLog] [INFO] - [] : ## Client: 송신 파일 사이즈 : [0]
+  2020-02-21 16:49:50,644 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 송신 성공. 
+  2020-02-21 17:05:07,526 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:05:07,527 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:05:07,527 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 17:05:07,528 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ######## KisFtClientMain Start:::::::
+  2020-02-21 17:05:07,529 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:05:07,529 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:05:07,529 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 17:05:07,530 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 17:05:07,553 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 17:05:07,553 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : download filename:::::::
+  2020-02-21 17:05:07,554 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:05:07,555 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:05:07,555 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 ip   :127.0.0.1
+  2020-02-21 17:05:07,555 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 port :30030
+  2020-02-21 17:05:08,655 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect 1
+  2020-02-21 17:05:08,662 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 17:05:08,662 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:5]
+  2020-02-21 17:05:08,663 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 17:05:08,663 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:5]
+  2020-02-21 17:05:11,663 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 1번을 통한 makeFr01 전문 발송 
+  2020-02-21 17:05:11,664 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils().makeFr01() : orgCode:MAGNET0001
+  2020-02-21 17:05:11,665 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ### Build file name : [MAGNET0001-REPLY.200220]
+  2020-02-21 17:05:11,665 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : msg:[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 17:05:11,665 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 17:05:11,666 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 17:05:11,666 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 17:05:11,666 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 100
+  2020-02-21 17:05:11,667 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 17:05:11,667 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 17:05:11,667 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 17:05:11,667 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-21 17:05:11,667 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-21 17:05:11,667 [Thread-10] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-21 17:05:11,667 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-21 17:05:11,667 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 17:05:11,667 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              
+  2020-02-21 17:05:11,668 [Thread-10] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 17:05:11,668 [Thread-10] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 17:05:11,668 [Thread-10] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-21 17:05:11,668 [Thread-10] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 17:05:11,668 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 17:05:11,669 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 17:05:11,669 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 17:05:11,669 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:5]
+  2020-02-21 17:05:11,669 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 17:05:11,669 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:5]
+  2020-02-21 17:05:11,669 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 17:05:11,669 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR12MAGNET00011000102400000000001000000                                         
+  2020-02-21 17:05:11,670 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 클라이언트1이 받은 결과 [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 17:05:11,670 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 17:05:11,670 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 다운로드 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송
+  2020-02-21 17:05:11,670 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : File Receiving : [MAGNET0001-REPLY.200220]
+  2020-02-21 17:05:11,670 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ## fileWrite :: Client: file receive starting... 
+  2020-02-21 17:05:11,670 [main] [ServerLog] [INFO] - [] : ## fileWrite :: Client: file receive starting... 
+  2020-02-21 17:05:11,671 [main] [ServerLog] [INFO] - [] : ## Client: File Name : [MAGNET0001-REPLY.200220]
+  2020-02-21 17:05:11,670 [Thread-11] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-21 17:05:11,671 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:5]
+  2020-02-21 17:05:11,671 [main] [ServerLog] [INFO] - [] : ## Client: File 생성완료 : [MAGNET0001-REPLY.200220]
+  2020-02-21 17:05:11,671 [main] [ServerLog] [INFO] - [] : ## Client: writen fileSize : 1474
+  2020-02-21 17:05:11,671 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:5]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 17:05:11,672 [main] [ServerLog] [INFO] - [] : ## Client: File 수신완료  
+  2020-02-21 17:05:11,672 [main] [ServerLog] [INFO] - [] : ## Client: 받은 파일 사이즈 : [1474]
+  2020-02-21 17:05:11,672 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 수신 성공. 
+  2020-02-21 17:05:11,672 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : recvString. 
+  2020-02-21 17:05:11,672 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:05:11,673 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:05:11,673 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 17:05:11,673 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 17:05:11,673 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 17:05:11,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 17:05:11,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 17:05:11,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 17:05:11,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 17:05:11,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR13MAGNET0001                                                                                      
+  2020-02-21 17:05:11,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관 코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 17:05:11,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : FR03 :: 서버에 Byte[]스트림 전송 msg : [FR03MAGNET00010000001474                                                                                ]
+  2020-02-21 17:05:11,674 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 17:05:11,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 17:05:11,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 17:05:11,675 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 17:05:14,676 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect close 1
+  2020-02-21 17:05:14,678 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### kis server에서 전문 통신 소요 시간: 7.149 초
+  2020-02-21 17:05:14,679 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:05:14,679 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:05:14,680 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 ip: 127.0.0.1
+  2020-02-21 17:05:14,680 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 port: 23510
+  2020-02-21 17:05:14,680 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 접속시도 
+  2020-02-21 17:07:51,687 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:07:51,689 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:07:51,689 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ######## KisFtClientMain Start:::::::
+  2020-02-21 17:07:51,689 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ######## KisFtClientMain Start:::::::
+  2020-02-21 17:07:51,690 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:07:51,691 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:07:51,691 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 17:07:51,691 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 17:07:51,713 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - download filename:::::::
+  2020-02-21 17:07:51,713 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : download filename:::::::
+  2020-02-21 17:07:51,714 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:07:51,715 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:07:51,715 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 ip   :127.0.0.1
+  2020-02-21 17:07:51,715 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 접속서버 port :30030
+  2020-02-21 17:07:52,789 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect 1
+  2020-02-21 17:07:52,811 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-21 17:07:52,811 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:6]
+  2020-02-21 17:07:52,812 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-21 17:07:52,812 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:6]
+  2020-02-21 17:07:55,811 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 1번을 통한 makeFr01 전문 발송 
+  2020-02-21 17:07:55,817 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils().makeFr01() : orgCode:MAGNET0001
+  2020-02-21 17:07:55,819 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ### Build file name : [MAGNET0001-REPLY.200220]
+  2020-02-21 17:07:55,819 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : msg:[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 17:07:55,820 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 17:07:55,820 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 17:07:55,821 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 17:07:55,821 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (3) 전송 자료의 길이를 먼저 보냄 : length : 100
+  2020-02-21 17:07:55,821 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 17:07:55,821 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 17:07:55,821 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              ]
+  2020-02-21 17:07:55,821 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-21 17:07:55,821 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-21 17:07:55,821 [Thread-12] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-21 17:07:55,821 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-21 17:07:55,821 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 17:07:55,822 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200220                                                              
+  2020-02-21 17:07:55,822 [Thread-12] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 17:07:55,822 [Thread-12] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 17:07:55,822 [Thread-12] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-21 17:07:55,822 [Thread-12] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 17:07:55,822 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 17:07:55,823 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-21 17:07:55,823 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 17:07:55,823 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 17:07:55,823 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:6]
+  2020-02-21 17:07:55,823 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:6]
+  2020-02-21 17:07:55,823 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 17:07:55,823 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR12MAGNET00011000102400000000001000000                                         
+  2020-02-21 17:07:55,823 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 클라이언트1이 받은 결과 [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-21 17:07:55,823 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 17:07:55,824 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 다운로드 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송
+  2020-02-21 17:07:55,824 [Thread-13] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-21 17:07:55,824 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : File Receiving : [MAGNET0001-REPLY.200220]
+  2020-02-21 17:07:55,824 [main] [net.jbongsu.client.KisFtClientMain] [INFO] - ## fileWrite :: Client: file receive starting... 
+  2020-02-21 17:07:55,824 [main] [ServerLog] [INFO] - [] : ## fileWrite :: Client: file receive starting... 
+  2020-02-21 17:07:55,824 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:6]
+  2020-02-21 17:07:55,824 [main] [ServerLog] [INFO] - [] : ## Client: File Name : [MAGNET0001-REPLY.200220]
+  2020-02-21 17:07:55,824 [Thread-12] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:6]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-21 17:07:55,825 [main] [ServerLog] [INFO] - [] : ## Client: File 생성완료 : [MAGNET0001-REPLY.200220]
+  2020-02-21 17:07:55,825 [main] [ServerLog] [INFO] - [] : ## Client: writen fileSize : 1474
+  2020-02-21 17:07:55,825 [main] [ServerLog] [INFO] - [] : ## Client: File 수신완료  
+  2020-02-21 17:07:55,825 [main] [ServerLog] [INFO] - [] : ## Client: 받은 파일 사이즈 : [1474]
+  2020-02-21 17:07:55,825 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 수신 성공. 
+  2020-02-21 17:07:55,826 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : recvString. 
+  2020-02-21 17:07:55,826 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:07:55,826 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:07:55,826 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-21 17:07:55,827 [main] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-21 17:07:55,827 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에서  Byte[]스트림을 전송받음 
+  2020-02-21 17:07:55,827 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (1) 전송될 자료의 길이를 받음 
+  2020-02-21 17:07:55,827 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (2) 전송될  자료의 길이에 맞는 byte[] 생성
+  2020-02-21 17:07:55,827 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (3) 전송된 자료를 byte[]변수에 저장함 
+  2020-02-21 17:07:55,827 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  (4) 전송된 자료를 String변수로 변환  
+  2020-02-21 17:07:55,827 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] :  전송 메시지 :   FR13MAGNET0001                                                                                      
+  2020-02-21 17:07:55,827 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 기관 코드 :: result.substring(4, 14) :: [MAGNET0001]
+  2020-02-21 17:07:55,828 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : FR03 :: 서버에 Byte[]스트림 전송 msg : [FR03MAGNET00010000001474                                                                                ]
+  2020-02-21 17:07:55,828 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : 서버에 Byte[]스트림 전송 
+  2020-02-21 17:07:55,828 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (1) 전송 자료를 byte[]로 변환 
+  2020-02-21 17:07:55,828 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (2) 전송 자료의 길이를 구함 : length : 
+  2020-02-21 17:07:55,828 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClient] : (4) 전송 자료를 보냄 : 
+  2020-02-21 17:07:58,829 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : connect close 1
+  2020-02-21 17:07:58,835 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### kis server에서 전문 통신 소요 시간: 7.141 초
+  2020-02-21 17:07:58,837 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-21 17:07:58,840 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-21 17:07:58,841 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 ip: 127.0.0.1
+  2020-02-21 17:07:58,841 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 port: 23510
+  2020-02-21 17:07:58,841 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버 접속시도 
+  2020-02-21 17:07:58,842 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : ############### relay서버로 파일 송신 
+  2020-02-21 17:07:58,845 [main] [ServerLog] [INFO] - [] : File transfer completed.
+  2020-02-21 17:07:58,845 [main] [ServerLog] [INFO] - [] : ## Client: File 송신완료  
+  2020-02-21 17:07:58,845 [main] [ServerLog] [INFO] - [] : ## Client: 송신 파일 사이즈 : [0]
+  2020-02-21 17:07:58,846 [main] [ServerLog] [INFO] - [net.jbongsu.client.KisFtClientMain] : 파일 송신 성공. 
+  

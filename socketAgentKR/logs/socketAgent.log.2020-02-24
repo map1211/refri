@@ -1,0 +1,215 @@
+2020-02-24 20:28:29,106 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:28:29,107 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:28:29,108 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 소켓 서버를 실행합니다.
+  2020-02-24 20:28:29,114 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 서버 응답대기 포트 : 30030
+  2020-02-24 20:28:29,115 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-24 20:31:46,658 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-24 20:31:46,668 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:0]
+  2020-02-24 20:31:46,672 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:31:46,673 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:31:46,673 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-24 20:31:46,673 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:0]
+  2020-02-24 20:31:49,692 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              ]
+  2020-02-24 20:31:49,692 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-24 20:31:49,692 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-24 20:31:49,698 [Thread-0] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-24 20:31:49,698 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-24 20:31:49,698 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              
+  2020-02-24 20:31:49,701 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:31:49,702 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:31:49,702 [Thread-0] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-24 20:31:49,702 [Thread-0] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-24 20:31:49,702 [Thread-0] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-24 20:31:49,703 [Thread-0] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:31:49,704 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:31:49,704 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-24 20:31:49,706 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:0]
+  2020-02-24 20:31:49,707 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:0]
+  2020-02-24 20:31:49,708 [Thread-1] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-24 20:31:49,708 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:0]
+  2020-02-24 20:31:49,709 [Thread-0] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:0]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-24 20:33:53,193 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-24 20:33:53,193 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:1]
+  2020-02-24 20:33:53,194 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:33:53,195 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:33:53,195 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-24 20:33:53,196 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:1]
+  2020-02-24 20:33:56,222 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              ]
+  2020-02-24 20:33:56,225 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-24 20:33:56,225 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-24 20:33:56,225 [Thread-2] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-24 20:33:56,226 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-24 20:33:56,226 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              
+  2020-02-24 20:33:56,226 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:33:56,227 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:33:56,227 [Thread-2] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-24 20:33:56,227 [Thread-2] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-24 20:33:56,227 [Thread-2] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-24 20:33:56,227 [Thread-2] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:33:56,227 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:33:56,227 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-24 20:33:56,228 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:1]
+  2020-02-24 20:33:56,228 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:1]
+  2020-02-24 20:33:56,228 [Thread-3] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-24 20:33:56,229 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:1]
+  2020-02-24 20:33:56,229 [Thread-2] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:1]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-24 20:36:26,501 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-24 20:36:26,501 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:2]
+  2020-02-24 20:36:26,501 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:36:26,503 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:36:26,503 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-24 20:36:26,503 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:2]
+  2020-02-24 20:36:29,509 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              ]
+  2020-02-24 20:36:29,510 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-24 20:36:29,510 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-24 20:36:29,511 [Thread-4] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-24 20:36:29,511 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-24 20:36:29,511 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              
+  2020-02-24 20:36:29,511 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:36:29,513 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:36:29,513 [Thread-4] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-24 20:36:29,513 [Thread-4] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-24 20:36:29,513 [Thread-4] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-24 20:36:29,514 [Thread-4] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:36:29,514 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:36:29,514 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-24 20:36:29,515 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:2]
+  2020-02-24 20:36:29,515 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:2]
+  2020-02-24 20:36:29,516 [Thread-5] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-24 20:36:29,517 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:2]
+  2020-02-24 20:36:29,517 [Thread-4] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:2]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-24 20:42:11,085 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-24 20:42:11,086 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:3]
+  2020-02-24 20:42:11,086 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:42:11,088 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:42:11,088 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-24 20:42:11,088 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:3]
+  2020-02-24 20:42:14,097 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              ]
+  2020-02-24 20:42:14,097 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-24 20:42:14,097 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-24 20:42:14,097 [Thread-6] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-24 20:42:14,098 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-24 20:42:14,098 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              
+  2020-02-24 20:42:14,098 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:42:14,099 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:42:14,099 [Thread-6] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-24 20:42:14,099 [Thread-6] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-24 20:42:14,099 [Thread-6] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-24 20:42:14,099 [Thread-6] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:42:14,099 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:42:14,100 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-24 20:42:14,100 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:3]
+  2020-02-24 20:42:14,100 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:3]
+  2020-02-24 20:42:14,101 [Thread-7] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-24 20:42:14,102 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:3]
+  2020-02-24 20:42:14,102 [Thread-6] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:3]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-24 20:51:53,157 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-24 20:51:53,158 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:4]
+  2020-02-24 20:51:53,158 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:51:53,159 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:51:53,160 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-24 20:51:53,160 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:4]
+  2020-02-24 20:51:56,170 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              ]
+  2020-02-24 20:51:56,171 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-24 20:51:56,171 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-24 20:51:56,171 [Thread-8] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-24 20:51:56,171 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-24 20:51:56,171 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              
+  2020-02-24 20:51:56,171 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:51:56,172 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:51:56,172 [Thread-8] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-24 20:51:56,172 [Thread-8] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-24 20:51:56,172 [Thread-8] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-24 20:51:56,173 [Thread-8] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:51:56,173 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:51:56,173 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-24 20:51:56,173 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:4]
+  2020-02-24 20:51:56,173 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:4]
+  2020-02-24 20:51:56,174 [Thread-9] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-24 20:51:56,175 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:4]
+  2020-02-24 20:51:56,175 [Thread-8] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:4]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-02-24 20:56:08,399 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : Client와 연결이 이루어지고 서비스를 시작합니다.
+  2020-02-24 20:56:08,400 [main] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandlerManager] : createConnectionHandler [ID:5]
+  2020-02-24 20:56:08,400 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:56:08,401 [main] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:56:08,402 [main] [ServerLog] [INFO] - [net.jbongsu.server.KisSimpleServer] : 새로운 Client의 연결요청을 기다립니다.
+  2020-02-24 20:56:08,402 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:5]
+  2020-02-24 20:56:11,417 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 메세지를 수신함  msg[FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              ]
+  2020-02-24 20:56:11,417 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : request 앞 4자리 : FR01
+  2020-02-24 20:56:11,417 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.requesthandler.KisFrCommandRequestHandler] : CommandRequestHandler::command::FR01
+  2020-02-24 20:56:11,417 [Thread-10] [net.jbongsu.server.requesthandler.KisFrCommandManager] [INFO] - CommandManager.kisFr01findExecutor : command : FR01
+  2020-02-24 20:56:11,417 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: 업무로직 처리 후 결과를 request에 담는다. 
+  2020-02-24 20:56:11,417 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFr01CommandExecutorJob.execute: request : FR01MAGNET0001EMAGNET0001-REPLY.200223                                                              
+  2020-02-24 20:56:11,417 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : getSocketServerInfo : 
+  2020-02-24 20:56:11,418 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.utils.ServerInfoUtil] : relayServerType : SA
+  2020-02-24 20:56:11,418 [Thread-10] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : orgCode:MAGNET0001
+  2020-02-24 20:56:11,418 [Thread-10] [net.jbongsu.utils.KisFTUtils] [INFO] - ## KisFTUtils() : recvTypeCode:E
+  2020-02-24 20:56:11,418 [Thread-10] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: head : FR01
+  2020-02-24 20:56:11,418 [Thread-10] [net.jbongsu.server.parser.KisFtParser] [INFO] - # KisFtParser :: return string : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:56:11,419 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.executor.KisFrCommandExecutorJob] : KisFrCommandExecutorJob.execute: sendResponse : [FR12MAGNET00011000102400000000001000000                                         ]
+  2020-02-24 20:56:11,419 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.communicator.LengthSpecificCommunicator] : 서버가 결과정보를 발송함
+  2020-02-24 20:56:11,419 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 받은 명령을 수행했습니다.[ID:5]
+  2020-02-24 20:56:11,419 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client로 부터 명령이 전송되기를 기다립니다.[ID:5]
+  2020-02-24 20:56:11,420 [Thread-11] [ServerLog] [INFO] - [] : result : SUCCESS
+  2020-02-24 20:56:11,421 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : Client와의 연결이 종료됩니다.[ID:5]
+  2020-02-24 20:56:11,421 [Thread-10] [ServerLog] [INFO] - [net.jbongsu.server.connectionhandler.KisFrConnectionHandler] : KisFrConnectionHandler.run() error[ID:5]
+  java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.net.SocketInputStream.read(SocketInputStream.java:224)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at net.jbongsu.server.communicator.LengthSpecificCommunicator.receiveRequest(LengthSpecificCommunicator.java:53)
+	at net.jbongsu.server.connectionhandler.KisFrConnectionHandler.run(KisFrConnectionHandler.java:61)
+	at java.lang.Thread.run(Thread.java:748)
