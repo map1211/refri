@@ -81,8 +81,10 @@ public class KisFTUtils {
 		sendTypeCode 	=  map.get("serverSendCode").toString();
 		sendTestYn 		=  map.get("serverSendTestYn").toString();
 		
-		
 		serverMode 		=  map.get("serverMode").toString();
+		// 날짜 타입 
+		sendConfigDateType 			= map.get("sendConfigDateType").toString();		
+		
 	}
 	
 	/**
@@ -190,7 +192,6 @@ public class KisFTUtils {
 //		sb.append(CustStringUtils.fillSpaceString("socketServer.log", 30, "R", " "));
 		String rcvFileName = "";
 		try {
-//			rcvFileName = CustStringUtils.getRecvFileName(orgCode, recvTypeCode);
 			rcvFileName = CustStringUtils.getRecvFileName(orgCode, recvTypeCode );
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -364,6 +365,7 @@ public class KisFTUtils {
 			} else {
 				// real 모드인 경우 
 				rcvFileName = CustStringUtils.setRecvFileName(fileNamePrefix, "8");
+//				rcvFileName = CustStringUtils.setRecvFileName(fileNamePrefix, sendConfigDateType.length()+"");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

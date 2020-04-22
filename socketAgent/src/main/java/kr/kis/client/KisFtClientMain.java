@@ -86,8 +86,8 @@ public class KisFtClientMain {
 
 		// Define Option Help
 		CmdLineParser.Option prop = main.addHelp(parser.addStringOption('p', "env property"), "This option Environment variable read.");
-		CmdLineParser.Option upload = main.addHelp(parser.addStringOption('u', "send start"), " KIS 서버로 파일 전송하는 기능 제공.");
-		CmdLineParser.Option download = main.addHelp(parser.addStringOption('d', "receive start"), "KIS 서버에서 파일 수신하는 기능제공.");
+		CmdLineParser.Option upload = main.addHelp(parser.addStringOption('u', "send start"), " To KIS Server file send...");
+		CmdLineParser.Option download = main.addHelp(parser.addStringOption('d', "receive start"), "From KIS Server file download");
 
 		
 		String uploadOptValue = "";
@@ -240,29 +240,32 @@ public class KisFtClientMain {
 			 */
 			if("download".equals(strType)) {
 				
-				
-				// 다운로드(수신) 모듈 호출
-				if(!"".equals(serverRecvCode)) {
-					if("A".equals(serverRecvCode) && "".equals(localFileName)) {
-						// 전체 문서 가져오기
-						if(recvFileList.size() > 0) {
-							for(int i=0; i < recvFileList.size(); i++) {
-								downloadExec(localFileName, KisFtConstant.RCV_FILE_TYPE_EDI, recvFileList.get(i));
+				try {
+					// 다운로드(수신) 모듈 호출
+					if(!"".equals(serverRecvCode)) {
+						if("A".equals(serverRecvCode) && "".equals(localFileName)) {
+							// 전체 문서 가져오기
+							if(recvFileList.size() > 0) {
+								for(int i=0; i < recvFileList.size(); i++) {
+									downloadExec(localFileName, KisFtConstant.RCV_FILE_TYPE_EDI, recvFileList.get(i));
+								}
 							}
+							
+						} else {
+							downloadExec(localFileName, "");
 						}
-						
-					} else {
-						downloadExec(localFileName, "");
 					}
+					
+					// 정상 종료시 시스템 명령어 수행. 
+					logutil.info("###### execCmd::" + execCmd);
+					execCommand(execCmd);
+					
+				} catch (Exception e) {
 				}
-				
-				// 정상 종료시 시스템 명령어 수행. 
-				logutil.info("###### execCmd::" + execCmd);
-				execCommand(execCmd);
 			}
 			
 		} catch(Exception e){
-			logutil.info("Client 오류 발생!", e);
+			logutil.info("Client Exception!", e);
 			e.printStackTrace();
 		} finally {
 		}
@@ -271,7 +274,8 @@ public class KisFtClientMain {
 
 	
 	/**
-	 * 전문 규약에 따른 파일 수신 
+	 * 전문 규약에 따른 파일 수신
+	 * File receiving 
 	 * 
 	 * @param localFileName
 	 * @param recvType
@@ -320,8 +324,8 @@ public class KisFtClientMain {
 		KisFtClient sc1 = new KisFtClient(envPath);
 		
 		//[1] ==== 서버에 연결 ==================
-		logutil.info("접속서버 ip   :" + socketIp);
-		logutil.info("접속서버 port :" + socketPort);
+		logutil.info("Connect ip   :" + socketIp);
+		logutil.info("Connect port :" + socketPort);
 		logutil.info("Encoding :" + socketEncode);
 		
 		logutil.info("socket timeout :" + socketTimeout);
@@ -331,7 +335,7 @@ public class KisFtClientMain {
 			logutil.info("connect client");
 			sc1.connect(socketIp, socketPort, socketTimeout);
 			
-			logutil.info("FR01 전문 발송 ");
+			logutil.info("FR01 Send ");
 			// 파일 수신 승인 전문(FR12) : KIS -> 가맹점
 			// 전문을 보내면 서버에서 작업 후 
 			// 파일 수신 전문(FR02) : KIS -> 가맹점 
@@ -351,7 +355,7 @@ public class KisFtClientMain {
 			try{    Thread.sleep(1000);  } catch (Exception e) {	}
 			// 1초 waiting후 input stream 읽기 
 			try {
-				logutil.info("FR12 전문 수신,파일수신,수신완료  ");
+				logutil.info("FR12 receive, file receive, receive complete  ");
 				result = sc1.recvFR12_02_13String( recvFilePath, rcvFileName.trim());
 			} catch (Exception e1) {
 				// 1초 waiting 후 inputstream 이 없으면 다시 1초 waiting후 input stream 읽기 
@@ -365,7 +369,7 @@ public class KisFtClientMain {
 					try {
 						result = sc1.recvFR12_02_13String( recvFilePath, rcvFileName.trim());
 					} catch (Exception e3) {
-						logutil.error("서버 응답시간 초과 / 서버 응답 없음 오류", e3);
+						logutil.error("Server response time out or Server no response exception ", e3);
 						e3.printStackTrace();
 					}
 				}
@@ -373,7 +377,7 @@ public class KisFtClientMain {
 					
 			}
 
-			logutil.info("클라이언트 받은 결과 [" + result + "]");
+			logutil.info("Result of client receive [" + result + "]");
 			
 			if(result != null & result.contains("SUCCESS")) {
 				String[] rslt = result.split("\\|");
@@ -381,7 +385,7 @@ public class KisFtClientMain {
 				// FR03
 				// 파일 수신종료 응답 전문 (FR03) : 가맹점 -> KIS
 				try {
-					logutil.info("FR03 전문 전송 시작 ");
+					logutil.info("FR03 sending start ");
 					sc1.sendFR03String(ftUtils.makeFr03(rsltRecvFileSize).toString());
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -415,20 +419,20 @@ public class KisFtClientMain {
 					
 					KisFtClient relayClient = new KisFtClient();
 					// relay 서버에 접속
-					logutil.info("############### relay서버 ip: " + relaysocketIp);
-					logutil.info("############### relay서버 port: " + relaysocketPort);
-					logutil.info("############### relay서버 접속시도 " );
+					logutil.info("############### relay server ip: " + relaysocketIp);
+					logutil.info("############### relay server port: " + relaysocketPort);
+					logutil.info("############### relay server connect trying " );
 					try {
 						relayClient.connect(relaysocketIp, relaysocketPort, socketTimeout);
 						
-						logutil.info("############### relay서버로 파일 송신 " );
+						logutil.info("############### file send to relay server " );
 						dos = new DataOutputStream(relayClient.getSocket().getOutputStream());
 						
 						// relay 서버에 파일 전송. 
 						String sendRslt = fileSend(dos, recvFilePath, rcvFileName.trim());
 						
 						if(KisFtConstant.RCV_SUCC.equals(sendRslt)) {
-							logutil.info("파일 송신 성공. ");
+							logutil.info("file send success. ");
 						}
 						// realay 서버 접속 종료
 						relayClient.close();	
@@ -446,7 +450,7 @@ public class KisFtClientMain {
 					
 					
 				} else {
-					logutil.error(rcvFileName + " 파일 수신 오류로 인해 파일이 존재 하지 않습니다. ");
+					logutil.error(rcvFileName + " is not exist. ");
 				}
 				
 			}
@@ -511,8 +515,8 @@ public class KisFtClientMain {
 		KisFtClient sc1 = new KisFtClient(envPath);
 		
 		//[1] ==== 서버에 연결 ==================
-		logutil.info("접속서버 ip   :" + socketIp);
-		logutil.info("접속서버 port :" + socketPort);
+		logutil.info("connect server ip   :" + socketIp);
+		logutil.info("connect server port :" + socketPort);
 		logutil.info("Encoding :" + socketEncode);
 		
 		logutil.info("socket timeout :" + socketTimeout);
@@ -556,14 +560,14 @@ public class KisFtClientMain {
 					try {
 						result = sc1.recvFR12_02_13String( recvFilePath, rcvFileName.trim());
 					} catch (Exception e3) {
-						logutil.error("서버 응답시간 초과 / 서버 응답 없음 오류", e3);
+						logutil.error("server Reponse time out or no response.", e3);
 						e3.printStackTrace();
 					}
 				}
 				
 			}
 
-			logutil.info("클라이언트 받은 결과 [" + result + "]");
+			logutil.info("client receive result  [" + result + "]");
 			
 			if(result != null & result.contains("SUCCESS")) {
 				String[] rslt = result.split("\\|");
@@ -571,13 +575,13 @@ public class KisFtClientMain {
 				// FR03
 				// 파일 수신종료 응답 전문 (FR03) : 가맹점 -> KIS
 				try {
-					logutil.info("FR03 전문 전송 시작 ");
+					logutil.info("FR03 send start ");
 					sc1.sendFR03String(ftUtils.makeFr03(rsltRecvFileSize).toString());
 				} catch (Exception e) {
 					e.printStackTrace();
 				} 
 			} else {
-				logutil.info("####### 파일 수신 오류. ");
+				logutil.info("####### file receive error. ");
 			}
 			
 			logutil.info("####### socket close ");
@@ -607,20 +611,20 @@ public class KisFtClientMain {
 					
 					KisFtClient relayClient = new KisFtClient();
 					// relay 서버에 접속
-					logutil.info("############### relay서버 ip: " + relaysocketIp);
-					logutil.info("############### relay서버 port: " + relaysocketPort);
-					logutil.info("############### relay서버 접속시도 " );
+					logutil.info("############### relay server ip: " + relaysocketIp);
+					logutil.info("############### relay server port: " + relaysocketPort);
+					logutil.info("############### relay server trying connect " );
 					try {
 						relayClient.connect(relaysocketIp, relaysocketPort, socketTimeout);
 						
-						logutil.info("############### relay서버로 파일 송신 " );
+						logutil.info("############### file send to relay server " );
 						dos = new DataOutputStream(relayClient.getSocket().getOutputStream());
 						
 						// relay 서버에 파일 전송. 
 						String sendRslt = fileSend(dos, recvFilePath, rcvFileName.trim());
 						
 						if(KisFtConstant.RCV_SUCC.equals(sendRslt)) {
-							logutil.info("파일 송신 성공. ");
+							logutil.info("file send success. ");
 						}
 						// realay 서버 접속 종료
 						relayClient.close();	
@@ -639,7 +643,7 @@ public class KisFtClientMain {
 					
 					
 				} else {
-					logutil.error(rcvFileName + " 파일 수신 오류로 인해 파일이 존재 하지 않습니다. ");
+					logutil.error(rcvFileName + " file not exist. ");
 				}			
 			}
 		} catch (IOException e2) {
@@ -708,14 +712,14 @@ public class KisFtClientMain {
 		KisFtClient ftClient = new KisFtClient(envPath);
 		
 		//[1] ==== relay 서버에 연결 ==================
-		logutil.info("접속서버 ip   :" + socketIp);
-		logutil.info("접속서버 port :" + socketPort);
+		logutil.info("connect server ip   :" + socketIp);
+		logutil.info("connect server port :" + socketPort);
 		
 		logutil.info("socket timeout :" + socketTimeout);
 		logutil.info("connect client");
 		ftClient.connect(socketIp, socketPort, socketTimeout);
 		
-		logutil.info("client 을 통한 makeFT01 전문 발송 ");
+		logutil.info("FT01 statement send ");
 		// 파일 수신 승인 전문(FT01) : 가맹점 -> KIS
 		// 전문을 보내면 서버에서 작업 후 
 		// 파일 송신 전문(FT12) : KIS -> 가맹점
@@ -725,7 +729,7 @@ public class KisFtClientMain {
 		fullText = ftUtils.makeFT01(sendType, fileName).toString();
 		
 		String result = "";
-		logutil.info("클라이언트 FT01 전문 송신 [" + fullText + "]");
+		logutil.info("Client FT01 statement send [" + fullText + "]");
 		try {
 			ftClient.sendFT01String(fullText);
 		} catch (Exception e1) {
@@ -747,23 +751,23 @@ public class KisFtClientMain {
 				try {
 					result = ftClient.recvFT12String();
 				} catch (Exception e3) {
-					logutil.error("서버 응답시간 초과 / 서버 응답 없음 오류", e3);
+					logutil.error("Server response time out or not response", e3);
 					e3.printStackTrace();
 				}
 			}
 			
 		}		
-		logutil.info("클라이언트 받은 결과 [" + result + "]");
+		logutil.info("Client receive result [" + result + "]");
 		
 		// 전문구분코드가 FR12 && 승인구분이 1인 경우 
 		if(KisFtConstant.CODE_FT12.equals(result.substring(0, 4)) ) { 
 			
 			if(	KisFtConstant.ACCEPT_YES.equals(result.substring(14, 15))) {
 				// 파일 전송 전문부분 실행. 
-				logutil.info("파일 전송 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송");
+				//logutil.info("파일 전송 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송");
 				// 파일 전송 전문 : 가맹점 -> KIS
 				// 파일 수신종료 요청 전문 (FR13) : KIS -> 가맹점
-				logutil.info("############### 파일 송신 " );
+				logutil.info("############### File send " );
 				OutputStream output = ftClient.getSocket().getOutputStream();
 				
 				// relay 서버에 파일 전송. 
@@ -779,9 +783,10 @@ public class KisFtClientMain {
 						total += len;
 					}
 				
-					logutil.info("파일 송신 성공. ");
+					logutil.info("File send success. ");
 					
 					// 파일 전송 종료 알림 (FT03) : 가맹점 -> KIS
+					logutil.info("send FT03 statement. ");
 					ftClient.sendFT03String(ftUtils.makeFT03().toString());
 					
 					// 파일 전송종료 응답 전문( FT13) : KIS -> 가맹점
@@ -800,7 +805,7 @@ public class KisFtClientMain {
 							try {
 								result = ftClient.recvFT13String();
 							} catch (Exception e3) {
-								logutil.error("서버 응답시간 초과 / 서버 응답 없음 오류", e3);
+								logutil.error("Server response time out or not response", e3);
 								e3.printStackTrace();
 							}
 						}
@@ -817,15 +822,15 @@ public class KisFtClientMain {
 			} else {
 				// 수신 요청한 파일이 존재하지 않음
 				if(KisFtConstant.REJECT_CODE_1001.equals(result.substring(16, 19))) {
-					logutil.info("Error : code : [" + KisFtConstant.ERROR_CODE_0001 +" :기 전송 파일 송신] " + result.substring(20, 69));
+					logutil.info("Error : code : [" + KisFtConstant.ERROR_CODE_0001 +" : already file sended] " + result.substring(20, 69));
 				} else if(KisFtConstant.REJECT_CODE_1002.equals(result.substring(16, 19))) {
-					logutil.info("Error : code : [" + KisFtConstant.ERROR_CODE_0002 +" :청구시 작업일 세팅 에러] " + result.substring(20, 69));
+					logutil.info("Error : code : [" + KisFtConstant.ERROR_CODE_0002 +" :working day setting error in case of request] " + result.substring(20, 69));
 				}
 			}
 			
 		} else {
 			// 전문구분코드가 FR12
-			logutil.info("잘못된 전문 구분 코드 전송됨 ");
+			logutil.info("Invalid Statement Code Sended ");
 		}
 		
 		//[3] ==== 서버와 연결종료! ==================
@@ -834,7 +839,7 @@ public class KisFtClientMain {
 		
 		long lFinishTime = System.currentTimeMillis();
 		long lEstTime = (lFinishTime - lStartTime);
-		logutil.info("############### kis server에서 전문 통신 소요 시간: " + lEstTime / 1000.0 + " 초");
+		logutil.info("############### kis server spend time : " + lEstTime / 1000.0 + " sec");
 		
 	}
 	
@@ -891,14 +896,14 @@ public class KisFtClientMain {
 		KisFtClient ftClient = new KisFtClient(envPath);
 		
 		//[1] ==== relay 서버에 연결 ==================
-		logutil.info("접속서버 ip   :" + socketIp);
-		logutil.info("접속서버 port :" + socketPort);
+		logutil.info("Connect server ip   :" + socketIp);
+		logutil.info("Connect server port :" + socketPort);
 		
 		logutil.info("socket timeout :" + socketTimeout);
 		logutil.info("connect client");
 		ftClient.connect(socketIp, socketPort, socketTimeout);
 		
-		logutil.info("client 을 통한 makeFT01 전문 발송 ");
+		logutil.info("FT01 send statement ");
 		// 파일 수신 승인 전문(FT01) : 가맹점 -> KIS
 		// 전문을 보내면 서버에서 작업 후 
 		// 파일 송신 전문(FT12) : KIS -> 가맹점
@@ -907,7 +912,7 @@ public class KisFtClientMain {
 		fullText = ftUtils.makeFT01(sendType, fileName).toString();
 		
 		String result = "";
-		logutil.info("클라이언트 FT01 전문 송신 [" + fullText + "]");
+		logutil.info("FT01 send statement is [" + fullText + "]");
 		try {
 			ftClient.sendFT01String(fullText);
 		} catch (Exception e1) {
@@ -929,23 +934,23 @@ public class KisFtClientMain {
 				try {
 					result = ftClient.recvFT12String();
 				} catch (Exception e3) {
-					logutil.error("서버 응답시간 초과 / 서버 응답 없음 오류", e3);
+					logutil.error("Server response time out or not response", e3);
 					e3.printStackTrace();
 				}
 			}
 			
 		}		
-		logutil.info("클라이언트 받은 결과 [" + result + "]");
+		logutil.info("Client receive result [" + result + "]");
 		
 		// 전문구분코드가 FR12 && 승인구분이 1인 경우 
 		if(KisFtConstant.CODE_FT12.equals(result.substring(0, 4)) ) { 
 			
 			if(	KisFtConstant.ACCEPT_YES.equals(result.substring(14, 15))) {
 				// 파일 전송 전문부분 실행. 
-				logutil.info("파일 전송 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송");
+//				logutil.info("파일 전송 전문부분 실행. 1024byte 씩 서버에서 outputstream 으로 전송");
 				// 파일 전송 전문 : 가맹점 -> KIS
 				// 파일 수신종료 요청 전문 (FR13) : KIS -> 가맹점
-				logutil.info("############### 파일 송신 " );
+				logutil.info("############### sending file " );
 				OutputStream output = ftClient.getSocket().getOutputStream();
 				
 				// relay 서버에 파일 전송. 
@@ -961,7 +966,7 @@ public class KisFtClientMain {
 						total += len;
 					}
 					
-					logutil.info("파일 송신 성공. ");
+					logutil.info("file send success. ");
 					
 					// 파일 전송 종료 알림 (FT03) : 가맹점 -> KIS
 					ftClient.sendFT03String(ftUtils.makeFT03().toString());
@@ -982,7 +987,7 @@ public class KisFtClientMain {
 							try {
 								result = ftClient.recvFT13String();
 							} catch (Exception e3) {
-								logutil.error("서버 응답시간 초과 / 서버 응답 없음 오류", e3);
+								logutil.error("Server response time out or not response", e3);
 								e3.printStackTrace();
 							}
 						}
@@ -996,15 +1001,15 @@ public class KisFtClientMain {
 			} else {
 				// 수신 요청한 파일이 존재하지 않음
 				if(KisFtConstant.REJECT_CODE_1001.equals(result.substring(16, 19))) {
-					logutil.info("Error : code : [" + KisFtConstant.ERROR_CODE_0001 +" :기 전송 파일 송신] " + result.substring(20, 69));
+					logutil.info("Error : code : [" + KisFtConstant.ERROR_CODE_0001 +" : already file send] " + result.substring(20, 69));
 				} else if(KisFtConstant.REJECT_CODE_1002.equals(result.substring(16, 19))) {
-					logutil.info("Error : code : [" + KisFtConstant.ERROR_CODE_0002 +" :청구시 작업일 세팅 에러] " + result.substring(20, 69));
+					logutil.info("Error : code : [" + KisFtConstant.ERROR_CODE_0002 +" :working day setting error in case of request] " + result.substring(20, 69));
 				}
 			}
 			
 		} else {
 			// 전문구분코드가 FR12
-			logutil.info("잘못된 전문 구분 코드 전송됨 ");
+			logutil.info("Invalid Statement Code Sended ");
 		}
 		
 		//[3] ==== 서버와 연결종료! ==================
@@ -1013,7 +1018,7 @@ public class KisFtClientMain {
 		
 		long lFinishTime = System.currentTimeMillis();
 		long lEstTime = (lFinishTime - lStartTime);
-		logutil.info("############### kis server에서 전문 통신 소요 시간: " + lEstTime / 1000.0 + " 초");
+		logutil.info("############### kis server spend time: " + lEstTime / 1000.0 + " sec");
 		
 	}
 	
@@ -1069,8 +1074,8 @@ public class KisFtClientMain {
             
 			rslt = "SUCCESS";
 			
-			logutil.info("## Client: File 송신완료 : " + fileName);
-			logutil.info("## Client: 송신 파일 사이즈 : [" + totalReadBytes + "]");
+			logutil.info("## Client: File send complete : " + fileName);
+			logutil.info("## Client: send file size  : [" + totalReadBytes + "]");
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -1107,7 +1112,7 @@ public class KisFtClientMain {
 			
 			fos = new FileOutputStream(file);
 			bos = new BufferedOutputStream(fos);
-			logutil.info("## Client: File 생성완료 : [" + fileName + "]");
+			logutil.info("## Client: File create : [" + fileName + "]");
 			
 			// 바이트 데이터 전송 받으면서 기록 
 			int len;
@@ -1124,8 +1129,8 @@ public class KisFtClientMain {
 			recvFileSize = Long.toString(writeSize);
 			rslt = "SUCCESS";
 			
-			logutil.info("## Client: File 수신완료  ");
-			logutil.info("## Client: 받은 파일 사이즈 : [" + recvFileSize + "]");
+			logutil.info("## Client: File recevie  ");
+			logutil.info("## Client: recevie file size : [" + recvFileSize + "]");
 		} catch (IOException e) {
 			e.printStackTrace();
 			rslt = "ERROR";
