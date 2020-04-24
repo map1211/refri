@@ -28,7 +28,7 @@ public class NettyServer {
 	private int bossCount;
 
 	/**
-	 * The Worker count.
+	 * The Worker count. 
 	 */
 //	@Value("${thread.maxNum}")
 	private int workerCount;
