@@ -1,5 +1,14 @@
 # kis
 
+
+```
+kis RelayServer 
+
+block mode server
+   - SpringRelayServer - message 송/수신 담당 릴레이서버
+   - SpringRelayServerKR - message 송/수신 담당 릴레이서버(EUC-KR)
+```
+
 ```
  kis socket client 
  
