@@ -12,7 +12,7 @@ public class EchoServer {
 		ServerSocket serverSocket = null;
 
 		try {
-			serverSocket = new ServerSocket(23594);
+			serverSocket = new ServerSocket(20010);
 			while (true) {
 				Socket accept = null;
 
@@ -58,9 +58,6 @@ class Test implements Runnable {
 		OutputStream outputStream = null;
 
 		try {
-			outputStream = socket.getOutputStream();
-			outputStream.write("Hi".getBytes());
-			outputStream.flush();
 
 			inputStream = socket.getInputStream();
 			String string = null;
@@ -68,6 +65,10 @@ class Test implements Runnable {
 				string = new String(buffer);
 				System.out.println("Echo " + string);
 			}
+			
+			outputStream = socket.getOutputStream();
+			outputStream.write("Hi".getBytes());
+			outputStream.flush();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

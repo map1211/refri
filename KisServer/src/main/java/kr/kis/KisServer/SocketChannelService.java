@@ -25,40 +25,30 @@ public class SocketChannelService {
 	@Value("${socket.host.port}")
 	private int hostPort;
 
-	//	private static ConcurrentHashMap<SocketChannel, SocketChannelVO> IN_BOUND_CHANNEL_KEY_MAP = new ConcurrentHashMap<SocketChannel, SocketChannelVO>();
-	//	private static ConcurrentHashMap<SocketChannel, SocketChannelVO> OUT_BOUND_CHANNEL_KEY_MAP = new ConcurrentHashMap<SocketChannel, SocketChannelVO>();
-	private static HashMap<SocketChannel, SocketChannelVO> CLIENT_CHANNEL_MAP = new HashMap<SocketChannel, SocketChannelVO>();
-	private static HashMap<SocketChannel, SocketChannelVO> HOST_SERVER_CHANNEL_MAP = new HashMap<SocketChannel, SocketChannelVO>();
-
+	private static HashMap<SocketChannel, SocketChannelVO> CHANNEL_MAP = new HashMap<SocketChannel, SocketChannelVO>();
 	private static BlockingQueue<SelectionKey> SELECTION_KEYS;
 
-	public SocketChannelService() {
-		logger.debug("THREAD_MAX_NUM : " + THREAD_MAX_NUM);
-	}
-
 	public void closeSelectionKey(SelectionKey key) {
+		String sessionId = "";
 		SocketChannel channel = null;
 
 		try {
 			channel = (SocketChannel) key.channel();
 
 			if (isHostServerChannel(channel)) {
-				logger.debug("### Close Host Server Channel : " + channel.socket().getRemoteSocketAddress());
+				try {
+					sessionId = "[" + System.identityHashCode(getHostServerChannel(channel)) + "]";
+				} catch (Exception e) {
+					sessionId = "Unknown";
+					logger.error(sessionId + " ERROR : " + e.getMessage(), e);
+				}
+				logger.debug(sessionId + "Close Host Server Channel : " + channel.socket().getRemoteSocketAddress());
 			} else {
-				logger.debug("### Close Client Channel : " + channel.socket().getRemoteSocketAddress());
-			}
-
-			try {
-				channel.socket().close();
-			} catch (Exception e) {
-			}
-
-			try {
-				channel.close();
-			} catch (Exception e) {
+				sessionId = "[" + System.identityHashCode(channel) + "]";
+				logger.debug(sessionId + " Close Client Channel : " + channel.socket().getRemoteSocketAddress());
 			}
 		} catch (Exception e) {
-			logger.error("ERROR", e);
+			logger.error(sessionId + " ERROR : " + e.getMessage(), e.getMessage());
 		} finally {
 			try {
 				takeSelectionKeys();
@@ -68,31 +58,34 @@ public class SocketChannelService {
 			key.cancel();
 
 			if (channel != null) {
-				if (isHostServerChannel(channel) == false) {
-					try {
-						closeSelectionKey(getSocketChannelVO(channel).getHostServerKey());
-					} catch (Exception e) {
-					}
+				CHANNEL_MAP.remove(channel);
+				
+				try {
+					channel.socket().close();
+				} catch (Exception e) {
 				}
-				CLIENT_CHANNEL_MAP.remove(channel);
-				HOST_SERVER_CHANNEL_MAP.remove(channel);
+
+				try {
+					channel.close();
+				} catch (Exception e) {
+				}
 			}
 		}
 	}
 
 	public void putSelectionKeys(SelectionKey key) throws Exception {
 		if (SELECTION_KEYS == null) {
-			logger.debug("### Work Queue Create : " + THREAD_MAX_NUM);
+			logger.debug("Work Queue Create : " + THREAD_MAX_NUM);
 			SELECTION_KEYS = new ArrayBlockingQueue<SelectionKey>(THREAD_MAX_NUM);
 		}
 
-		logger.debug("### Work Register Star (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
+		logger.debug("Work Register Star (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
 		SELECTION_KEYS.put(key);
-		logger.debug("### Work Register End (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
+		logger.debug("Work Register End (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
 	}
 
 	public void takeSelectionKeys() throws Exception {
-		logger.debug("### Work Unregister Start (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
+		logger.debug("Work Unregister Start (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
 		try {
 			if (SELECTION_KEYS.isEmpty()) {
 				return;
@@ -102,39 +95,47 @@ public class SocketChannelService {
 		} catch (Exception e) {
 			logger.error("ERROR", e);
 		} finally {
-			logger.debug("### Work Unregister End (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
+			logger.debug("Work Unregister End (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
 		}
 	}
 
 	public void mappingServer(SelectionKey clientServerKey, SocketChannel clientChannel, SocketChannel hostServerChannel) throws Exception {
-		logger.debug("### MappingServer : " + clientChannel.socket().getRemoteSocketAddress() + " - " + hostServerChannel.socket().getRemoteSocketAddress());
+		logger.debug("[" + System.identityHashCode(clientChannel) + "] MappingServer : " + clientChannel.socket().getRemoteSocketAddress() + " - " + hostServerChannel.socket().getRemoteSocketAddress());
 
 		SocketChannelVO socketChannelVO = new SocketChannelVO(clientServerKey, clientChannel, hostServerChannel);
-		CLIENT_CHANNEL_MAP.put(hostServerChannel, socketChannelVO);
-		HOST_SERVER_CHANNEL_MAP.put(clientChannel, socketChannelVO);
+		CHANNEL_MAP.put(hostServerChannel, socketChannelVO);
+		CHANNEL_MAP.put(clientChannel, socketChannelVO);
 	}
 
 	public SocketChannelVO getSocketChannelVO(SocketChannel socketChannel) {
-		if (CLIENT_CHANNEL_MAP.containsKey(socketChannel)) {
-			return CLIENT_CHANNEL_MAP.get(socketChannel);
-		} else {
-			return HOST_SERVER_CHANNEL_MAP.get(socketChannel);
-		}
+		return CHANNEL_MAP.get(socketChannel);
 	}
 
 	public SocketChannel getHostServerChannel(SocketChannel socketChannel) throws Exception {
-		SocketChannel hostServerChannel = HOST_SERVER_CHANNEL_MAP.get(socketChannel).getHostServerChannel();
-		return hostServerChannel;
+		SocketChannelVO socketChannelVO = CHANNEL_MAP.get(socketChannel);
+		if (socketChannelVO == null) {
+			throw new Exception("Not found Host Server Channel");
+		}
+
+		return socketChannelVO.getHostServerChannel();
 	}
 
 	public SocketChannel getClientChannel(SocketChannel socketChannel) throws Exception {
-		SocketChannel clientChannel = CLIENT_CHANNEL_MAP.get(socketChannel).getClientChannel();
-		return clientChannel;
+		SocketChannelVO socketChannelVO = CHANNEL_MAP.get(socketChannel);
+		if (socketChannelVO == null) {
+			throw new Exception("Not found Client Channel");
+		}
+
+		return socketChannelVO.getClientChannel();
 	}
 
 	public boolean isHostServerChannel(SocketChannel channel) {
-		InetSocketAddress SocketAddress = (InetSocketAddress) channel.socket().getRemoteSocketAddress();
-		String address = SocketAddress.getHostName() + SocketAddress.getPort();
+		InetSocketAddress socketAddress = (InetSocketAddress) channel.socket().getRemoteSocketAddress();
+		String hostName = socketAddress.getHostName();
+		if ("localhost".equals(hostName)) {
+			hostName = "127.0.0.1";
+		}
+		String address = hostName + socketAddress.getPort();
 		return (hostIp + hostPort).equals(address);
 	}
 }

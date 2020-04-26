@@ -1,0 +1,23 @@
+# application.properties
+
+# Server Type
+socket.server.relayType=ST
+
+# socket server 시작 
+socket.server.ST.ip=127.0.0.1
+socket.server.ST.port=20000
+
+# 마지막 socket server 가 토스할 서버 정보.
+socket.host.ip=127.0.0.1
+socket.host.port=33590
+
+# thread number 
+thread.maxNum=100
+
+
+# encoding code
+socket.server.encoding=EUC-KR
+
+# socket time setting
+socket.server.timeout=3
+

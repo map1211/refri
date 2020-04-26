@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- log file path -->
+	<property name="LOG_PATH" value="${LOGPATH}" />
+	<!-- log file name -->
+	<property name="LOG_FILE_NAME" value="relayServer" />
+	<!-- log days -->
+	<property name="LOG_DAYS" value="30" />
+	<!-- pattern -->
+	<property name="LOG_PATTERN"
+		value="%d{yyyy-MM-dd HH:mm:ss,SSS} [%t] [%c] [%p] - %m%n" />
+
+	<!-- console log -->
+	<appender name="console"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%-5level %d{yy-MM-dd HH:mm:ss,SSS}[%thread] [%logger{0}:%line] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 로그 파일 생성 관련 -->
+	<!-- 로그 모드 -->
+	<!-- log file -->
+	<appender name="file"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_PATH}/${LOG_FILE_NAME}.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH}/${LOG_FILE_NAME}.%d{yyyy-MM-dd}.log
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>${LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.springframework" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<root level="DEBUG">
+		<appender-ref ref="console" />
+		<appender-ref ref="file" />
+	</root>
+
+</configuration>
+

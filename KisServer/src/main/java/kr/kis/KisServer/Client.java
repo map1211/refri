@@ -11,9 +11,9 @@ public class Client {
 		long t = System.currentTimeMillis();
 
 		ThreadGroup threadGroup = new ThreadGroup("test");
-		int cnt1 = 20;
-		int cnt2 = 60;
-		final SimpleDateFormat x = new SimpleDateFormat("yyyyMMddhhmmss");
+		int cnt1 = 10;
+		int cnt2 = 10;
+		final SimpleDateFormat x = new SimpleDateFormat("yyyyMMdd");
 		for (int j = 0; j < cnt1; j++) {
 			Thread.sleep(1000);
 			for (int i = 0; i < cnt2; i++) {
@@ -27,17 +27,17 @@ public class Client {
 						InputStream inputStream = null;
 						OutputStream outputStream = null;
 						try {
-							socket = new Socket("127.0.0.1", 23592);
-
-							inputStream = socket.getInputStream();
-							inputStream.read(buffer);
-							System.out.println(xx + "<<< " + new String(buffer));
+							socket = new Socket("127.0.0.1", 20000);
 							
 							outputStream = socket.getOutputStream();
 							String format = x.format(new Date());
 							System.out.println(xx + ">>> " + format);
 							outputStream.write(format.getBytes());
 							outputStream.flush();
+							
+							inputStream = socket.getInputStream();
+							inputStream.read(buffer);
+							System.out.println(xx + "<<< " + new String(buffer));
 						} catch (Exception e) {
 							e.printStackTrace();
 						} finally {

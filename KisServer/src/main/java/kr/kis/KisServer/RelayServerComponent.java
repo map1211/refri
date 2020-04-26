@@ -9,7 +9,6 @@ import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
-import java.util.LinkedList;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,11 +31,11 @@ public class RelayServerComponent implements ApplicationRunner {
 	@Value("${socket.host.port}")
 	private int hostPort;
 
+	@Value("${socket.server.encoding}")
+	private String encoding;
+
 	@Autowired
 	private SocketChannelService socketChannelService;
-
-	private ByteBuffer buffer = ByteBuffer.allocate(1024);
-	private LinkedList<byte[]> bufferList = new LinkedList<byte[]>();
 
 	private Selector selector = null;
 
@@ -52,7 +51,7 @@ public class RelayServerComponent implements ApplicationRunner {
 				serverChannel.configureBlocking(false);
 				serverChannel.socket().bind(new InetSocketAddress(relayServerPort));
 				serverChannel.register(selector, SelectionKey.OP_ACCEPT);
-				logger.debug("### Server running : " + relayServerPort);
+				logger.debug("Server running : " + relayServerPort);
 			}
 
 			while (selector.select() > 0) {
@@ -65,19 +64,15 @@ public class RelayServerComponent implements ApplicationRunner {
 						continue;
 					}
 
-					if (key.isConnectable()) {
-						connectable(key);
-					} else if (key.isAcceptable()) {
+					if (key.isAcceptable()) {
 						acceptable(selector, key);
 					} else if (key.isReadable()) {
 						readable(key);
-					} else if (key.isWritable()) {
-						writable(selector, key);
 					}
 				}
 			}
 		} catch (Exception e) {
-			logger.error("ERROR", e);
+			logger.error("!!! ERROR", e);
 		} finally {
 			try {
 				serverChannel.close();
@@ -91,21 +86,9 @@ public class RelayServerComponent implements ApplicationRunner {
 		}
 	}
 
-	private void connectable(SelectionKey key) {
-		try {
-			SocketChannel socketChannel = (SocketChannel) key.channel();
-			socketChannel.finishConnect();
-			
-			if (socketChannelService.isHostServerChannel(socketChannel)) {
-				logger.debug("### Host Server New Connection : " + hostIp + ":" + hostPort);
-				socketChannelService.getSocketChannelVO(socketChannel).setHostServerKey(key);
-			}
-		} catch (Exception e) {
-			socketChannelService.closeSelectionKey(key);
-		}
-	}
-
 	private void acceptable(Selector selector, SelectionKey key) {
+		String sessionId = "";
+
 		try {
 			socketChannelService.putSelectionKeys(key);
 
@@ -113,86 +96,87 @@ public class RelayServerComponent implements ApplicationRunner {
 
 			SocketChannel clientChannel = serverChannel.accept();
 			clientChannel.configureBlocking(false);
+			sessionId = "[" + System.identityHashCode(clientChannel) + "]";
 
 			Socket socket = clientChannel.socket();
 			SocketAddress remoteAddr = socket.getRemoteSocketAddress();
-			logger.debug("### Relay Server Connection Detect : " + remoteAddr);
-
-			clientChannel.register(selector, SelectionKey.OP_READ);
+			logger.debug(sessionId + "Relay Server Connection Detect : " + remoteAddr);
 
 			connectionHostServer(key, clientChannel);
 		} catch (Exception e) {
-			logger.error("ERROR", e);
+			logger.error("!!! " + sessionId + " ERROR : " + e.getMessage(), e.getMessage());
 			socketChannelService.closeSelectionKey(key);
 		}
 	}
 
 	private void readable(SelectionKey key) {
+		String sessionId = "";
+		SocketChannel clientChannel = null;
+
 		try {
 			SocketChannel channel = (SocketChannel) key.channel();
 			channel.configureBlocking(false);
-
 			Socket socket = channel.socket();
 
-			buffer.clear();
+			if (socketChannelService.isHostServerChannel(channel)) {
+				SocketChannel hostServerChannel = channel;
+				clientChannel = socketChannelService.getClientChannel(hostServerChannel);
+			} else {
+				clientChannel = channel;
+			}
+			sessionId = "[" + System.identityHashCode(clientChannel) + "]";
+
+			ByteBuffer buffer = ByteBuffer.allocate(4096);
 			int size = channel.read(buffer);
 			if (size == -1) {
 				throw new ConnectionClosedException(socket.getRemoteSocketAddress());
 			}
-			buffer.flip();
 
 			if (socketChannelService.isHostServerChannel(channel)) {
-				logger.debug("<<< Host Server Response Data Length : " + buffer.limit());
-				buffer.clear();
-				socketChannelService.getClientChannel(channel).register(selector, SelectionKey.OP_WRITE, ByteBuffer.wrap(buffer.array()));
-			} else {
-				logger.debug(">>> Client Request Data Length : " + buffer.limit());
-				socketChannelService.getHostServerChannel(channel).register(selector, SelectionKey.OP_WRITE, ByteBuffer.wrap(buffer.array()));
-			}
-		} catch (Exception e) {
-			if (e instanceof ConnectionClosedException) {
-				logger.error("ERROR : " + e.getMessage(), e.getMessage());
-			} else {
-				logger.error("ERROR", e);
-			}
+				SocketChannel hostServerChannel = channel;
+				clientChannel.configureBlocking(false);
 
-			socketChannelService.closeSelectionKey(key);
-		}
-	}
+				logger.debug(sessionId + " Host Request : " + (InetSocketAddress) hostServerChannel.socket().getRemoteSocketAddress());
+				logger.debug(sessionId + " Host Server Response Data Length : " + size);
 
-	private void writable(Selector selector, SelectionKey key) {
-		try {
-			SocketChannel channel = (SocketChannel) key.channel();
-			channel.configureBlocking(false);
+				logger.debug(sessionId + " Client Response Data Length : " + size);
+				clientChannel.write(ByteBuffer.wrap(buffer.array(), 0, size));
+			} else {
+				logger.debug(sessionId + " Client Request : " + (InetSocketAddress) clientChannel.socket().getRemoteSocketAddress());
+				logger.debug(sessionId + " Client Request Data Length : " + size);
+
+				logger.debug(sessionId + " Host Server Request Data Length : " + size);
+				SocketChannel hostChannel = socketChannelService.getHostServerChannel(clientChannel);
+				hostChannel.configureBlocking(false);
+				hostChannel.write(ByteBuffer.wrap(buffer.array(), 0, size));
+			}
 
 			buffer.clear();
-			buffer.put((ByteBuffer) key.attachment());
-			buffer.flip();
-
-			if (socketChannelService.isHostServerChannel(channel)) {
-				logger.debug(">>> Host Server Request Data Length : " + buffer.limit());
-			} else {
-				logger.debug("<<< Client Response Data Length : " + buffer.limit());
-			}
-
-			channel.write(ByteBuffer.wrap(buffer.array()));
-			channel.register(selector, SelectionKey.OP_READ);
 		} catch (Exception e) {
-			logger.error("ERROR", e);
+			logger.error(sessionId + " ERROR : " + e.getMessage(), e.getMessage());
 			socketChannelService.closeSelectionKey(key);
 		}
 	}
 
 	private void connectionHostServer(SelectionKey key, SocketChannel clientChannel) {
+		String sessionId = "";
 		SocketChannel hostServerChannel = null;
 
 		try {
+			sessionId = "[" + System.identityHashCode(clientChannel) + "]";
+
 			hostServerChannel = SocketChannel.open(new InetSocketAddress(hostIp, hostPort));
 			hostServerChannel.configureBlocking(false);
-			hostServerChannel.register(selector, SelectionKey.OP_READ);
+
+			logger.debug(sessionId + " Host Server Connection Waiting : " + hostIp + ":" + hostPort);
+			hostServerChannel.finishConnect();
+			logger.debug(sessionId + " Host Server Connection Success: " + hostIp + ":" + hostPort);
+
 			socketChannelService.mappingServer(key, clientChannel, hostServerChannel);
+			clientChannel.register(selector, SelectionKey.OP_READ);
+			hostServerChannel.register(selector, SelectionKey.OP_READ);
 		} catch (Exception e) {
-			logger.error("ERROR", e);
+			logger.error(sessionId + " ERROR : " + e.getMessage(), e.getMessage());
 			socketChannelService.closeSelectionKey(key);
 		}
 	}

@@ -1,0 +1,32 @@
+# application.properties
+
+# server type
+# ST:start relay server , FN: end relay server , R0~R9 : between relay server 
+socket.server.relayType=FN
+
+# socket server1 
+#socket.server.ST.ip=127.0.0.1
+#socket.server.ST.port=23510
+
+# Listener socket info 
+socket.server.FN.ip=
+socket.server.FN.port=33590
+#socket.server.FN.port=20000
+
+# Target server socket info
+#socket.host.ip=210.112.100.97
+#socket.server.ST.port=9029
+socket.host.ip=127.0.0.1
+socket.host.port=20010
+
+
+# thread number 
+thread.maxNum=100
+
+
+# character encoding code
+socket.server.encoding=EUC-KR
+
+# socket time setting
+socket.server.timeout=3
+

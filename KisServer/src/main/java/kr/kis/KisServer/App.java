@@ -20,16 +20,17 @@ public class App {
 
 		ConfigurableApplicationContext configurableApplicationContext = null;
 		try {
-			final String configLocation = System.getenv(args[0]);
-			System.out.println("Properties Location : " + configLocation);
-			
-			System.setProperty("LOGPATH", configLocation);
-			
+			final String appLocation = System.getenv(args[0]) + File.separator;
+			System.out.println("App Location : " + appLocation);
+
+			System.setProperty("LOGPATH", appLocation + "logs");
+
+			String configLocation = appLocation + File.separator + "resources" + File.separator;
 			configurableApplicationContext = new SpringApplicationBuilder(App.class)//
 					.properties(//
-							"spring.config.location=file:" + configLocation + File.separator + "application.properties", //
-							"config.location=file:" + configLocation, //
-							"logging.config=file:" + configLocation + File.separator + "log4j.xml")//
+							"spring.config.location=file:" + configLocation + "application.properties", //
+							"logging.config=file:" + configLocation + "log4j.xml", //
+							"config.location=file:" + configLocation)//
 					.run(args);
 		} catch (Exception e) {
 			logger.error("ERROR", e);

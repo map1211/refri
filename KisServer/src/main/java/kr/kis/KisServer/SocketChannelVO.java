@@ -5,7 +5,6 @@ import java.nio.channels.SocketChannel;
 
 public class SocketChannelVO {
 	private SelectionKey clientKey;
-	private SelectionKey hostServerKey;
 	private SocketChannel clientChannel;
 	private SocketChannel hostServerChannel;
 
@@ -37,14 +36,6 @@ public class SocketChannelVO {
 
 	public void setClientKey(SelectionKey clientKey) {
 		this.clientKey = clientKey;
-	}
-
-	public SelectionKey getHostServerKey() {
-		return hostServerKey;
-	}
-
-	public void setHostServerKey(SelectionKey hostServerKey) {
-		this.hostServerKey = hostServerKey;
 	}
 
 }
