@@ -39,13 +39,18 @@ public class RelayServerComponent implements ApplicationRunner {
 
 	private Selector selector = null;
 
+	private ByteBuffer buffer = ByteBuffer.allocate(4096);
+
 	@Override
 	public void run(ApplicationArguments arg0) throws Exception {
+		SelectionKey selectedKey = null;
+		Iterator<SelectionKey> selectedKeysIterator = null;
 		ServerSocketChannel serverChannel = null;
 
 		try {
 			selector = Selector.open();
 
+			// Relay Server Channel ¼³Á¤
 			serverChannel = ServerSocketChannel.open();
 			{
 				serverChannel.configureBlocking(false);
@@ -54,25 +59,30 @@ public class RelayServerComponent implements ApplicationRunner {
 				logger.debug("Server running : " + relayServerPort);
 			}
 
+			// Selector
 			while (selector.select() > 0) {
-				Iterator<SelectionKey> keys = selector.selectedKeys().iterator();
-				while (keys.hasNext()) {
-					final SelectionKey key = keys.next();
+				selectedKeysIterator = selector.selectedKeys().iterator();
+				while (selectedKeysIterator.hasNext()) {
+					// Selected Key È¹µæ
+					selectedKey = selectedKeysIterator.next();
 
-					keys.remove();
-					if (!key.isValid()) {
+					// SelectedKays Á¤¸®
+					selectedKeysIterator.remove();
+
+					// Validation
+					if (!selectedKey.isValid()) {
 						continue;
 					}
 
-					if (key.isAcceptable()) {
-						acceptable(selector, key);
-					} else if (key.isReadable()) {
-						readable(key);
+					if (selectedKey.isAcceptable()) {
+						acceptable(selector, selectedKey);
+					} else if (selectedKey.isReadable()) {
+						readable(selectedKey);
 					}
 				}
 			}
 		} catch (Exception e) {
-			logger.error("!!! ERROR", e);
+			logger.error("ERROR", e);
 		} finally {
 			try {
 				serverChannel.close();
@@ -87,35 +97,47 @@ public class RelayServerComponent implements ApplicationRunner {
 	}
 
 	private void acceptable(Selector selector, SelectionKey key) {
+		Socket socket = null;
 		String sessionId = "";
+		SocketChannel clientChannel = null;
+		ServerSocketChannel serverChannel = null;
 
 		try {
 			socketChannelService.putSelectionKeys(key);
+			serverChannel = (ServerSocketChannel) key.channel();
 
-			ServerSocketChannel serverChannel = (ServerSocketChannel) key.channel();
-
-			SocketChannel clientChannel = serverChannel.accept();
+			clientChannel = serverChannel.accept();
 			clientChannel.configureBlocking(false);
 			sessionId = "[" + System.identityHashCode(clientChannel) + "]";
 
-			Socket socket = clientChannel.socket();
+			socket = clientChannel.socket();
 			SocketAddress remoteAddr = socket.getRemoteSocketAddress();
 			logger.debug(sessionId + "Relay Server Connection Detect : " + remoteAddr);
 
-			connectionHostServer(key, clientChannel);
+			connectionHostServer(clientChannel);
 		} catch (Exception e) {
-			logger.error("!!! " + sessionId + " ERROR : " + e.getMessage(), e.getMessage());
-			socketChannelService.closeSelectionKey(key);
+			logger.error(sessionId + " ERROR - Accept: " + e.getMessage(), e.getMessage());
+			close(clientChannel);
+			
+			try {
+				socket.close();
+			} catch (Exception e1) {
+			}
+			
+			try {
+				clientChannel.close();
+			} catch (Exception e1) {
+			}
 		}
 	}
 
 	private void readable(SelectionKey key) {
 		String sessionId = "";
+		SocketChannel channel = null;
 		SocketChannel clientChannel = null;
 
 		try {
-			SocketChannel channel = (SocketChannel) key.channel();
-			channel.configureBlocking(false);
+			channel = (SocketChannel) key.channel();
 			Socket socket = channel.socket();
 
 			if (socketChannelService.isHostServerChannel(channel)) {
@@ -126,7 +148,7 @@ public class RelayServerComponent implements ApplicationRunner {
 			}
 			sessionId = "[" + System.identityHashCode(clientChannel) + "]";
 
-			ByteBuffer buffer = ByteBuffer.allocate(4096);
+			buffer.clear();
 			int size = channel.read(buffer);
 			if (size == -1) {
 				throw new ConnectionClosedException(socket.getRemoteSocketAddress());
@@ -134,31 +156,26 @@ public class RelayServerComponent implements ApplicationRunner {
 
 			if (socketChannelService.isHostServerChannel(channel)) {
 				SocketChannel hostServerChannel = channel;
-				clientChannel.configureBlocking(false);
 
-				logger.debug(sessionId + " Host Request : " + (InetSocketAddress) hostServerChannel.socket().getRemoteSocketAddress());
+				logger.debug(sessionId + " Host Server Response : " + (InetSocketAddress) hostServerChannel.socket().getRemoteSocketAddress());
 				logger.debug(sessionId + " Host Server Response Data Length : " + size);
-
-				logger.debug(sessionId + " Client Response Data Length : " + size);
 				clientChannel.write(ByteBuffer.wrap(buffer.array(), 0, size));
+				logger.debug(sessionId + " Client Response Data Length : " + size);
 			} else {
 				logger.debug(sessionId + " Client Request : " + (InetSocketAddress) clientChannel.socket().getRemoteSocketAddress());
 				logger.debug(sessionId + " Client Request Data Length : " + size);
 
-				logger.debug(sessionId + " Host Server Request Data Length : " + size);
 				SocketChannel hostChannel = socketChannelService.getHostServerChannel(clientChannel);
-				hostChannel.configureBlocking(false);
 				hostChannel.write(ByteBuffer.wrap(buffer.array(), 0, size));
+				logger.debug(sessionId + " Host Server Request Data Length : " + size);
 			}
-
-			buffer.clear();
 		} catch (Exception e) {
-			logger.error(sessionId + " ERROR : " + e.getMessage(), e.getMessage());
-			socketChannelService.closeSelectionKey(key);
+			logger.error(sessionId + " ERROR - Read : " + e.getMessage(), e.getMessage());
+			close(channel);
 		}
 	}
 
-	private void connectionHostServer(SelectionKey key, SocketChannel clientChannel) {
+	private void connectionHostServer(SocketChannel clientChannel) throws Exception {
 		String sessionId = "";
 		SocketChannel hostServerChannel = null;
 
@@ -172,12 +189,41 @@ public class RelayServerComponent implements ApplicationRunner {
 			hostServerChannel.finishConnect();
 			logger.debug(sessionId + " Host Server Connection Success: " + hostIp + ":" + hostPort);
 
-			socketChannelService.mappingServer(key, clientChannel, hostServerChannel);
-			clientChannel.register(selector, SelectionKey.OP_READ);
-			hostServerChannel.register(selector, SelectionKey.OP_READ);
+			SelectionKey clientKey = clientChannel.register(selector, SelectionKey.OP_READ);
+			SelectionKey hostServerKey = hostServerChannel.register(selector, SelectionKey.OP_READ);
+			socketChannelService.mappingServer((SocketChannel) clientKey.channel(), (SocketChannel) hostServerKey.channel());
 		} catch (Exception e) {
-			logger.error(sessionId + " ERROR : " + e.getMessage(), e.getMessage());
-			socketChannelService.closeSelectionKey(key);
+			logger.error(sessionId + " ERROR - Connection Host Server : " + e.getMessage(), e.getMessage());
+			close(clientChannel);
+			throw e;
+		}
+	}
+
+	private void close(SocketChannel channel) {
+		String sessionId = "[" + System.identityHashCode(channel) + "]";
+		boolean isHostServerChannel = false;
+		SocketChannel mappingChannel = null;
+
+		try {
+			isHostServerChannel = socketChannelService.isHostServerChannel(channel);
+			if (isHostServerChannel) {
+				sessionId = "[" + System.identityHashCode(socketChannelService.getClientChannel(channel)) + "]";
+				mappingChannel = socketChannelService.getClientChannel(channel);
+			} else {
+				mappingChannel = socketChannelService.getHostServerChannel(channel);
+			}
+
+			logger.debug(sessionId + " Mapping Channel Close Start [" + System.identityHashCode(channel) + "]");
+			SelectionKey mappingSelectionKey = mappingChannel.keyFor(selector);
+			socketChannelService.close(sessionId, mappingSelectionKey);
+			logger.debug(sessionId + " Mapping Channel Close End [" + System.identityHashCode(channel) + "]");
+		} catch (Exception e) {
+			logger.error(" ERROR - Close", "Not found Mapping");
+		} finally {
+			logger.debug(sessionId + " Channel Close Start [" + System.identityHashCode(channel) + "]");
+			SelectionKey selectionKey = channel.keyFor(selector);
+			socketChannelService.close(sessionId, selectionKey);
+			logger.debug(sessionId + " Channel Close End [" + System.identityHashCode(channel) + "]");
 		}
 	}
 }
