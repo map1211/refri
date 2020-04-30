@@ -4,8 +4,7 @@ import java.net.InetSocketAddress;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.SocketChannel;
 import java.util.HashMap;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,59 +24,31 @@ public class SocketChannelService {
 	@Value("${socket.host.port}")
 	private int hostPort;
 
-	private static HashMap<SocketChannel, SocketChannelVO> CHANNEL_MAP = new HashMap<SocketChannel, SocketChannelVO>();
-	private static BlockingQueue<SelectionKey> SELECTION_KEYS;
+	public static HashMap<SocketChannel, SocketChannelVO> CHANNEL_MAP = new HashMap<SocketChannel, SocketChannelVO>();
+	public static AtomicInteger SESSION_COUNT = new AtomicInteger();
 
-	public void close(String sessionId, SelectionKey key) {
+	public void close(String sessionId, SelectionKey key) throws Exception {
 		SocketChannel channel = null;
 
 		try {
-			try {
-				key.cancel();
-				takeSelectionKeys();
-
-				channel = (SocketChannel) key.channel();
-				CHANNEL_MAP.remove(channel);
-			} catch (Exception e) {
-			}
+			key.cancel();
+			channel = (SocketChannel) key.channel();
+			CHANNEL_MAP.remove(channel);
 
 			try {
 				channel.socket().close();
+				logger.debug("Session Count (" + SocketChannelService.SESSION_COUNT.decrementAndGet() + ")");
 			} catch (Exception e) {
+				logger.error("ERROR - " + e.getMessage());
 			}
 
 			try {
 				channel.close();
 			} catch (Exception e) {
+				logger.error("ERROR - " + e.getMessage());
 			}
 		} catch (Exception e) {
-			logger.error("ERROR", e);
-			logger.error(sessionId + " ERROR - Close : " + e.getMessage(), e.getMessage());
-		}
-	}
-
-	public void putSelectionKeys(SelectionKey key) throws Exception {
-		if (SELECTION_KEYS == null) {
-			logger.debug("Work Queue Create : " + THREAD_MAX_NUM);
-			SELECTION_KEYS = new ArrayBlockingQueue<SelectionKey>(THREAD_MAX_NUM);
-		}
-
-		logger.debug("Work Register Star (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
-		SELECTION_KEYS.put(key);
-		logger.debug("Work Register End (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
-	}
-
-	public void takeSelectionKeys() throws Exception {
-		logger.debug("Work Unregister Start (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
-		try {
-			if (SELECTION_KEYS.isEmpty()) {
-				return;
-			}
-
-			SELECTION_KEYS.take();
-		} catch (Exception e) {
-		} finally {
-			logger.debug("Work Unregister End (" + SELECTION_KEYS.size() + " / " + THREAD_MAX_NUM + ")");
+			throw e;
 		}
 	}
 

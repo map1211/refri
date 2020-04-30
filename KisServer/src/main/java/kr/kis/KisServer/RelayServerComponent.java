@@ -82,7 +82,7 @@ public class RelayServerComponent implements ApplicationRunner {
 				}
 			}
 		} catch (Exception e) {
-			logger.error("ERROR", e);
+			logger.error("ERROR - " + e.getMessage());
 		} finally {
 			try {
 				serverChannel.close();
@@ -103,12 +103,12 @@ public class RelayServerComponent implements ApplicationRunner {
 		ServerSocketChannel serverChannel = null;
 
 		try {
-			socketChannelService.putSelectionKeys(key);
 			serverChannel = (ServerSocketChannel) key.channel();
 
 			clientChannel = serverChannel.accept();
 			clientChannel.configureBlocking(false);
 			sessionId = "[" + System.identityHashCode(clientChannel) + "]";
+			logger.debug("Session Count (" + SocketChannelService.SESSION_COUNT.incrementAndGet() + ")");
 
 			socket = clientChannel.socket();
 			SocketAddress remoteAddr = socket.getRemoteSocketAddress();
@@ -116,18 +116,8 @@ public class RelayServerComponent implements ApplicationRunner {
 
 			connectionHostServer(clientChannel);
 		} catch (Exception e) {
-			logger.error(sessionId + " ERROR - Accept: " + e.getMessage(), e.getMessage());
+			logger.error(sessionId + " ERROR - Accept: " + e.getMessage());
 			close(clientChannel);
-			
-			try {
-				socket.close();
-			} catch (Exception e1) {
-			}
-			
-			try {
-				clientChannel.close();
-			} catch (Exception e1) {
-			}
 		}
 	}
 
@@ -170,7 +160,7 @@ public class RelayServerComponent implements ApplicationRunner {
 				logger.debug(sessionId + " Host Server Request Data Length : " + size);
 			}
 		} catch (Exception e) {
-			logger.error(sessionId + " ERROR - Read : " + e.getMessage(), e.getMessage());
+			logger.error(sessionId + " ERROR - Read : " + e.getMessage());
 			close(channel);
 		}
 	}
@@ -182,19 +172,17 @@ public class RelayServerComponent implements ApplicationRunner {
 		try {
 			sessionId = "[" + System.identityHashCode(clientChannel) + "]";
 
+			logger.debug(sessionId + " Host Server Connection Waiting : " + hostIp + ":" + hostPort);
 			hostServerChannel = SocketChannel.open(new InetSocketAddress(hostIp, hostPort));
 			hostServerChannel.configureBlocking(false);
-
-			logger.debug(sessionId + " Host Server Connection Waiting : " + hostIp + ":" + hostPort);
-			hostServerChannel.finishConnect();
-			logger.debug(sessionId + " Host Server Connection Success: " + hostIp + ":" + hostPort);
+			logger.debug("Session Count (" + SocketChannelService.SESSION_COUNT.incrementAndGet() + ")");
 
 			SelectionKey clientKey = clientChannel.register(selector, SelectionKey.OP_READ);
 			SelectionKey hostServerKey = hostServerChannel.register(selector, SelectionKey.OP_READ);
 			socketChannelService.mappingServer((SocketChannel) clientKey.channel(), (SocketChannel) hostServerKey.channel());
+			logger.debug(sessionId + " Host Server Connection Success: " + hostIp + ":" + hostPort);
 		} catch (Exception e) {
-			logger.error(sessionId + " ERROR - Connection Host Server : " + e.getMessage(), e.getMessage());
-			close(clientChannel);
+			logger.error(sessionId + " ERROR - Connection Host Server : " + e.getMessage());
 			throw e;
 		}
 	}
@@ -218,12 +206,36 @@ public class RelayServerComponent implements ApplicationRunner {
 			socketChannelService.close(sessionId, mappingSelectionKey);
 			logger.debug(sessionId + " Mapping Channel Close End [" + System.identityHashCode(channel) + "]");
 		} catch (Exception e) {
-			logger.error(" ERROR - Close", "Not found Mapping");
+			logger.error(sessionId + " ERROR - " + e.getMessage());
 		} finally {
-			logger.debug(sessionId + " Channel Close Start [" + System.identityHashCode(channel) + "]");
-			SelectionKey selectionKey = channel.keyFor(selector);
-			socketChannelService.close(sessionId, selectionKey);
-			logger.debug(sessionId + " Channel Close End [" + System.identityHashCode(channel) + "]");
+			try {
+				logger.debug(sessionId + " Channel Close Start [" + System.identityHashCode(channel) + "]");
+				SelectionKey selectionKey = channel.keyFor(selector);
+				socketChannelService.close(sessionId, selectionKey);
+				logger.debug(sessionId + " Channel Close End [" + System.identityHashCode(channel) + "]");
+			} catch (Exception e) {
+				logger.error(sessionId + " ERROR - " + e.getMessage());
+
+				// Mapping 하지 못한 Session 처리
+				try {
+					if (channel.socket().isClosed() == false) {
+						try {
+							channel.socket().close();
+							logger.debug("Session Count (" + SocketChannelService.SESSION_COUNT.decrementAndGet() + ")");
+							SocketChannelService.CHANNEL_MAP.remove(channel);
+						} catch (Exception e1) {
+						}
+
+						try {
+							channel.close();
+						} catch (Exception e1) {
+						}
+					}
+				} catch (Exception e1) {
+				}
+			}
+
+			logger.debug("Channel Map Count (" + SocketChannelService.CHANNEL_MAP.size() + ")");
 		}
 	}
 }
