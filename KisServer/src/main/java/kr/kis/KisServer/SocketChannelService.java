@@ -27,7 +27,7 @@ public class SocketChannelService {
 	public static HashMap<SocketChannel, SocketChannelVO> CHANNEL_MAP = new HashMap<SocketChannel, SocketChannelVO>();
 	public static AtomicInteger SESSION_COUNT = new AtomicInteger();
 
-	public void close(String sessionId, SelectionKey key) throws Exception {
+	public void close(SelectionKey key) throws Exception {
 		SocketChannel channel = null;
 
 		try {
@@ -35,9 +35,15 @@ public class SocketChannelService {
 			channel = (SocketChannel) key.channel();
 			CHANNEL_MAP.remove(channel);
 
+			if (channel == null) {
+				return;
+			}
+
 			try {
-				channel.socket().close();
-				logger.debug("Session Count (" + SocketChannelService.SESSION_COUNT.decrementAndGet() + ")");
+				if (channel.socket() != null && channel.socket().isClosed()) {
+					channel.socket().close();
+					SocketChannelService.SESSION_COUNT.decrementAndGet();
+				}
 			} catch (Exception e) {
 				logger.error("ERROR - " + e.getMessage());
 			}

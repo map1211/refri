@@ -1,7 +1,7 @@
-D:\eGovDev_3.8_ThinkIT\workspace\KisServer\src\main\java\kr\kis\KisServer\ConnectionClosedException.java
-D:\eGovDev_3.8_ThinkIT\workspace\KisServer\src\main\java\kr\kis\KisServer\RelayServerComponent.java
-D:\eGovDev_3.8_ThinkIT\workspace\KisServer\src\main\java\kr\kis\KisServer\App.java
-D:\eGovDev_3.8_ThinkIT\workspace\KisServer\src\main\java\kr\kis\KisServer\EchoServer.java
-D:\eGovDev_3.8_ThinkIT\workspace\KisServer\src\main\java\kr\kis\KisServer\SocketChannelService.java
-D:\eGovDev_3.8_ThinkIT\workspace\KisServer\src\main\java\kr\kis\KisServer\Client.java
-D:\eGovDev_3.8_ThinkIT\workspace\KisServer\src\main\java\kr\kis\KisServer\SocketChannelVO.java
+E:\workspace\Relay\KisServer\src\main\java\kr\kis\KisServer\Client.java
+E:\workspace\Relay\KisServer\src\main\java\kr\kis\KisServer\SocketChannelVO.java
+E:\workspace\Relay\KisServer\src\main\java\kr\kis\KisServer\RelayServerComponent.java
+E:\workspace\Relay\KisServer\src\main\java\kr\kis\KisServer\EchoServer.java
+E:\workspace\Relay\KisServer\src\main\java\kr\kis\KisServer\SocketChannelService.java
+E:\workspace\Relay\KisServer\src\main\java\kr\kis\KisServer\App.java
+E:\workspace\Relay\KisServer\src\main\java\kr\kis\KisServer\ConnectionClosedException.java

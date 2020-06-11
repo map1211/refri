@@ -27,7 +27,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
-			<version>1.5.22.RELEASE</version>
+			<version>1.5.21.RELEASE</version>
 		</dependency>
 	</dependencies>
 
@@ -37,7 +37,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>1.5.22.RELEASE</version>
+				<version>1.5.21.RELEASE</version>
 				<configuration>
 					<compilerVersion>${java.version}</compilerVersion>
 					<executable>true</executable>
