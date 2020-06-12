@@ -133,9 +133,10 @@ public class RelayServerComponent implements ApplicationRunner {
 			String removeAddrStr = ((InetSocketAddress) remoteAddr).getAddress().getHostAddress();
 
 			// 로그 예외 IP 확인
-			checkLogExceptionId(sessionId, removeAddrStr);
-
-			debugLog(sessionId, " Session Count (" + SocketChannelService.SESSION_COUNT.incrementAndGet() + ")");
+			if (checkLogExceptionIp(sessionId, removeAddrStr)) {
+				throw new Exception("Log Exception Ip : " + removeAddrStr);
+			}
+			
 			debugLog(sessionId, " Relay Server Connection Detect : " + remoteAddr + " (" + removeAddrStr + ")");
 
 			connectionHostServer(clientChannel);
@@ -200,7 +201,6 @@ public class RelayServerComponent implements ApplicationRunner {
 			debugLog(sessionId, " Host Server Connection Waiting : " + hostIp + ":" + hostPort);
 			hostServerChannel = SocketChannel.open(new InetSocketAddress(hostIp, hostPort));
 			hostServerChannel.configureBlocking(false);
-			debugLog(sessionId, " Session Count (" + SocketChannelService.SESSION_COUNT.incrementAndGet() + ")");
 
 			SelectionKey clientKey = clientChannel.register(selector, SelectionKey.OP_READ);
 			SelectionKey hostServerKey = hostServerChannel.register(selector, SelectionKey.OP_READ);
@@ -246,7 +246,6 @@ public class RelayServerComponent implements ApplicationRunner {
 					if (channel.socket().isClosed() == false) {
 						try {
 							channel.socket().close();
-							debugLog(sessionId, " Session Count (" + SocketChannelService.SESSION_COUNT.decrementAndGet() + ")");
 							SocketChannelService.CHANNEL_MAP.remove(channel);
 						} catch (Exception e1) {
 						}
@@ -272,19 +271,19 @@ public class RelayServerComponent implements ApplicationRunner {
 	 * @param sessionId
 	 * @param ip
 	 */
-	private void checkLogExceptionId(int sessionId, String ip) {
+	private boolean checkLogExceptionIp(int sessionId, String ip) {
 		if (logExceptionIpList.contains(ip)) {
 			logExceptionIdList.add(sessionId);
-			
-			/*
-			 * 매번 달라지는 ID를 수집 후 해제 할 시점이 다양하므로
-			 * 단순히 예외 대상 ID를 Array에 넣고 개수가 너무 많아지면
-			 * 가장 오래된 데이터를 정리하는 방식으로 예외대상을 관리한다.
-			 */
+
+			// Log Exception 대상이 너무 많아 지지 않도록 제한
 			if (logExceptionIdList.size() > maxLogExceptionIpList) {
 				logExceptionIdList.remove(0);
 			}
+			
+			return true;
 		}
+		
+		return false;
 	}
 
 	private void debugLog(int sessionId, String msg) {
