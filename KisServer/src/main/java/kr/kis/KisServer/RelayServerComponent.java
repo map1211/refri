@@ -40,7 +40,7 @@ public class RelayServerComponent implements ApplicationRunner {
 	private String logExceptionIps;
 	private ArrayList<String> logExceptionIpList;
 	private ArrayList<Integer> logExceptionIdList;
-	private int maxLogExceptionIpList = 100;
+	private static final int MAX_LOG_EXCEPTION_IP_COUNT = 100;
 
 	@Autowired
 	private SocketChannelService socketChannelService;
@@ -75,7 +75,7 @@ public class RelayServerComponent implements ApplicationRunner {
 
 				logExceptionIpList = new ArrayList<String>(Arrays.asList(logExceptionIps.split(",")));
 				logger.debug("logExceptionIps : " + Arrays.toString(logExceptionIpList.toArray()));
-				logExceptionIdList = new ArrayList<Integer>(logExceptionIpList.size() * 2);
+				logExceptionIdList = new ArrayList<Integer>(MAX_LOG_EXCEPTION_IP_COUNT);
 			}
 
 			// Selector
@@ -130,15 +130,14 @@ public class RelayServerComponent implements ApplicationRunner {
 
 			socket = clientChannel.socket();
 			SocketAddress remoteAddr = socket.getRemoteSocketAddress();
-			String removeAddrStr = ((InetSocketAddress) remoteAddr).getAddress().getHostAddress();
-
+			String removeAddrStr = ((InetSocketAddress) remoteAddr).getAddress().toString().substring(1);
+			
 			// 로그 예외 IP 확인
 			if (checkLogExceptionIp(sessionId, removeAddrStr)) {
 				throw new Exception("Log Exception Ip : " + removeAddrStr);
 			}
 			
-			debugLog(sessionId, " Relay Server Connection Detect : " + remoteAddr + " (" + removeAddrStr + ")");
-
+			debugLog(sessionId, " Relay Server Connection Detect : " + remoteAddr);
 			connectionHostServer(clientChannel);
 		} catch (Exception e) {
 			errorLog(sessionId, " ERROR - Accept: " + e.getMessage());
@@ -276,7 +275,7 @@ public class RelayServerComponent implements ApplicationRunner {
 			logExceptionIdList.add(sessionId);
 
 			// Log Exception 대상이 너무 많아 지지 않도록 제한
-			if (logExceptionIdList.size() > maxLogExceptionIpList) {
+			if (logExceptionIdList.size() > MAX_LOG_EXCEPTION_IP_COUNT) {
 				logExceptionIdList.remove(0);
 			}
 			
