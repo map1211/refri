@@ -57,8 +57,8 @@ public class SocketChannelService {
 
 	public void mappingServer(SocketChannel clientChannel, SocketChannel hostServerChannel) throws Exception {
 		logger.debug("[" + System.identityHashCode(clientChannel) + "] MappingServer : " //
-				+ clientChannel.socket().getRemoteSocketAddress() + "[" + System.identityHashCode(clientChannel) + "] - " //
-				+ hostServerChannel.socket().getRemoteSocketAddress() + "[" + System.identityHashCode(hostServerChannel) + "]");
+				+ ((InetSocketAddress) clientChannel.socket().getRemoteSocketAddress()).getAddress().getHostAddress() + "[" + System.identityHashCode(clientChannel) + "] - " //
+				+ ((InetSocketAddress) hostServerChannel.socket().getRemoteSocketAddress()).getAddress().getHostAddress() + "[" + System.identityHashCode(hostServerChannel) + "]");
 
 		SocketChannelVO socketChannelVO = new SocketChannelVO(clientChannel, hostServerChannel);
 		CHANNEL_MAP.put(hostServerChannel, socketChannelVO);
@@ -89,10 +89,7 @@ public class SocketChannelService {
 
 	public boolean isHostServerChannel(SocketChannel channel) {
 		InetSocketAddress socketAddress = (InetSocketAddress) channel.socket().getRemoteSocketAddress();
-		String hostName = socketAddress.getHostName();
-		if ("localhost".equals(hostName)) {
-			hostName = "127.0.0.1";
-		}
+		String hostName = socketAddress.getAddress().getHostAddress();
 		String address = hostName + socketAddress.getPort();
 		String hostAddress = hostIp + hostPort;
 		return hostAddress.equals(address);

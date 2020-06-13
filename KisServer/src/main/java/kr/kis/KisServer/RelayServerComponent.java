@@ -130,14 +130,14 @@ public class RelayServerComponent implements ApplicationRunner {
 
 			socket = clientChannel.socket();
 			SocketAddress remoteAddr = socket.getRemoteSocketAddress();
-			String removeAddrStr = ((InetSocketAddress) remoteAddr).getAddress().toString().substring(1);
-			
+			String removeAddrStr = ((InetSocketAddress) remoteAddr).getAddress().getHostAddress();
+
 			// 로그 예외 IP 확인
 			if (checkLogExceptionIp(sessionId, removeAddrStr)) {
 				throw new Exception("Log Exception Ip : " + removeAddrStr);
 			}
-			
-			debugLog(sessionId, " Relay Server Connection Detect : " + remoteAddr);
+
+			debugLog(sessionId, " Relay Server Connection Detect : " + removeAddrStr);
 			connectionHostServer(clientChannel);
 		} catch (Exception e) {
 			errorLog(sessionId, " ERROR - Accept: " + e.getMessage());
@@ -172,12 +172,12 @@ public class RelayServerComponent implements ApplicationRunner {
 			if (socketChannelService.isHostServerChannel(channel)) {
 				SocketChannel hostServerChannel = channel;
 
-				debugLog(sessionId, " Host Server Response : " + (InetSocketAddress) hostServerChannel.socket().getRemoteSocketAddress());
+				debugLog(sessionId, " Host Server Response : " + ((InetSocketAddress) hostServerChannel.socket().getRemoteSocketAddress()).getAddress().getHostAddress());
 				debugLog(sessionId, " Host Server Response Data Length : " + size);
 				clientChannel.write(ByteBuffer.wrap(buffer.array(), 0, size));
 				debugLog(sessionId, " Client Response Data Length : " + size);
 			} else {
-				debugLog(sessionId, " Client Request : " + (InetSocketAddress) clientChannel.socket().getRemoteSocketAddress());
+				debugLog(sessionId, " Client Request : " + ((InetSocketAddress) clientChannel.socket().getRemoteSocketAddress()).getAddress().getHostAddress());
 				debugLog(sessionId, " Client Request Data Length : " + size);
 
 				SocketChannel hostChannel = socketChannelService.getHostServerChannel(clientChannel);
@@ -278,10 +278,10 @@ public class RelayServerComponent implements ApplicationRunner {
 			if (logExceptionIdList.size() > MAX_LOG_EXCEPTION_IP_COUNT) {
 				logExceptionIdList.remove(0);
 			}
-			
+
 			return true;
 		}
-		
+
 		return false;
 	}
 
