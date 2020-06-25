@@ -37,7 +37,7 @@ public class KisFtClient {
 
 	
 	private static InputStream dis = null;
-	private static OutputStream dos = null;   
+	private static OutputStream dos = null;
 	
 	static String recvFileSize;
 	static String envPath;
@@ -132,7 +132,7 @@ public class KisFtClient {
 		String retMsg = null;
 		
 		try{
-			log.info("outputstream 생성 " );
+//			log.info("outputstream 생성 " );
 			OutputStream output = socket.getOutputStream();
 //			log.info("(1) 전송 자료를 byte[]로 변환 " );
 			byte[] sendWhat = msg.getBytes(socketEncode);
@@ -140,7 +140,7 @@ public class KisFtClient {
 			int writeLen= sendWhat.length;
 //			log.info("(4) 전송 자료를 보냄 : " + new String(sendWhat));
 			output.write(sendWhat);
-			log.info("서버로 전문 송신 성공 " );
+			log.info("send statement to server " );
 //			log.info("서버에서  Byte[]스트림을 전송받음 " );
 			InputStream input = socket.getInputStream();
 //			log.info(" (1) 전송될 자료의 길이를 받음 " );
@@ -156,11 +156,11 @@ public class KisFtClient {
 			}
 			// (4) 전송된 자료를 String변수로 변환 
 //			log.info(" (4) 전송된 자료를 String변수로 변환  " );
-			log.info(" 전송 메시지 :   " + line );
+			log.info(" send message  :   " + line );
 			return retMsg;
 			
 		}catch(Exception e){
-			log.info("Client sendString 오류 ", e);
+			log.info("Exception : Client sendString  ", e);
 			e.printStackTrace();
 			throw e;
 		}
@@ -175,7 +175,7 @@ public class KisFtClient {
 	public void sendFR01String( String msg ) throws Exception{
 		
 		try{
-			log.info("outputstream 생성 " );
+//			log.info("outputstream 생성 " );
 			OutputStream output = socket.getOutputStream();
 //			log.info("(1) 전송 자료를 byte[]로 변환 " );
 			byte[] sendWhat = msg.getBytes(socketEncode);
@@ -183,10 +183,10 @@ public class KisFtClient {
 			int writeLen= sendWhat.length;
 //			log.info("(4) 전송 자료를 보냄 : " + new String(sendWhat));
 			output.write(sendWhat);
-			log.info("전문송신 완료 " );
+			log.info("Send statement complete " );
 
 		}catch(Exception e){
-			log.info("Client sendString 오류 ", e);
+			log.info("Exception : Client sendString ", e);
 			e.printStackTrace();
 			throw e;
 		}
@@ -218,7 +218,7 @@ public class KisFtClient {
 			return line;
 			
 		}catch(Exception e){
-			log.info("Client recvString 오류 ", e);
+			log.info("Exception : Client recvString ", e);
 			e.printStackTrace();
 			throw e;
 		}
@@ -261,7 +261,7 @@ public class KisFtClient {
 			log.info("receive msg : [" +retMsg + "]");
 			if("FR12".equals(retMsg.substring(0, 4)) && "1".equals(retMsg.substring(14, 15))) {
 				String rcvFileSize = retMsg.substring(15, 25);
-				log.info("파일 수신 모드 filesize long : " + Long.parseLong(rcvFileSize) );
+				log.info("file receiving mode :: filesize long : " + Long.parseLong(rcvFileSize) );
 				
 				// FR02 : 파일 수신 실행. 
 				// 파일 수신이 정상적으로 완료 된 경우 
@@ -274,7 +274,7 @@ public class KisFtClient {
 				
 				FileOutputStream fos = new FileOutputStream(file);
 				BufferedOutputStream bos = new BufferedOutputStream(fos);
-				log.info("## Client: File 생성완료 : [" + fileName + "]");
+				log.info("## Client: File create : [" + fileName + "]");
 				
 				// 바이트 데이터 전송 받으면서 기록 
 				int len;
@@ -282,6 +282,47 @@ public class KisFtClient {
 				
 				byte[] data = new byte[bufSize];
 				long writeSize = 0;
+				long longRcvFileSize = Long.parseLong(rcvFileSize); 
+//				if( Long.parseLong(rcvFileSize) > 1024) {
+//					while((len = is.read(data)) != -1) {
+//						bos.write(data, 0, len);
+//						writeSize += len;
+//						if((writeSize + 1024) > Long.parseLong(rcvFileSize)) {
+//							break;
+//						}
+//					}
+//				} else {
+//					data = new byte[(int)Long.parseLong(rcvFileSize)];
+//					while((len = is.read(data)) != -1) {
+//						bos.write(data, 0, len);
+//						writeSize += len;
+//						if((writeSize + 1024) > Long.parseLong(rcvFileSize)) {
+//							break;
+//						}
+//					}
+//				}
+				
+//				log.info("## Client: writen fileSize : rcvFileSize : " + Long.parseLong(rcvFileSize));
+//				log.info("## Client: writen fileSize : writeSize :  " + writeSize);
+//				log.info("## Client: writen fileSize : len :  " + len);
+				
+//				byte[] residualData ;
+//				if( Long.parseLong(rcvFileSize) < writeSize) {
+//					residualData = new byte[(int) (writeSize-100)];
+//					len = is.read(residualData);
+//					bos.write(residualData, 0, len);
+//					writeSize += len;
+//				} else {
+//					residualData = new byte[(int) (Long.parseLong(rcvFileSize)-writeSize)];
+//					len = is.read(residualData);
+//					bos.write(residualData, 0, len);
+//					writeSize += len;
+//					
+//				}	
+
+				
+				
+				if( Long.parseLong(rcvFileSize) > 1024) {
 				while((len = is.read(data)) != -1) {
 					bos.write(data, 0, len);
 					writeSize += len;
@@ -289,22 +330,92 @@ public class KisFtClient {
 						break;
 					}
 				}
+			} else {
+				data = new byte[(int)Long.parseLong(rcvFileSize)];
+				while((len = is.read(data)) != -1) {
+					bos.write(data, 0, len);
+					writeSize += len;
+					if((writeSize + 1024) > Long.parseLong(rcvFileSize)) {
+						break;
+					}
+				}
+			}
+			
+//			log.info("## Client: writen fileSize : rcvFileSize : " + Long.parseLong(rcvFileSize));
+//			log.info("## Client: writen fileSize : writeSize :  " + writeSize);
+//			log.info("## Client: writen fileSize : len :  " + len);
+			// 임화혁 팀장 주장내용 적용. 
+			// 패킷에 전부 안들어 오는 경우 
+			// 대비해서 loop 돌면서 확인. 
+			//
+			byte[] residualData ;
+			if( Long.parseLong(rcvFileSize) < writeSize) {
+				residualData = new byte[(int) (writeSize-100)];
+				while((len = is.read(residualData)) != -1) {
+					bos.write(data, 0, len);
+					writeSize += len;
+					if((writeSize) == Long.parseLong(rcvFileSize)) {
+						break;
+					}
+				}				
+			} else {
+				residualData = new byte[(int) (Long.parseLong(rcvFileSize)-writeSize)];
+			
+				while((len = is.read(residualData)) != -1) {
+					bos.write(data, 0, len);
+					writeSize += len;
+					if((writeSize) == Long.parseLong(rcvFileSize)) {
+						break;
+					}
+				}					
 				
-				byte[] residualData = new byte[(int) (Long.parseLong(rcvFileSize)-writeSize)];
-				len = is.read(residualData);
-				bos.write(residualData, 0, len);
-				writeSize += len;
+			}	
 				
-				log.info("## 최종 Client: writen fileSize : " + writeSize);
+				
+//				// Lim hh TJ logic apply start. 
+//				// 2020.06.25 - 2020.06.26
+//				// 
+//				if( longRcvFileSize > 1024) {
+//					while((len = is.read(data)) != -1) {
+//						bos.write(data, 0, len);
+//						writeSize += len;
+//
+//						if((longRcvFileSize - writeSize) < 1024) {
+//							break;
+//						}
+//						
+//						longRcvFileSize -= writeSize;
+//					}
+//				}
+//				
+//				
+//				byte[] data1 = new byte[(int)longRcvFileSize];
+//				
+//				while((len = is.read(data1)) != -1) {
+//					bos.write(data, 0, len);
+//					writeSize += len;
+//					longRcvFileSize -= len;
+//					
+//					if(longRcvFileSize == 0) {
+//						break;
+//					}
+//			
+//					data1 = new byte[(int)longRcvFileSize];
+//				}				
+				
+				// Lim hh TJ logic apply end 
+				log.info("## Client: writen fileSize : " + writeSize);
+				
+				
 				
 				try {bos.close();} catch (IOException e) {e.printStackTrace();}
 				try {fos.close();} catch (IOException e) {e.printStackTrace();}
 				
 				recvFileSize = Long.toString(writeSize);	  
-				log.info("## 수신파일 데이터 size : " + recvFileSize);
+				log.info("## Receive file data size : " + recvFileSize);
 				
 				if(Long.parseLong(rcvFileSize) != writeSize)  {
-					log.info("파일 수신 오류. ");
+					log.info("Exception : file receive. ");
 				} else {
 					byte[] receiveFr13 = new byte[size]; // 100 byte read
 					// (3) 전송된 자료를 byte[]변수에 저장함
@@ -313,25 +424,25 @@ public class KisFtClient {
 					// (4) 전송된 자료를 String변수로 변환 
 //					log.info(" 수신 전문 변환  " );
 					String retMsg1 = new String(receiveFr13, socketEncode);
-					log.info("FR13 전문 수신 : [" + retMsg1 + "]" );
+					log.info("Receive FR13 statement : [" + retMsg1 + "]" );
 					
 					if(KisFtConstant.CODE_FR13.equals(retMsg1.substring(0, 4))) {
 						retResult = "SUCCESS|"+recvFileSize; 
-						log.info("파일 수신 성공. ");
+						log.info("file receive success. ");
 					}
 				}
 				return retResult;
 			} else {
-				log.info("## 승인/거절여부 :  "+ retMsg.substring(14, 15));	
-				log.info("## 거절 코드  :  "+ retMsg.substring(35, 39));	
+//				log.info("## Agree/Reject  :  "+ retMsg.substring(14, 15));	
+				log.info("## reject code  :  "+ retMsg.substring(35, 39));	
 				if("FR12".equals(retMsg.substring(0, 4)) && "2".equals(retMsg.substring(14, 15))) {
 					if("0001".equals(retMsg.substring(35, 39))) {
-						log.error("## 수신 요청한 파일이 존재하지 않음  " );		
+						log.error("## Receiving file is not exist" );		
 					} else if("0002".equals(retMsg.substring(35, 39))) {
-						log.error("## 기타 전문 수신함(오류 전문) " );		
+						log.error("## Receive other fulltext(error fulltext) " );		
 						
 					} else if("0003".equals(retMsg.substring(35, 39))) {
-						log.error("## 기타 에러 발생" );		
+						log.error("## Raise other exception." );		
 					}
 				}
 				return "FAIL";
@@ -340,7 +451,7 @@ public class KisFtClient {
 			
 			
 		}catch(Exception e){
-			log.info("Client recvString 오류 ", e);
+			log.info("Exception : Client recvString ", e);
 			return "FAIL";
 		}
 	}
@@ -358,7 +469,7 @@ public class KisFtClient {
 		String retMsg = "";
 		
 		try{
-			log.info("FR03 :: 서버에 Byte[]스트림 전송 msg : [" + msg + "]" );
+			log.info("FR03 :: Byte [] stream transmission to server.  msg : [" + msg + "]" );
 			//서버에 Byte[]스트림 전송
 //			log.info("서버에 Byte[]스트림 전송 " );
 			DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
@@ -373,7 +484,7 @@ public class KisFtClient {
 			return retMsg;
 
 		}catch(Exception e){
-			log.info("Client sendString 오류 ", e);
+			log.info("Exceptin : Client sendString  ", e);
 			e.printStackTrace();
 			throw e;
 		}
@@ -384,7 +495,7 @@ public class KisFtClient {
 		String retMsg = "";
 		
 		try{
-			log.info("FR03 :: 서버에 Byte[]스트림 전송 msg : [" + msg + "]" );
+			log.info("FR03 :: Byte [] stream transmission to server. msg : [" + msg + "]" );
 			OutputStream output = socket.getOutputStream();
 			//(1) 전송 자료를 byte[]로 변환
 			byte[] sendWhat = msg.getBytes(socketEncode);
@@ -395,7 +506,7 @@ public class KisFtClient {
 			
 			
 		}catch(Exception e){
-			log.info("Client sendString 오류 ", e);
+			log.info("Exception : Client sendString ", e);
 			e.printStackTrace();
 			throw e;
 		}
@@ -443,19 +554,19 @@ public class KisFtClient {
 			}
 			
 			// relay 서버에 접속
-			log.info("############### relay서버 ip: " + relaysocketIp);
-			log.info("############### relay서버 port: " + relaysocketPort);
-			log.info("############### relay서버 접속시도 " );
+			log.info("############### relay server ip: " + relaysocketIp);
+			log.info("############### relay server port: " + relaysocketPort);
+			log.info("############### relay server connect " );
 			relayClient.connect(relaysocketIp, relaysocketPort, relayServerSocketTimeout);
 			
-			log.info("############### relay서버로 파일 송신 " );
+			log.info("############### relay server file send" );
 			DataOutputStream dos = new DataOutputStream(relayClient.getSocket().getOutputStream());
 			
 			// relay 서버에 파일 전송. 
 			String sendRslt = fileSend(dos, sendFilePath, sendFileName.trim());
 			
 			if(KisFtConstant.RCV_SUCC.equals(sendRslt)) {
-				log.info("파일 송신 성공. ");
+				log.info("file send success. ");
 			}
 			// realay 서버 접속 종료
 			relayClient.close();
@@ -517,8 +628,8 @@ public class KisFtClient {
             
 			rslt = "SUCCESS";
 			
-			logutil.printMessage("## Client: File 송신완료  ");
-			logutil.printMessage("## Client: 송신 파일 사이즈 : [" + totalReadBytes + "]");
+			logutil.printMessage("## Client: File send.  ");
+			logutil.printMessage("## Client: send file size : [" + totalReadBytes + "]");
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -557,7 +668,7 @@ public class KisFtClient {
 			
 			fos = new FileOutputStream(file);
 			bos = new BufferedOutputStream(fos);
-			logutil.info("## Client: File 생성완료 : [" + fileName + "]");
+			logutil.info("## Client: File create : [" + fileName + "]");
 			
 			// 바이트 데이터 전송 받으면서 기록 
 			int len;
@@ -574,8 +685,8 @@ public class KisFtClient {
 			recvFileSize = Long.toString(writeSize);
 			rslt = "SUCCESS";
 			
-			logutil.info("## Client: File 수신완료  ");
-			logutil.info("## Client: 받은 파일 사이즈 : [" + recvFileSize + "]");
+			logutil.info("## Client: File receive ");
+			logutil.info("## Client: receive file size : [" + recvFileSize + "]");
 		} catch (IOException e) {
 			e.printStackTrace();
 			rslt = "ERROR";
@@ -611,7 +722,7 @@ public class KisFtClient {
 			output.write(sendWhat);
 
 		}catch(Exception e){
-			log.info("Client sendFT01String 오류 ", e);
+			log.info("Excepton : Client sendFT01String ", e);
 			e.printStackTrace();
 			throw e;
 		}
@@ -626,12 +737,12 @@ public class KisFtClient {
 	 */
 	public void sendFT03String( String msg ) throws Exception{
 		
-		log.info("msg:[" + msg + "]");
+//		log.info("msg:[" + msg + "]");
 		String retMsg = null;
 		
 		try{
 			//서버에 Byte[]스트림 전송
-			log.info("outputstream 생성 " );
+//			log.info("outputstream 생성 " );
 			OutputStream output = socket.getOutputStream();
 			//(1) 전송 자료를 byte[]로 변환
 			byte[] sendWhat = msg.getBytes(socketEncode);
@@ -641,7 +752,7 @@ public class KisFtClient {
 			output.write(sendWhat);
 
 		}catch(Exception e){
-			log.info("Client sendFT01String 오류 ", e);
+			log.info("Exception : Client sendFT01String  ", e);
 			e.printStackTrace();
 			throw e;
 		}
@@ -679,7 +790,7 @@ public class KisFtClient {
 			log.info("receive msg : [" +retMsg + "]");
 			
 		}catch(Exception e){
-			log.info("Client recvFT12String 오류 ", e);
+			log.info("Exception : Client recvFT12String ", e);
 			return "FAIL";
 		}
 		
@@ -717,7 +828,38 @@ public class KisFtClient {
 			log.info("receive msg : [" +retMsg + "]");
 			
 		}catch(Exception e){
-			log.info("Client recvFT13String 오류 ", e);
+			log.info("Exception : Client recvFT13String  ", e);
+			return "FAIL";
+		}
+		
+		return retMsg;
+	}
+	
+	
+	public String recvFT13String(String envPath) throws Exception{
+		
+		String retMsg = null;
+		String retResult = null;
+		
+		KisFTUtils ftUtils = new KisFTUtils(envPath);
+		
+		try{
+			
+			//서버에서  Byte[]스트림을 전송받음
+			InputStream is = socket.getInputStream();
+			DataInputStream dis = new DataInputStream(is);
+			// (1) 전송될 자료의 길이를 받음
+			int size = 100;
+			// (2) 전송될  자료의 길이에 맞는 byte[] 생성
+			byte[] receiveWhat = new byte[size];
+			dis.read(receiveWhat, 0, size);
+			// (4) 전송된 자료를 String변수로 변환 
+			retMsg = new String(receiveWhat, socketEncode);
+			
+			log.info("receive msg : [" +retMsg + "]");
+			
+		}catch(Exception e){
+			log.info("Exception : Client recvFT13String  ", e);
 			return "FAIL";
 		}
 		
