@@ -59,8 +59,8 @@ public class SendFileInfoRead {
 	}
 	
 	/**
-	 * application.properties 에 정의된 filepath, filename 
-	 * 해당 파일의 내용을 읽어 arraylist 로 반환. 
+	 * application.properties �뿉 �젙�쓽�맂 filepath, filename 
+	 * �빐�떦 �뙆�씪�쓽 �궡�슜�쓣 �씫�뼱 arraylist 濡� 諛섑솚. 
 	 * @return
 	 */
 	public ArrayList<String> readConfig() {
@@ -68,13 +68,13 @@ public class SendFileInfoRead {
 		ArrayList<String> arr = new ArrayList();
 		try {
 			log.info("#######  readConfig() serverSendConfigPath  :: " + serverSendConfigPath );
-			// 파일객체 생성
+			// �뙆�씪媛앹껜 �깮�꽦
 			file = new File(serverSendConfigPath + File.separator + serverSendConfigName);
 			
-			// 입력 스트림 생성 
+			// �엯�젰 �뒪�듃由� �깮�꽦 
 			FileReader fileReader = new FileReader(file);
 			
-			// 입력 버퍼 생성 
+			// �엯�젰 踰꾪띁 �깮�꽦 
 			BufferedReader bReader = new BufferedReader(fileReader);
 			
 			String line = "";
@@ -84,7 +84,7 @@ public class SendFileInfoRead {
 				
 			}
 			
-			// .readLine() 은 끝에 개행문자를 읽지 않는다. 
+			// .readLine() �� �걹�뿉 媛쒗뻾臾몄옄瑜� �씫吏� �븡�뒗�떎. 
 			bReader.close();
 			
 			for(int i=0; i < arr.size(); i++) {
@@ -102,9 +102,9 @@ public class SendFileInfoRead {
 	}
 	
 	/**
-	 * application.properties 에 정의된 filepath, filename
-	 * 인자로 받은 yymdd 에 해당하는 문자열이 존재하는 것만 arraylist 에 담는다.  
-	 * 해당 파일의 내용을 읽어 arraylist 로 반환. 
+	 * application.properties �뿉 �젙�쓽�맂 filepath, filename
+	 * �씤�옄濡� 諛쏆� yymdd �뿉 �빐�떦�븯�뒗 臾몄옄�뿴�씠 議댁옱�븯�뒗 寃껊쭔 arraylist �뿉 �떞�뒗�떎.  
+	 * �빐�떦 �뙆�씪�쓽 �궡�슜�쓣 �씫�뼱 arraylist 濡� 諛섑솚. 
 	 * @return
 	 */
 	public ArrayList<String> readConfig(String yymmdd) {
@@ -112,25 +112,26 @@ public class SendFileInfoRead {
 		ArrayList<String> arr = new ArrayList();
 		try {
 			log.info("#######  readConfig(String yymmdd) serverSendConfigPath  :: " + serverSendConfigPath );
-			// 파일객체 생성
+			// �뙆�씪媛앹껜 �깮�꽦
 			file = new File(serverSendConfigPath + File.separator + serverSendConfigName);
 			
-			// 입력 스트림 생성 
+			// �엯�젰 �뒪�듃由� �깮�꽦 
 			FileReader fileReader = new FileReader(file);
 			
-			// 입력 버퍼 생성 
+			// �엯�젰 踰꾪띁 �깮�꽦 
 			BufferedReader bReader = new BufferedReader(fileReader);
 			
 			String line = "";
 			while ((line = bReader.readLine()) != null) {
-				log.info(line);
-				if(line.contains(yymmdd)) {
-					arr.add(line);
-				}
+				log.info("line : " + line + "_"+yymmdd);
+				//if(line.contains(yymmdd)) {
+					//log.info("line :============ " );
+					arr.add(line + "_"+yymmdd);
+				//}
 				
 			}
 			
-			// .readLine() 은 끝에 개행문자를 읽지 않는다. 
+			// .readLine() �� �걹�뿉 媛쒗뻾臾몄옄瑜� �씫吏� �븡�뒗�떎. 
 			bReader.close();
 			
 			for(int i=0; i < arr.size(); i++) {

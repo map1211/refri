@@ -44,6 +44,7 @@ public class KisFtClientMain {
 	static int    relayServerPort;
 	
 	static int    socketTimeout;
+	static int    socketPacketCount;
 	static ArrayList<String>    recvFileList = new ArrayList();
 	
 	
@@ -98,6 +99,8 @@ public class KisFtClientMain {
 		String localFileName = ""; 
 		String rcvFileName = "";
 		envPath = ""; 
+		
+		
 		
 		try{
 			
@@ -165,6 +168,7 @@ public class KisFtClientMain {
 				serverOrgCode =  map.get("serverOrgCode").toString();
 				socketEncode = map.get("serverEncodeType").toString();
 				socketTimeout = Integer.parseInt(map.get("serverSocketTimeout").toString());
+				socketPacketCount = Integer.parseInt(map.get("serverSocketPacketCount").toString());
 				
 				recvFileList = (ArrayList<String>)map.get("serverRecvFiles");
 				
@@ -175,7 +179,9 @@ public class KisFtClientMain {
 				sendTestYn 		=  map.get("serverSendTestYn").toString();
 				
 				sendConfigDateType 	=  map.get("serverSendConfigDateType").toString();
-				execCmd 		= map.get("execCommand").toString();
+				if(map.get("execCommand") != null) {
+					execCmd 		= map.get("execCommand").toString();
+				}
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
@@ -193,6 +199,9 @@ public class KisFtClientMain {
 			 */
 			if("upload".equals(strType)) {
 				
+				// delay 타임을 환경변수에서 읽어 계산  
+				//int sleepTm = 1000 / socketPacketCount;
+				
 				if("".equals(localFileName)) {
 					/**
 					 * 전송을 위한 파일리스트를 cfg파일에서 읽기 
@@ -208,6 +217,7 @@ public class KisFtClientMain {
 					}
 					ArrayList<String> arrFileList = new ArrayList();
 					try {
+						System.out.println("CustStringUtils.getToday(sendConfigDateType) :: " + CustStringUtils.getToday(sendConfigDateType));
 						arrFileList = sfir.readConfig(CustStringUtils.getToday(sendConfigDateType));
 					} catch (Exception e2) {
 						e2.printStackTrace();
@@ -258,7 +268,9 @@ public class KisFtClientMain {
 				
 				// 정상 종료시 시스템 명령어 수행. 
 				logutil.info("###### execCmd::" + execCmd);
-				execCommand(execCmd);
+				if(execCmd != null && !"".equals(execCmd)) {
+					execCommand(execCmd);
+				}
 			}
 			
 		} catch(Exception e){
@@ -307,6 +319,7 @@ public class KisFtClientMain {
 			serverOrgCode =  map.get("serverOrgCode").toString();
 			socketEncode = map.get("serverEncodeType").toString();
 			socketTimeout = Integer.parseInt(map.get("serverSocketTimeout").toString());
+//			socketPacketCount = Integer.parseInt(map.get("serverSocketPacketCount").toString());
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
@@ -325,6 +338,7 @@ public class KisFtClientMain {
 		logutil.info("Encoding :" + socketEncode);
 		
 		logutil.info("socket timeout :" + socketTimeout);
+//		logutil.info("socket packet count :" + socketTimeout);
 		String rcvFileName = ""; 
 				
 		try {
@@ -391,65 +405,7 @@ public class KisFtClientMain {
 			logutil.info("####### socket close ");
 			sc1.close();	
 
-			/**
-			 * 릴레이서버 사용하여 전달 허용시 
-			 */
-			if("Y".equals(relayServerUseYn)) {
-				
-				/**
-				 * 릴레이서버에 파일 전달 부분
-				 * 
-				 */
-				File f = new File(recvFilePath+File.separator+rcvFileName.trim());
-				
-				if(f.exists()) 	{
-					// 릴레이 서버에 파일 전달하기
-					HashMap<String, Object> relaymap = new HashMap<String, Object>();
-					try {
-						relaymap = util.getRelayServerInfo("ST");
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-					String relaysocketIp 	= relaymap.get("relayServerIp").toString();
-					int relaysocketPort 	= Integer.parseInt(relaymap.get("relayServerPort").toString());
-					
-					KisFtClient relayClient = new KisFtClient();
-					// relay 서버에 접속
-					logutil.info("############### relay서버 ip: " + relaysocketIp);
-					logutil.info("############### relay서버 port: " + relaysocketPort);
-					logutil.info("############### relay서버 접속시도 " );
-					try {
-						relayClient.connect(relaysocketIp, relaysocketPort, socketTimeout);
-						
-						logutil.info("############### relay서버로 파일 송신 " );
-						dos = new DataOutputStream(relayClient.getSocket().getOutputStream());
-						
-						// relay 서버에 파일 전송. 
-						String sendRslt = fileSend(dos, recvFilePath, rcvFileName.trim());
-						
-						if(KisFtConstant.RCV_SUCC.equals(sendRslt)) {
-							logutil.info("파일 송신 성공. ");
-						}
-						// realay 서버 접속 종료
-						relayClient.close();	
-						
-					} catch (IOException e) {
-						// realay 서버 접속 종료
-						try {
-							relayClient.close();
-						} catch (IOException e1) {
-							e1.printStackTrace();
-						}
-						
-						e.printStackTrace();
-					}
-					
-					
-				} else {
-					logutil.error(rcvFileName + " 파일 수신 오류로 인해 파일이 존재 하지 않습니다. ");
-				}
-				
-			}
+
 						
 		} catch (IOException e2) {
 			try {sc1.close();} catch (IOException e) {e.printStackTrace();}
@@ -498,6 +454,7 @@ public class KisFtClientMain {
 			serverOrgCode =  map.get("serverOrgCode").toString();
 			socketEncode = map.get("serverEncodeType").toString();
 			socketTimeout = Integer.parseInt(map.get("serverSocketTimeout").toString());
+//			socketPacketCount = Integer.parseInt(map.get("serverSocketPacketCount").toString());
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
@@ -583,65 +540,7 @@ public class KisFtClientMain {
 			logutil.info("####### socket close ");
 			sc1.close();			
 			
-			/**
-			 * 릴레이서버 사용하여 전달 허용시 
-			 */
-			if("Y".equals(relayServerUseYn)) {
-				
-				/**
-				 * 릴레이서버에 파일 전달 부분
-				 * 
-				 */
-				File f = new File(recvFilePath+File.separator+rcvFileName.trim());
-				
-				if(f.exists()) 	{
-					// 릴레이 서버에 파일 전달하기
-					HashMap<String, Object> relaymap = new HashMap<String, Object>();
-					try {
-						relaymap = util.getRelayServerInfo("ST");
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-					String relaysocketIp 	= relaymap.get("relayServerIp").toString();
-					int relaysocketPort 	= Integer.parseInt(relaymap.get("relayServerPort").toString());
-					
-					KisFtClient relayClient = new KisFtClient();
-					// relay 서버에 접속
-					logutil.info("############### relay서버 ip: " + relaysocketIp);
-					logutil.info("############### relay서버 port: " + relaysocketPort);
-					logutil.info("############### relay서버 접속시도 " );
-					try {
-						relayClient.connect(relaysocketIp, relaysocketPort, socketTimeout);
-						
-						logutil.info("############### relay서버로 파일 송신 " );
-						dos = new DataOutputStream(relayClient.getSocket().getOutputStream());
-						
-						// relay 서버에 파일 전송. 
-						String sendRslt = fileSend(dos, recvFilePath, rcvFileName.trim());
-						
-						if(KisFtConstant.RCV_SUCC.equals(sendRslt)) {
-							logutil.info("파일 송신 성공. ");
-						}
-						// realay 서버 접속 종료
-						relayClient.close();	
-						
-					} catch (IOException e) {
-						// realay 서버 접속 종료
-						try {
-							relayClient.close();
-						} catch (IOException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-						
-						e.printStackTrace();
-					}
-					
-					
-				} else {
-					logutil.error(rcvFileName + " 파일 수신 오류로 인해 파일이 존재 하지 않습니다. ");
-				}			
-			}
+
 		} catch (IOException e2) {
 			try {sc1.close();} catch (IOException e) {e.printStackTrace();}
 			e2.printStackTrace();
@@ -694,6 +593,7 @@ public class KisFtClientMain {
 			serverOrgCode =  map.get("serverOrgCode").toString();
 			socketEncode = map.get("serverEncodeType").toString();
 			socketTimeout = Integer.parseInt(map.get("serverSocketTimeout").toString());
+			socketPacketCount = Integer.parseInt(map.get("serverSocketPacketCount").toString());
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -712,6 +612,7 @@ public class KisFtClientMain {
 		logutil.info("접속서버 port :" + socketPort);
 		
 		logutil.info("socket timeout :" + socketTimeout);
+		logutil.info("socket packet count  :" + socketPacketCount);
 		logutil.info("connect client");
 		ftClient.connect(socketIp, socketPort, socketTimeout);
 		
@@ -774,17 +675,35 @@ public class KisFtClientMain {
 					int len;
 					byte[] buf = new byte[1024];
 					long total = 0L;
+					int sendCnt = 0;
+					
+					// 파일 전송. 
 					while((len = fis.read(buf)) != -1) {
 						output.write(buf, 0, len);
 						total += len;
+						
+						// 64kbps, 패킷 수 제한으로 delay 추가함.
+						// 2020.06.26
+						try{    
+							Thread.sleep(1000/socketPacketCount);  
+						} catch (Exception e) {	
+							
+						}
+
 					}
 				
 					logutil.info("파일 송신 성공. ");
-					
+					// 파일 전송 종료 알림 전문 전송 전에 딜레이 한 번 더 주기. 
+					// 64kbps 의 초당 4-5패킷 전송으로 서버에서 수신시에 문제 발생해서 추가적용 
+					// 0.5 초 delay 
+					try{   Thread.sleep(500);  } catch (Exception e) {	}
+
 					// 파일 전송 종료 알림 (FT03) : 가맹점 -> KIS
+					logutil.info(" 파일 전송 종료 알림 (FT03) : 가맹점 -> KIS ");
 					ftClient.sendFT03String(ftUtils.makeFT03().toString());
 					
 					// 파일 전송종료 응답 전문( FT13) : KIS -> 가맹점
+					logutil.info(" 파일 전송종료 응답 전문( FT13) : KIS -> 가맹점 ");
 					// 1초 waiting후 input stream 읽기 
 					try{   Thread.sleep(1000);  } catch (Exception e) {	}
 					try {
@@ -815,7 +734,7 @@ public class KisFtClientMain {
 				
 				//result = sc1.sendString(KisFTUtils.makeFr02().toString());
 			} else {
-				// 수신 요청한 파일이 존재하지 않음
+				// 오류코드 수신 
 				if(KisFtConstant.REJECT_CODE_1001.equals(result.substring(16, 19))) {
 					logutil.info("Error : code : [" + KisFtConstant.ERROR_CODE_0001 +" :기 전송 파일 송신] " + result.substring(20, 69));
 				} else if(KisFtConstant.REJECT_CODE_1002.equals(result.substring(16, 19))) {
@@ -878,6 +797,7 @@ public class KisFtClientMain {
 			serverOrgCode =  map.get("serverOrgCode").toString();
 			socketEncode = map.get("serverEncodeType").toString();
 			socketTimeout = Integer.parseInt(map.get("serverSocketTimeout").toString());
+			socketPacketCount = Integer.parseInt(map.get("serverSocketPacketCount").toString());
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
@@ -895,6 +815,7 @@ public class KisFtClientMain {
 		logutil.info("접속서버 port :" + socketPort);
 		
 		logutil.info("socket timeout :" + socketTimeout);
+		logutil.info("socket packet count :" + socketPacketCount);
 		logutil.info("connect client");
 		ftClient.connect(socketIp, socketPort, socketTimeout);
 		
@@ -959,6 +880,14 @@ public class KisFtClientMain {
 					while((len = fis.read(buf)) != -1) {
 						output.write(buf, 0, len);
 						total += len;
+						
+						// 64kbps, 패킷 수 제한으로 delay 추가함.
+						// 2020.06.26
+						try{    
+							Thread.sleep(1000/socketPacketCount);
+						} catch (Exception e) {	
+							
+						}
 					}
 					
 					logutil.info("파일 송신 성공. ");
@@ -1018,71 +947,7 @@ public class KisFtClientMain {
 	}
 	
 	
-	/**
-	 * DataOutputStream을 통한 파일을 서버에 전송
-	 * 
-	 * @param dos
-	 * @param filePath
-	 * @param fileName
-	 * @return
-	 */
-	public static String fileSend(DataOutputStream dos, String filePath, String fileName) {
-		String rslt = "";
-		LogUtil logutil = new LogUtil();
-		FileInputStream fis2 = null ;
-		BufferedInputStream bis2 = null;
-		
-		if("".equals(filePath)) {
-			filePath = "C:/socket-server2";
-		}
-		
-		
-		File file = new File(filePath + File.separator + fileName);
-		if (!file.exists()) {
-			logutil.info("File not Exist.");
-		    System.exit(0);
-		}
 
-		long fileSize = file.length();
-		long totalReadBytes = 0;
-		byte[] buffer = new byte[DEFAULT_BUFFER_SIZE];
-		byte[] data = new byte[DEFAULT_BUFFER_SIZE];
-		int readBytes;
-		double startTime = 0;
-
-
-		int len;
-		try {
-			// 파일명 전송.
-			dos.writeUTF(fileName);
-			
-			fis2 = new FileInputStream(file);
-			bis2 = new BufferedInputStream(fis2);
-			
-            startTime = System.currentTimeMillis();
-            while((len = bis2.read(data)) != -1 ) {
-            	dos.write(data, 0, len);
-            	totalReadBytes += len;
-            }
-            dos.flush();
-            logutil.info("File transfer completed.");
-            
-			rslt = "SUCCESS";
-			
-			logutil.info("## Client: File 송신완료 : " + fileName);
-			logutil.info("## Client: 송신 파일 사이즈 : [" + totalReadBytes + "]");
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-			rslt = "ERROR";
-		} finally {
-			try {fis2.close();} catch (IOException e) {e.printStackTrace();}
-			try {bis2.close();} catch (IOException e) {e.printStackTrace();}
-		}
-		
-		return rslt;
-	}
-	
 	/**
 	 * DataInputStream 을 통해 파일을 수신하여 로컬에 저장
 	 * 
@@ -1167,6 +1032,17 @@ public class KisFtClientMain {
 		}
 	}	
 	
+	/**
+	 *  인자로 전달 된 값 만큼 대기 
+	 * @param stime
+	 */
+	private static void sleepSendSocket(int stime) {
+		try{    
+			Thread.sleep(stime);  
+		} catch (Exception e) {	
+			
+		}
+	}
 	
 	public static void execCommand (String cmd) {
 		

@@ -27,7 +27,7 @@ public class ServerInfoUtil {
 	}
 	
 	/**
-	 * 프로퍼티 정보 로딩.
+	 * �봽濡쒗띁�떚 �젙蹂� 濡쒕뵫.
 	 * 
 	 * @return
 	 */
@@ -56,7 +56,7 @@ public class ServerInfoUtil {
 	
 	
 	/**
-	 * 릴레이서버 정보
+	 * 由대젅�씠�꽌踰� �젙蹂�
 	 * 
 	 * @return
 	 * @throws Exception
@@ -70,18 +70,19 @@ public class ServerInfoUtil {
 		String relayServerType 	= properties.getProperty("socket.server.relayType");
 		if("SA".equals(relayServerType) || "FN".equals(relayServerType)) {
 			
-			// 서버모드 T: test , R: real
+			// �꽌踰꾨え�뱶 T: test , R: real
 			svrinfoMap.put("relayServerMode", properties.getProperty("socket.server.mode")); 
 			
-			// stand alone 형 인 경우
-			log.info("stand alone 형 인 경우");
+			// stand alone �삎 �씤 寃쎌슦
+			log.info("stand alone �삎 �씤 寃쎌슦");
 			svrinfoMap.put("relayServerType", relayServerType);
 			svrinfoMap.put("relayServerIp", properties.getProperty("socket.server."+ relayServerType+".ip"));
 			svrinfoMap.put("relayServerPort", Integer.parseInt(properties.getProperty("socket.server."+ relayServerType+".port")));
 			svrinfoMap.put("relayServerEncodeType", properties.getProperty("socket.encode"));		
-			svrinfoMap.put("relayServerSocketTimeout", Integer.parseInt(properties.getProperty("socket.server.timeout")));		
+			svrinfoMap.put("relayServerSocketTimeout", Integer.parseInt(properties.getProperty("socket.server.timeout")));
+			svrinfoMap.put("relayServerSocketPacketCount", Integer.parseInt(properties.getProperty("socket.server.packetcnt")));
 			/**
-			 * properties 에 정의된 receive file list 가져오기 
+			 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 			 * 
 			 */
 			int rcount=0;
@@ -89,7 +90,7 @@ public class ServerInfoUtil {
 			ArrayList arrRcvFileName = new ArrayList();
 			for (String key : properties.stringPropertyNames()) {
 				if(key.contains(rcvFileNameStr)) {
-					// 수신 파일 리스트를 배열에 담기 
+					// �닔�떊 �뙆�씪 由ъ뒪�듃瑜� 諛곗뿴�뿉 �떞湲� 
 					arrRcvFileName.add(properties.getProperty(key).toString());
 					rcount++;
 				}
@@ -97,7 +98,7 @@ public class ServerInfoUtil {
 			
 			svrinfoMap.put("relayServerRecvFiles", arrRcvFileName);
 			/**
-			 * properties 에 정의된 receive file list 가져오기 
+			 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 			 * 
 			 */
 			svrinfoMap.put("relayServerSendPath", properties.getProperty("socket.client."+ relayServerType+".sendPath"));
@@ -108,12 +109,14 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerSendCode", properties.getProperty("socket.server."+ relayServerType+".sendCode"));
 			svrinfoMap.put("relayServerSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 			
-			// relay server 사용여부 확인 
+			// relay server �궗�슜�뿬遺� �솗�씤 
 //			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
 			svrinfoMap.put("relayServerRelayUseYn", "N");
 			
-			// 클라이언트 종료 후 실행할 명령어  
-			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+			// �겢�씪�씠�뼵�듃 醫낅즺 �썑 �떎�뻾�븷 紐낅졊�뼱  
+			if( properties.getProperty("fin.exec.command") != null) {
+				svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+			}
 			
 			log.info("relayServerType : " + svrinfoMap.get("relayServerType").toString());
 			log.info("relayServerIp : " + svrinfoMap.get("relayServerIp").toString());
@@ -121,11 +124,11 @@ public class ServerInfoUtil {
 			log.info("relayServerEncodeType : " + svrinfoMap.get("relayServerEncodeType").toString());
 			
 		} else if("ST".equals(relayServerType)) {
-			log.info("ST 형 인 경우");
-			// 중계서버 중 맨 처음 시작하는 서버 
+			log.info("ST �삎 �씤 寃쎌슦");
+			// 以묎퀎�꽌踰� 以� 留� 泥섏쓬 �떆�옉�븯�뒗 �꽌踰� 
 			int rcount = 0;
-			// 프로퍼티에 등록된 항목 중 key 가 어떤게 있는지 확인하기 위해 
-			// 키를 확인.
+			// �봽濡쒗띁�떚�뿉 �벑濡앸맂 �빆紐� 以� key 媛� �뼱�뼡寃� �엳�뒗吏� �솗�씤�븯湲� �쐞�빐 
+			// �궎瑜� �솗�씤.
 			for (String key : properties.stringPropertyNames()) {
 				if(key.contains(".R")) {
 					rcount++;
@@ -136,8 +139,8 @@ public class ServerInfoUtil {
 			
 			String midStr = "";
 
-			// R로 시작하는 key가 존재하면 ST가 시작하는 relay이기 때문에 다음 서버는 RO부터 시작
-			// R로 시작하는 key가 존재하지 않으면 FN 으로 설정. 
+			// R濡� �떆�옉�븯�뒗 key媛� 議댁옱�븯硫� ST媛� �떆�옉�븯�뒗 relay�씠湲� �븣臾몄뿉 �떎�쓬 �꽌踰꾨뒗 RO遺��꽣 �떆�옉
+			// R濡� �떆�옉�븯�뒗 key媛� 議댁옱�븯吏� �븡�쑝硫� FN �쑝濡� �꽕�젙. 
 			if(rcount > 0) {
 				midStr = "R0";
 			} else {
@@ -145,7 +148,7 @@ public class ServerInfoUtil {
 				
 			}
 			
-			// 서버모드 T: test , R: real
+			// �꽌踰꾨え�뱶 T: test , R: real
 			svrinfoMap.put("relayServerMode", properties.getProperty("socket.server.mode")); 
 			
 			svrinfoMap.put("relayServerType", relayServerType);
@@ -153,15 +156,16 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerPort", Integer.parseInt(properties.getProperty("socket.server."+ midStr+".port")));
 			svrinfoMap.put("relayServerEncodeType", properties.getProperty("socket.encode"));
 			svrinfoMap.put("relayServerSocketTimeout", Integer.parseInt(properties.getProperty("socket.server.timeout")));
+			svrinfoMap.put("relayServerSocketPacketCount", Integer.parseInt(properties.getProperty("socket.server.packetcnt")));
 			/**
-			 * properties 에 정의된 receive file list 가져오기 
+			 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 			 * 
 			 */
 			String rcvFileNameStr = "socket.server."+ relayServerType +".recvFileList";
 			ArrayList arrRcvFileName = new ArrayList();
 			for (String key : properties.stringPropertyNames()) {
 				if(key.contains(rcvFileNameStr)) {
-					// 수신 파일 리스트를 배열에 담기 
+					// �닔�떊 �뙆�씪 由ъ뒪�듃瑜� 諛곗뿴�뿉 �떞湲� 
 					arrRcvFileName.add(properties.getProperty(key).toString());
 					rcount++;
 				}
@@ -169,7 +173,7 @@ public class ServerInfoUtil {
 			
 			svrinfoMap.put("relayServerRecvFiles", arrRcvFileName);
 			/**
-			 * properties 에 정의된 receive file list 가져오기 
+			 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 			 * 
 			 */
 			svrinfoMap.put("relayServerSendPath", properties.getProperty("socket.client."+ relayServerType+".sendPath"));
@@ -180,12 +184,14 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerSendCode", properties.getProperty("socket.server."+ relayServerType+".sendCode"));
 			svrinfoMap.put("relayServerSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 			
-			// relay server 사용여부 확인 
+			// relay server �궗�슜�뿬遺� �솗�씤 
 //			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
 			svrinfoMap.put("relayServerRelayUseYn", "N");
 			
-			// 클라이언트 종료 후 실행할 명령어  
-			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+			// �겢�씪�씠�뼵�듃 醫낅즺 �썑 �떎�뻾�븷 紐낅졊�뼱
+			if( properties.getProperty("fin.exec.command") != null) {
+				svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+			}
 			
 			log.info("relayServerType : " + svrinfoMap.get("relayServerType").toString());
 			log.info("relayServerIp : " + svrinfoMap.get("relayServerIp").toString());
@@ -193,14 +199,14 @@ public class ServerInfoUtil {
 			log.info("relayServerEncodeType : " + svrinfoMap.get("relayServerEncodeType").toString());
 			
 		} else if(!"ST".equals(relayServerType) && !"FN".equals(relayServerType)) {
-			log.info("중계서버 중 R0 ~ R9 에 해당 하는 경우");
-			// 중계서버 중 R0 ~ R9 에 해당 하는 경우 
+			log.info("以묎퀎�꽌踰� 以� R0 ~ R9 �뿉 �빐�떦 �븯�뒗 寃쎌슦");
+			// 以묎퀎�꽌踰� 以� R0 ~ R9 �뿉 �빐�떦 �븯�뒗 寃쎌슦 
 			int svrNo = Integer.parseInt(relayServerType.replace("R", ""));
 			svrNo++;
 			
 			if(svrNo > 9 ) {
-				ServerLog.getInstance().info(this.getClass().getName(),"중계서버 횟수를 초과했습니다.");
-				throw new Exception("중계서버 횟수를 초과했습니다.");
+				ServerLog.getInstance().info(this.getClass().getName(),"以묎퀎�꽌踰� �슏�닔瑜� 珥덇낵�뻽�뒿�땲�떎.");
+				throw new Exception("以묎퀎�꽌踰� �슏�닔瑜� 珥덇낵�뻽�뒿�땲�떎.");
 			}
 			String nextSvrNo = "R" + (svrNo);
 			ServerLog.getInstance().info(this.getClass().getName(),"nextSvrNo ::" + nextSvrNo );
@@ -218,7 +224,7 @@ public class ServerInfoUtil {
 				midStr = "FN";
 			}
 			
-			// 서버모드 T: test , R: real
+			// �꽌踰꾨え�뱶 T: test , R: real
 			svrinfoMap.put("relayServerMode", properties.getProperty("socket.server.mode")); 
 			
 			svrinfoMap.put("relayServerType", relayServerType);
@@ -226,16 +232,17 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerPort", Integer.parseInt(properties.getProperty("socket.server."+ midStr+".port")));
 			svrinfoMap.put("relayServerEncodeType", properties.getProperty("socket.encode"));
 			svrinfoMap.put("relayServerSocketTimeout", Integer.parseInt(properties.getProperty("socket.server.timeout")));
+			svrinfoMap.put("relayServerSocketPacketCount", Integer.parseInt(properties.getProperty("socket.server.packetcnt")));
 			
 			/**
-			 * properties 에 정의된 receive file list 가져오기 
+			 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 			 * 
 			 */
 			String rcvFileNameStr = "socket.server."+ relayServerType +".recvFileList";
 			ArrayList arrRcvFileName = new ArrayList();
 			for (String key : properties.stringPropertyNames()) {
 				if(key.contains(rcvFileNameStr)) {
-					// 수신 파일 리스트를 배열에 담기 
+					// �닔�떊 �뙆�씪 由ъ뒪�듃瑜� 諛곗뿴�뿉 �떞湲� 
 					arrRcvFileName.add(properties.getProperty(key).toString());
 					rcount++;
 				}
@@ -243,7 +250,7 @@ public class ServerInfoUtil {
 			
 			svrinfoMap.put("relayServerRecvFiles", arrRcvFileName);
 			/**
-			 * properties 에 정의된 receive file list 가져오기 
+			 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 			 * 
 			 */
 			
@@ -256,12 +263,14 @@ public class ServerInfoUtil {
 			svrinfoMap.put("relayServerSendCode", properties.getProperty("socket.server."+ relayServerType+".sendCode"));
 			svrinfoMap.put("relayServerSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 			
-			// relay server 사용여부 확인 
+			// relay server �궗�슜�뿬遺� �솗�씤 
 //			svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
 			svrinfoMap.put("relayServerRelayUseYn", "N");
 			
-			// 클라이언트 종료 후 실행할 명령어  
-			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+			// �겢�씪�씠�뼵�듃 醫낅즺 �썑 �떎�뻾�븷 紐낅졊�뼱  
+			if( properties.getProperty("fin.exec.command") != null) {
+				svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+			}
 
 			
 			log.info("relayServerType : " + svrinfoMap.get("relayServerType").toString());
@@ -274,7 +283,7 @@ public class ServerInfoUtil {
 	}
 	
 	/**
-	 * relay 서버 정보 
+	 * relay �꽌踰� �젙蹂� 
 	 * 
 	 * @param midfix
 	 * @return
@@ -287,16 +296,17 @@ public class ServerInfoUtil {
 		Properties properties = utilInit();
 		
 		String relayServerType 	= midfix; 
-		// 서버모드 T: test , R: real
+		// �꽌踰꾨え�뱶 T: test , R: real
 		svrinfoMap.put("relayServerMode", properties.getProperty("socket.server.mode")); 
 		svrinfoMap.put("relayServerType", relayServerType);
 		svrinfoMap.put("relayServerIp", properties.getProperty("socket.server."+ relayServerType+".ip"));
 		svrinfoMap.put("relayServerPort", Integer.parseInt(properties.getProperty("socket.server."+ relayServerType+".port")));
 		svrinfoMap.put("relayServerEncodeType", properties.getProperty("socket.encode"));	
 		svrinfoMap.put("relayServerSocketTimeout", Integer.parseInt(properties.getProperty("socket.server.timeout")));
+		svrinfoMap.put("relayServerSocketPacketCount", Integer.parseInt(properties.getProperty("socket.server.packetcnt")));
 		
 		/**
-		 * properties 에 정의된 receive file list 가져오기 
+		 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 		 * 
 		 */
 		int rcount = 0;
@@ -311,7 +321,7 @@ public class ServerInfoUtil {
 		
 		svrinfoMap.put("relayServerRecvFiles", arrRcvFileName);
 		/**
-		 * properties 에 정의된 receive file list 가져오기 
+		 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 		 * 
 		 */
 		
@@ -323,19 +333,21 @@ public class ServerInfoUtil {
 		svrinfoMap.put("relayServerSendCode", properties.getProperty("socket.server."+ relayServerType+".sendCode"));
 		svrinfoMap.put("relayServerSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
 		
-		// relay server 사용여부 확인 
+		// relay server �궗�슜�뿬遺� �솗�씤 
 		//svrinfoMap.put("relayServerRelayUseYn", properties.getProperty("socket.server.relayYn"));
 		svrinfoMap.put("relayServerRelayUseYn", "N");
 		
-		// 클라이언트 종료 후 실행할 명령어  
-		svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+		// �겢�씪�씠�뼵�듃 醫낅즺 �썑 �떎�뻾�븷 紐낅졊�뼱  
+		if( properties.getProperty("fin.exec.command") != null) {
+			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+		}
 
 		
 		return svrinfoMap;
 	}
 	
 	/**
-	 * socket 서버 정보
+	 * socket �꽌踰� �젙蹂�
 	 * @return
 	 */
 	public HashMap<String, Object> getSocketServerInfo() {
@@ -346,7 +358,7 @@ public class ServerInfoUtil {
 		
 		String relayServerType 	= properties.getProperty("socket.server.relayType");
 		
-		// 서버모드 T: test , R: real
+		// �꽌踰꾨え�뱶 T: test , R: real
 		svrinfoMap.put("serverMode", properties.getProperty("socket.server.mode"));  //
 		
 		svrinfoMap.put("serverType", relayServerType);
@@ -357,9 +369,11 @@ public class ServerInfoUtil {
 		svrinfoMap.put("serverRecvCode", properties.getProperty("socket.server."+ relayServerType+".recvCode"));
 		svrinfoMap.put("serverOrgCode", properties.getProperty("socket.server."+ relayServerType+".orgCode"));
 		svrinfoMap.put("serverSocketTimeout", Integer.parseInt(properties.getProperty("socket.server.timeout")));
+		svrinfoMap.put("serverSocketPacketCount", Integer.parseInt(properties.getProperty("socket.server.packetcnt")));
 		
+		//System.out.println("### serverSocketPacketCount : " + svrinfoMap.get("serverSocketPacketCount") );
 		/**
-		 * properties 에 정의된 receive file list 가져오기 
+		 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 		 * 
 		 */
 		int rcount = 0;
@@ -367,7 +381,7 @@ public class ServerInfoUtil {
 		ArrayList arrRcvFileName = new ArrayList();
 		for (String key : properties.stringPropertyNames()) {
 			if(key.contains(rcvFileNameStr)) {
-				// 수신 파일 리스트를 배열에 담기 
+				// �닔�떊 �뙆�씪 由ъ뒪�듃瑜� 諛곗뿴�뿉 �떞湲� 
 				arrRcvFileName.add(properties.getProperty(key).toString());
 				rcount++;
 			}
@@ -375,7 +389,7 @@ public class ServerInfoUtil {
 		
 		svrinfoMap.put("serverRecvFiles", arrRcvFileName);
 		/**
-		 * properties 에 정의된 receive file list 가져오기 
+		 * properties �뿉 �젙�쓽�맂 receive file list 媛��졇�삤湲� 
 		 * 
 		 */
 		
@@ -386,12 +400,14 @@ public class ServerInfoUtil {
 		
 		svrinfoMap.put("serverSendCode", properties.getProperty("socket.server."+ relayServerType+".sendCode"));
 		svrinfoMap.put("serverSendTestYn", properties.getProperty("socket.server."+ relayServerType+".sendTestYn"));
-		// relay server 사용여부 확인 
+		// relay server �궗�슜�뿬遺� �솗�씤 
 //		svrinfoMap.put("serverRelayUseYn", properties.getProperty("socket.server.relayYn"));
 		svrinfoMap.put("serverRelayUseYn", "N");
 		
-		// 클라이언트 종료 후 실행할 명령어  
-		svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+		// �겢�씪�씠�뼵�듃 醫낅즺 �썑 �떎�뻾�븷 紐낅졊�뼱  
+		if( properties.getProperty("fin.exec.command") != null) {
+			svrinfoMap.put("execCommand", properties.getProperty("fin.exec.command"));
+		}
 
 		
 		return svrinfoMap;
