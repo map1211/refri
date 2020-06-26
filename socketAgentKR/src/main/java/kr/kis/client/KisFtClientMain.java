@@ -671,6 +671,8 @@ public class KisFtClientMain {
 				//String sendRslt = fileSend(dos, recvFilePath, fileName.trim());
 				File file = new File(sendPath + File.separator + fileName);
 				try {
+					// 송신할 파일의 크기 구함. 
+					long lSendFileSize = file.length(); 
 					FileInputStream fis = new FileInputStream(file);
 					int len;
 					byte[] buf = new byte[1024];
@@ -678,18 +680,44 @@ public class KisFtClientMain {
 					int sendCnt = 0;
 					
 					// 파일 전송. 
-					while((len = fis.read(buf)) != -1) {
-						output.write(buf, 0, len);
-						total += len;
-						
-						// 64kbps, 패킷 수 제한으로 delay 추가함.
-						// 2020.06.26
-						try{    
-							Thread.sleep(1000/socketPacketCount);  
-						} catch (Exception e) {	
+					// 1024 byte 이하 인 경우 
+					if( lSendFileSize < Long.parseLong("1024")) {
+						while((len = fis.read(new byte[ (int)lSendFileSize ])) != -1) {
+							if(len == 0 ) {
+								break;
+							}
+							
+							output.write(buf, 0, len);
+							total += len;
+							
+							// 64kbps, 패킷 수 제한으로 delay 추가함.
+							// 2020.06.26
+							try{    
+								Thread.sleep(1000/socketPacketCount);  
+							} catch (Exception e) {	
+								
+							}
+						}
+							
+					} else {
+						while((len = fis.read(buf)) != -1) {
+							if(len == 0 ) {
+								break;
+							}
+							
+							output.write(buf, 0, len);
+							total += len;
+							
+							// 64kbps, 패킷 수 제한으로 delay 추가함.
+							// 2020.06.26
+							try{    
+								Thread.sleep(1000/socketPacketCount);  
+							} catch (Exception e) {	
+								
+							}
 							
 						}
-
+						
 					}
 				
 					logutil.info("파일 송신 성공. ");
@@ -873,20 +901,49 @@ public class KisFtClientMain {
 				//String sendRslt = fileSend(dos, recvFilePath, fileName.trim());
 				File file = new File(sendPath + File.separator + fileName);
 				try {
+					// 송신할 파일의 크기 구함. 
+					long lSendFileSize = file.length(); 
+					
 					FileInputStream fis = new FileInputStream(file);
 					int len;
 					byte[] buf = new byte[1024];
 					long total = 0L;
-					while((len = fis.read(buf)) != -1) {
-						output.write(buf, 0, len);
-						total += len;
-						
-						// 64kbps, 패킷 수 제한으로 delay 추가함.
-						// 2020.06.26
-						try{    
-							Thread.sleep(1000/socketPacketCount);
-						} catch (Exception e) {	
+					
+					// 1024 byte 이하 인 경우 
+					if( lSendFileSize < Long.parseLong("1024")) {
+						buf = new byte[(int)lSendFileSize];
+						while((len = fis.read( buf )) != -1) {
+							if(len == 0 ) {
+								break;
+							}
+							output.write(buf, 0, len);
+							total += len;
 							
+							// 64kbps, 패킷 수 제한으로 delay 추가함.
+							// 2020.06.26
+							try{    
+								Thread.sleep(1000/socketPacketCount);
+							} catch (Exception e) {	
+								
+							}
+						}
+	
+					} else {
+						
+						while((len = fis.read(buf)) != -1) {
+							if(len == 0) {
+								break;
+							}
+							output.write(buf, 0, len);
+							total += len;
+							
+							// 64kbps, 패킷 수 제한으로 delay 추가함.
+							// 2020.06.26
+							try{    
+								Thread.sleep(1000/socketPacketCount);
+							} catch (Exception e) {	
+								
+							}
 						}
 					}
 					

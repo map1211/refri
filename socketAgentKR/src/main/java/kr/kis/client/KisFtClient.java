@@ -18,7 +18,7 @@ import java.net.SocketAddress;
 import java.net.UnknownHostException;
 import java.util.HashMap;
 
-import kr.kis.utils.KisFTUtils;
+//import kr.kis.utils.KisFTUtils;
 import kr.kis.utils.KisFtConstant;
 import kr.kis.utils.LogUtil;
 import kr.kis.utils.ServerInfoUtil;
@@ -202,7 +202,7 @@ public class KisFtClient {
 		
 		String retMsg = null;
 		
-		KisFTUtils ftUtils = new KisFTUtils();
+//		KisFTUtils ftUtils = new KisFTUtils();
 		
 		try{
 			InputStream input = socket.getInputStream();
@@ -810,7 +810,7 @@ public class KisFtClient {
 		String retMsg = null;
 		String retResult = null;
 		
-		KisFTUtils ftUtils = new KisFTUtils();
+		//KisFTUtils ftUtils = new KisFTUtils();
 		
 		try{
 			
@@ -841,7 +841,7 @@ public class KisFtClient {
 		String retMsg = null;
 		String retResult = null;
 		
-		KisFTUtils ftUtils = new KisFTUtils(envPath);
+		//KisFTUtils ftUtils = new KisFTUtils(envPath);
 		
 		try{
 			
