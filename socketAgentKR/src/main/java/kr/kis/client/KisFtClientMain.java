@@ -667,12 +667,33 @@ public class KisFtClientMain {
 				logutil.info("############### 파일 송신 " );
 				OutputStream output = ftClient.getSocket().getOutputStream();
 				
+//				총화일사이즈, 
+//				전송예상시간, 
+//				1회전송하는 사이즈, 
+//				1초에 전송건수
+//
+//				전송예상시간 =  총화일사이즈 / (1회전송사이즈 * 1초에  전송건수)
+//				
+				
 				// relay 서버에 파일 전송. 
 				//String sendRslt = fileSend(dos, recvFilePath, fileName.trim());
 				File file = new File(sendPath + File.separator + fileName);
 				try {
 					// 송신할 파일의 크기 구함. 
 					long lSendFileSize = file.length(); 
+					// 운영 요구 사항으로 로그 시작
+					long estTime = 0l;
+					long sendSize = 0l;
+					
+					estTime = lSendFileSize / (1024*socketPacketCount);
+					sendSize = 1024;
+					
+					logutil.info("Send file size : " + lSendFileSize);
+					logutil.info("Send packet size : " + 1024);
+					logutil.info("Send packet count per second : " + socketPacketCount);
+					logutil.info("Total send time  : " + estTime);
+					// 운영 요구 사항으로 로그 종료
+					
 					FileInputStream fis = new FileInputStream(file);
 					int len;
 					byte[] buf = new byte[1024];

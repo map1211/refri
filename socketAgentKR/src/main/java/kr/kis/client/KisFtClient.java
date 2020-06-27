@@ -200,10 +200,6 @@ public class KisFtClient {
 	 */
 	public String recvString() throws Exception{
 		
-		String retMsg = null;
-		
-//		KisFTUtils ftUtils = new KisFTUtils();
-		
 		try{
 			InputStream input = socket.getInputStream();
 			String line="";
@@ -268,8 +264,6 @@ public class KisFtClient {
 				// 파일 수신종료 요청 전문 (FR13) : KIS -> 가맹점
 				log.info("File Receiving : [" + fileName + "]");
 				
-				byte[] buffer = new byte[1024];
-	            int bytesRead=0;
 	            File file = new File(filePath  + File.separator + fileName) ;
 				
 				FileOutputStream fos = new FileOutputStream(file);
@@ -283,129 +277,44 @@ public class KisFtClient {
 				byte[] data = new byte[bufSize];
 				long writeSize = 0;
 				long longRcvFileSize = Long.parseLong(rcvFileSize); 
-//				if( Long.parseLong(rcvFileSize) > 1024) {
-//					while((len = is.read(data)) != -1) {
-//						bos.write(data, 0, len);
-//						writeSize += len;
-//						if((writeSize + 1024) > Long.parseLong(rcvFileSize)) {
-//							break;
-//						}
-//					}
-//				} else {
-//					data = new byte[(int)Long.parseLong(rcvFileSize)];
-//					while((len = is.read(data)) != -1) {
-//						bos.write(data, 0, len);
-//						writeSize += len;
-//						if((writeSize + 1024) > Long.parseLong(rcvFileSize)) {
-//							break;
-//						}
-//					}
-//				}
 				
-//				log.info("## Client: writen fileSize : rcvFileSize : " + Long.parseLong(rcvFileSize));
-//				log.info("## Client: writen fileSize : writeSize :  " + writeSize);
-//				log.info("## Client: writen fileSize : len :  " + len);
-				
-//				byte[] residualData ;
-//				if( Long.parseLong(rcvFileSize) < writeSize) {
-//					residualData = new byte[(int) (writeSize-100)];
-//					len = is.read(residualData);
-//					bos.write(residualData, 0, len);
-//					writeSize += len;
-//				} else {
-//					residualData = new byte[(int) (Long.parseLong(rcvFileSize)-writeSize)];
-//					len = is.read(residualData);
-//					bos.write(residualData, 0, len);
-//					writeSize += len;
-//					
-//				}	
-
-				
-				
-				if( Long.parseLong(rcvFileSize) > 1024) {
-				while((len = is.read(data)) != -1) {
-					bos.write(data, 0, len);
-					writeSize += len;
-					if((writeSize + 1024) > Long.parseLong(rcvFileSize)) {
-						break;
+				if( longRcvFileSize > 1024) {
+					while((len = is.read(data)) != -1) {
+						bos.write(data, 0, len);
+						writeSize += len;
+						if((writeSize + 1024) > longRcvFileSize) {
+							break;
+						}
+					}
+				} else {
+					data = new byte[(int)longRcvFileSize];
+					while((len = is.read(data)) != -1) {
+						bos.write(data, 0, len);
+						writeSize += len;
+						if((writeSize + 1024) > longRcvFileSize) {
+							break;
+						}
 					}
 				}
-			} else {
-				data = new byte[(int)Long.parseLong(rcvFileSize)];
+				
+				// 임화혁 팀장 내용 적용. 
+				// 패킷에 전부 안들어 오는 경우 
+				// 대비해서 loop 돌면서 확인. 
+				//
+				
+				long writeSize2 = longRcvFileSize;
 				while((len = is.read(data)) != -1) {
 					bos.write(data, 0, len);
-					writeSize += len;
-					if((writeSize + 1024) > Long.parseLong(rcvFileSize)) {
-						break;
+					writeSize += len; // 전체 파이 사이즈 비교용.
+					writeSize2 -= len;
+					if(writeSize2 < 1024) {
+						data = new byte[(int)writeSize2];
 					}
 				}
-			}
 			
-//			log.info("## Client: writen fileSize : rcvFileSize : " + Long.parseLong(rcvFileSize));
-//			log.info("## Client: writen fileSize : writeSize :  " + writeSize);
-//			log.info("## Client: writen fileSize : len :  " + len);
-			// 임화혁 팀장 주장내용 적용. 
-			// 패킷에 전부 안들어 오는 경우 
-			// 대비해서 loop 돌면서 확인. 
-			//
-			byte[] residualData ;
-			if( Long.parseLong(rcvFileSize) < writeSize) {
-				residualData = new byte[(int) (writeSize-100)];
-				while((len = is.read(residualData)) != -1) {
-					bos.write(data, 0, len);
-					writeSize += len;
-					if((writeSize) == Long.parseLong(rcvFileSize)) {
-						break;
-					}
-				}				
-			} else {
-				residualData = new byte[(int) (Long.parseLong(rcvFileSize)-writeSize)];
-			
-				while((len = is.read(residualData)) != -1) {
-					bos.write(data, 0, len);
-					writeSize += len;
-					if((writeSize) == Long.parseLong(rcvFileSize)) {
-						break;
-					}
-				}					
-				
-			}	
-				
-				
-//				// Lim hh TJ logic apply start. 
-//				// 2020.06.25 - 2020.06.26
-//				// 
-//				if( longRcvFileSize > 1024) {
-//					while((len = is.read(data)) != -1) {
-//						bos.write(data, 0, len);
-//						writeSize += len;
-//
-//						if((longRcvFileSize - writeSize) < 1024) {
-//							break;
-//						}
-//						
-//						longRcvFileSize -= writeSize;
-//					}
-//				}
-//				
-//				
-//				byte[] data1 = new byte[(int)longRcvFileSize];
-//				
-//				while((len = is.read(data1)) != -1) {
-//					bos.write(data, 0, len);
-//					writeSize += len;
-//					longRcvFileSize -= len;
-//					
-//					if(longRcvFileSize == 0) {
-//						break;
-//					}
-//			
-//					data1 = new byte[(int)longRcvFileSize];
-//				}				
 				
 				// Lim hh TJ logic apply end 
 				log.info("## Client: writen fileSize : " + writeSize);
-				
 				
 				
 				try {bos.close();} catch (IOException e) {e.printStackTrace();}
@@ -414,8 +323,9 @@ public class KisFtClient {
 				recvFileSize = Long.toString(writeSize);	  
 				log.info("## Receive file data size : " + recvFileSize);
 				
-				if(Long.parseLong(rcvFileSize) != writeSize)  {
+				if(longRcvFileSize != writeSize)  {
 					log.info("Exception : file receive. ");
+					retResult = "FAIL|"+"file receive size diff."; 
 				} else {
 					byte[] receiveFr13 = new byte[size]; // 100 byte read
 					// (3) 전송된 자료를 byte[]변수에 저장함
@@ -491,8 +401,6 @@ public class KisFtClient {
 	}
 	
 	public void sendFR03String( String msg ) throws Exception{
-		
-		String retMsg = "";
 		
 		try{
 			log.info("FR03 :: Byte [] stream transmission to server. msg : [" + msg + "]" );
@@ -709,7 +617,6 @@ public class KisFtClient {
 	public void sendFT01String( String msg ) throws Exception{
 		
 		log.info("msg:[" + msg + "]");
-		String retMsg = null;
 		
 		try{
 			//서버에 Byte[]스트림 전송
@@ -770,8 +677,6 @@ public class KisFtClient {
 	public String recvFT12String() throws Exception{
 		
 		String retMsg = null;
-		String retResult = null;
-		
 		
 		try{
 		
@@ -808,9 +713,6 @@ public class KisFtClient {
 	public String recvFT13String() throws Exception{
 		
 		String retMsg = null;
-		String retResult = null;
-		
-		//KisFTUtils ftUtils = new KisFTUtils();
 		
 		try{
 			
@@ -839,9 +741,6 @@ public class KisFtClient {
 	public String recvFT13String(String envPath) throws Exception{
 		
 		String retMsg = null;
-		String retResult = null;
-		
-		//KisFTUtils ftUtils = new KisFTUtils(envPath);
 		
 		try{
 			
